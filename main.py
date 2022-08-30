@@ -1,3 +1,4 @@
+import pytz
 import requests
 
 import cinema_city
@@ -28,7 +29,7 @@ def get_all_movies():
     s.headers.update(headers)
     s.cookies.update({"hfSKey": "%7C%7C%7C%7C%7C%7C%7C%7C%7C1182_res%7C98163%7C"})
 
-    date = d.now()
+    date = d.now(pytz.timezone('ASIA/TEL_AVIV'))
     for i in range(days_to_check):
         print("\n\n\nstarted checking for:", date.strftime("%d-%m-%Y"), "\n")
         year = str(date.year)
