@@ -33,7 +33,7 @@ jobs:
         run: |
           sudo apt-get install -y chromium-browser
 
-      -name: print chrome location
+      - name: print chrome location
         run: |
           which chromium-browser
 
