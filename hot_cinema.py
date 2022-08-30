@@ -76,6 +76,7 @@ def get_by_location(location: Locations, date: str, formatted_date: str, s: requ
         for time in info.split("\n")[2:]:
             movies.append(Screening(formatted_date, "Hot Cinema", location.value['name'], name, MovieType.m_2D, time,
                                     f"https://hotcinema.co.il/theater/{location.value['code2']}"))
+    print("DONE")
 
 
 def get_movies(year: str, month: str, day: str, s: requests.Session):

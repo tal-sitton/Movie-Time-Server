@@ -1,3 +1,4 @@
+import time
 from enum import Enum
 
 from selenium.webdriver.common.by import By
@@ -55,6 +56,10 @@ def prepare(location: Locations, date: str):
     url = f"https://www.yesplanet.co.il/#/buy-tickets-by-cinema?in-cinema={location.value['code']}&at={date}&view-mode=list"
     driver.get(url)
     driver.refresh()
+    time.sleep(1)
+    if driver.current_url != url:
+        print("NO DATE FOUND")
+        return []
     return driver.find_elements(By.CLASS_NAME, "qb-movie")
 
 
