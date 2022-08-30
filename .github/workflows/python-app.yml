@@ -37,6 +37,12 @@ jobs:
         run: |
           which chromium-browser
 
+      - name: upload chrome artifct
+        - uses: actions/upload-artifact@v3
+          with:
+            name: chromium-browser
+            path: /usr/bin/chromium-browser
+
 #      - name: Test main.py
 #        run: |
 #          python main.py test
