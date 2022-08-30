@@ -7,9 +7,11 @@ import rav_hen
 import yes_planet
 from consts import movies, headers, driver
 
-year = "2022"
-month = "08"
-day = "29"
+from datetime import datetime as d
+
+year = str(d.now().year)
+month = str(d.now().month).zfill(2)
+day = str(d.now().day).zfill(2)
 
 
 def create_json():
