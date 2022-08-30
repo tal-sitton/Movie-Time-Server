@@ -15,7 +15,7 @@ day = str(d.now().day).zfill(2)
 
 
 def create_json():
-    js = '{\n"Screenings": ['
+    js = '{\n"time": "' + d.now().strftime("%d-%m-%Y") + '",\n"Screenings": ['
     for movie in movies:
         js += movie.json() + ",\n"
     js = js[:-2]
