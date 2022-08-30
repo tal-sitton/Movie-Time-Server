@@ -3,11 +3,16 @@ from enum import Enum
 
 from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
+from webdriver_manager.core.utils import ChromeType
 
 options = webdriver.ChromeOptions()
 options.add_argument('--blink-settings=imagesEnabled=false')
+
 if len(sys.argv) > 1:
-    driver = webdriver.Chrome(ChromeDriverManager().install())
+    driver_path = ChromeDriverManager(chrome_type=ChromeType.CHROMIUM).install()
+    options.add_argument("--headless")
+    driver = webdriver.Chrome(driver_path, options=options)
+
 else:
     options.binary_location = "GoogleChromePortableBeta/App/Chrome-bin/chrome.exe"
     driver = webdriver.Chrome(options=options)
