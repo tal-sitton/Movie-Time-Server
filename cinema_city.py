@@ -66,6 +66,7 @@ def get_date(location: Locations, date: str, s: requests.Session):
     url = f"https://www.cinema-city.co.il/tickets/GetDatesByTheater?theaterId={location.value['code']}"
     res = s.get(url)
     data = res.json()
+    print(data)
     return [new_date for new_date in data if date in new_date][0]
 
 
