@@ -2,6 +2,8 @@ import time
 from enum import Enum
 
 from selenium.webdriver.common.by import By
+from selenium.webdriver.support.wait import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 
 from Screening import Screening
 from consts import driver, movies, MovieType
@@ -37,6 +39,8 @@ def prepare(location: Locations, date: str):
     if driver.current_url != url:
         print("NO DATE FOUND")
         return []
+    wait = WebDriverWait(driver, 10)
+    wait.until(EC.element_to_be_clickable((By.CLASS_NAME, 'qb-movie-name')))
     return driver.find_elements(By.CLASS_NAME, "qb-movie")
 
 
@@ -51,9 +55,9 @@ def get_by_location(location: Locations, date: str, format_date: str):
             data = type_data.text
             for info in type_data.find_elements(By.TAG_NAME, "a"):
                 link = info.get_attribute("data-url")
-                time = info.text
+                m_time = info.text
                 movies.append(
-                    Screening(format_date, "Yes Planet", location.value['name'], movie_name, MovieType.m_2D, time,
+                    Screening(format_date, "Rav Hen", location.value['name'], movie_name, MovieType.m_2D, m_time,
                               link))
     print("DONE")
 
