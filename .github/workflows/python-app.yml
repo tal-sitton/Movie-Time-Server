@@ -9,8 +9,7 @@ on:
   pull_request:
     branches: [ "master" ]
   schedule:
-    - cron: "32 6 * * *"
-    - cron: "*/5 * * * *" # todo remove: every 5 minutes
+    - cron: "32 6 * * *" # 6:32am every day
 
 permissions: write-all
 
