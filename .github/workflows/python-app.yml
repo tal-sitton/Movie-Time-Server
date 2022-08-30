@@ -49,4 +49,4 @@ jobs:
           
           git add "test.txt"
           git commit -m "Update test.txt" test.txt
-          git push
+          git push origin master
