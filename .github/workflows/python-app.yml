@@ -50,8 +50,8 @@ jobs:
 #          path: /usr/bin/chromium-browser
       - name: cp chromium
         run: |
-          cp chromium-browser /usr/bin/chromium-browser
-          chmod +x /usr/bin/chromium-browser
+          sudo cp chromium-browser /usr/bin/chromium-browser
+          sudo chmod +x /usr/bin/chromium-browser
 
       - name: Test main.py
         run: |
