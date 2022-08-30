@@ -43,11 +43,15 @@ jobs:
 #          name: chromium-browser
 #          path: /usr/bin/chromium-browser
 
-      - name: download chrome artifct
-        uses: actions/download-artifact@v3
-        with:
-          name: chromium-browser
-          path: /usr/bin/chromium-browser
+#      - name: download chrome artifct
+#        uses: actions/download-artifact@v3
+#        with:
+#          name: chromium-browser
+#          path: /usr/bin/chromium-browser
+       - name: cp chromium
+         run: |
+          cp chromium-browser /usr/bin/chromium-browser
+          chmod +x /usr/bin/chromium-browser
 
       - name: Test main.py
         run: |
