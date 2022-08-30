@@ -7,11 +7,9 @@ import rav_hen
 import yes_planet
 from consts import movies, headers, driver
 
-from datetime import datetime as d
+from datetime import datetime as d, timedelta
 
-year = str(d.now().year)
-month = str(d.now().month).zfill(2)
-day = str(d.now().day).zfill(2)
+days_to_check = 5
 
 
 def create_json():
@@ -29,14 +27,21 @@ def get_all_movies():
     s = requests.session()
     s.headers.update(headers)
     s.cookies.update({"hfSKey": "%7C%7C%7C%7C%7C%7C%7C%7C%7C1182_res%7C98163%7C"})
-    yes_planet.get_movies(year, month, day)
-    rav_hen.get_movies(year, month, day)
 
-    driver.close()
+    date = d.now()
+    for i in range(days_to_check):
+        print("\n\n\nstarted checking for:", date.strftime("%d-%m-%Y"), "\n")
+        year = str(date.year)
+        month = str(date.month).zfill(2)
+        day = str(date.day).zfill(2)
 
-    hot_cinema.get_movies(year, month, day, s)
-    cinema_city.get_movies(year, month, day, s)
-    lev.get_movies(year, month, day, s)
+        yes_planet.get_movies(year, month, day)
+        rav_hen.get_movies(year, month, day)
+        # driver.close()
+        hot_cinema.get_movies(year, month, day, s)
+        cinema_city.get_movies(year, month, day, s)
+        lev.get_movies(year, month, day, s)
+        date += timedelta(days=1)
 
     create_json()
     print(len(movies))

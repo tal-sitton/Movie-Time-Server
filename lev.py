@@ -50,6 +50,7 @@ class Locations(Enum):
 
 
 def get_by_location(location: Locations, date: str, format_date: str, s: requests.Session):
+    print("STARTED LEV ", location.name)
     url = f"https://ticket.lev.co.il/api/presentations?locationId={location.value['code']}&includeSynopsis=0"
     res = s.get(url)
     for movie in res.json()['presentations']:
@@ -59,6 +60,7 @@ def get_by_location(location: Locations, date: str, format_date: str, s: request
         time = movie['dateTime'].split(" ")[1]
         link = f"https://ticket.lev.co.il/order/{movie['id']}"
         movies.append(Screening(format_date, "Lev", location.value["name"], name, consts.MovieType.m_2D, time, link))
+    print("DONE")
 
 
 def get_movies(year: str, month: str, day: str, s: requests.Session):

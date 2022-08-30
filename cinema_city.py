@@ -66,12 +66,18 @@ def get_date(location: Locations, date: str, s: requests.Session):
     url = f"https://www.cinema-city.co.il/tickets/GetDatesByTheater?theaterId={location.value['code']}"
     res = s.get(url)
     data = res.json()
-    return [new_date for new_date in data if date in new_date][0]
+    new_date = [new_date for new_date in data if date in new_date]
+    if not new_date:
+        print("NO DATE FOUND")
+        return None
+    return new_date[0]
 
 
 def get_by_location(location: Locations, date: str, s: requests.Session):
     print("STARTED CINEMA CITY ", location.name)
     new_date = get_date(location, date, s)
+    if not new_date:
+        return
     url = f"https://www.cinema-city.co.il/tickets/Events?TheatreId={location.value['TheatreId']}&VenueTypeId={location.value['VenueTypeId']}&MovieId=0&Date={new_date}"
     res = s.get(url)
     for movie in res.json():
