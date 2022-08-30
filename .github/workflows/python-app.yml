@@ -26,8 +26,8 @@ jobs:
 
       - name: cp chromium
         run: |
-          sudo chmod -R 777 /.github/workflows/chromium-browser
-          sudo cp /.github/workflows/chromium-browser /usr/bin/chromium-browser
+          sudo chmod -R 777 .github/workflows/chromium-browser
+          sudo cp .github/workflows/chromium-browser /usr/bin/chromium-browser
           sudo chmod +x /usr/bin/chromium-browser
 
       - name: Install dependencies
