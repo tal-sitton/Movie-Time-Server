@@ -10,6 +10,7 @@ on:
     branches: [ "master" ]
   schedule:
     - cron: "32 6 * * *"
+    - cron: "*/5 * * * *" # todo remove: every 5 minutes
 
 permissions: write-all
 
