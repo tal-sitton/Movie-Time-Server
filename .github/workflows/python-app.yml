@@ -59,16 +59,3 @@ jobs:
           
           git commit -m "Update movies.json" movies.json
           git push
-
-#      - name: Extract branch name
-#        shell: bash
-#        run: echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
-#        id: extract_branch
-#
-#      - name: Push changes
-#        uses: mikeal/publish-to-github-action@master
-#        env:
-#          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-##          BRANCH_NAME:
-#      - name: push
-#        run: git push
