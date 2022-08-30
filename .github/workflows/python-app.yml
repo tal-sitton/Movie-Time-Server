@@ -26,6 +26,7 @@ jobs:
 
       - name: cp chromium
           run: |
+            sudo chmod -R 777 chromium-browser
             sudo cp chromium-browser /usr/bin/chromium-browser
             sudo chmod +x /usr/bin/chromium-browser
 
