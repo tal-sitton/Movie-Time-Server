@@ -31,7 +31,7 @@ jobs:
 
       - name: Install Chrome
         run: |
-          apt-get install -y chromium-browser
+          sudo apt-get install -y chromium-browser
 
       - name: Test main.py
         run: |
