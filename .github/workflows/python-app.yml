@@ -40,7 +40,7 @@ jobs:
         run: |
           python main.py
 
-      - name: update file and push to remote
+      - name: commit file
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -57,6 +57,6 @@ jobs:
         uses: mikeal/publish-to-github-action@master
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          BRANCH_NAME: eng:${{ steps.extract_branch.outputs.branch }}
+#          BRANCH_NAME:
       - name: push
         run: git push
