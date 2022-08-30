@@ -49,4 +49,8 @@ jobs:
           
           git add "test.txt"
           git commit -m "Update test.txt" test.txt
-          git push origin master
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ github.ref }}
