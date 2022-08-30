@@ -5,18 +5,23 @@ from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
 from webdriver_manager.core.utils import ChromeType
 
-options = webdriver.ChromeOptions()
-options.add_argument('--blink-settings=imagesEnabled=false')
+chrome_options = webdriver.ChromeOptions()
 
-if len(sys.argv) > 1:
-    driver_path = ChromeDriverManager(chrome_type=ChromeType.CHROMIUM).install()
-    options.add_argument("--headless")
-    driver = webdriver.Chrome(driver_path, options=options)
+options = [
+    "--headless",
+    "--disable-gpu",
+    "--window-size=1920,1200",
+    "--ignore-certificate-errors",
+    "--disable-extensions",
+    "--no-sandbox",
+    "--disable-dev-shm-usage",
+    "--blink-settings=imagesEnabled=false"
+]
+for option in options:
+    chrome_options.add_argument(option)
 
-else:
-    options.binary_location = "GoogleChromePortableBeta/App/Chrome-bin/chrome.exe"
-    driver = webdriver.Chrome(options=options)
-
+driver_path = ChromeDriverManager(chrome_type=ChromeType.CHROMIUM).install()
+driver = webdriver.Chrome(driver_path, options=chrome_options)
 driver.implicitly_wait(10)
 
 headers = {
