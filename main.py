@@ -9,7 +9,7 @@ from consts import movies, headers, driver
 
 year = "2022"
 month = "08"
-day = "28"
+day = "29"
 
 
 def create_json():
