@@ -4,7 +4,7 @@ import requests
 
 import consts
 from Screening import Screening
-from consts import movies
+from consts import movies, Districts
 
 
 class Locations(Enum):
@@ -15,49 +15,57 @@ class Locations(Enum):
         "code": "1",
         "TheatreId": "1170",
         "VenueTypeId": "1",
-        "name": "גלילות"
+        "name": "גלילות",
+        "dis": Districts.DAN,
     }
     RISHON = {
         "code": "2",
         "TheatreId": "1173",
         "VenueTypeId": "1",
-        "name": "ראשון לציון"
+        "name": "ראשון לציון",
+        "dis": Districts.DAN,
     }
     JERUSALEM = {
         "code": "3",
         "TheatreId": "1174",
         "VenueTypeId": "1",
-        "name": "ירושלים"
+        "name": "ירושלים",
+        "dis": Districts.JERUSALEM,
     }
     KFAR_SABBA = {
         "code": "4",
         "TheatreId": "1175",
         "VenueTypeId": "1",
-        "name": "כפר סבא"
+        "name": "כפר סבא",
+        "dis": Districts.SHARON,
     }
     NATANIA = {
         "code": "5",
         "TheatreId": "1176",
         "VenueTypeId": "1",
-        "name": "נתניה"
+        "name": "נתניה",
+        "dis": Districts.SHARON,
     }
     BEER_SHEVA = {
         "code": "17",
         "TheatreId": "1178",
         "VenueTypeId": "1",
-        "name": "באר שבע"
+        "name": "באר שבע",
+        "dis": Districts.DAROM,
     }
     HADERA = {
         "code": "13",
         "TheatreId": "1350",
         "VenueTypeId": "1",
-        "name": "חדרה"
+        "name": "חדרה",
+        "dis": Districts.ZAFON,
     }
     ASHDOD = {
         "code": "25",
         "TheatreId": "1181",
         "VenueTypeId": "1",
-        "name": "אשדוד"
+        "name": "אשדוד",
+        "dis": Districts.DAROM,
     }
 
 
@@ -86,7 +94,9 @@ def get_by_location(location: Locations, date: str, s: requests.Session):
             time = show.get("Hour")
             link = f"https://tickets.cinema-city.co.il/order/{show.get('EventId')}"
             movies.append(
-                Screening(date, "Cinema City", location.value["name"], movie_name, consts.MovieType.m_2D, time, link))
+                Screening(date, "סינמה סיטי", location.value["name"], location.value['dis'], movie_name,
+                          consts.MovieType.m_2D, time, link)
+            )
 
     print("DONE")
 

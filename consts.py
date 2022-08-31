@@ -37,4 +37,12 @@ class MovieType(Enum):
     m_4DX = 6
 
 
+class Districts(Enum):
+    DAN = "גוש דן"
+    SHARON = "השרון"
+    JERUSALEM = "ירושלים"
+    ZAFON = "הצפון"
+    DAROM = "הדרום"
+
+
 movies = []

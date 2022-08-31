@@ -4,7 +4,7 @@ import bs4
 import requests
 
 from Screening import Screening
-from consts import movies, MovieType
+from consts import movies, MovieType, Districts
 
 
 class Locations(Enum):
@@ -14,52 +14,62 @@ class Locations(Enum):
     MODIIN = {
         "code": "MOD",
         "code2": "1",
-        "name": "מודיעין"
+        "name": "מודיעין",
+        "dis": Districts.JERUSALEM,
     }
     KIRYON = {
         "code": "KIRYON",
         "code2": "2",
-        "name": "קריון"
+        "name": "קריון",
+        "dis": Districts.ZAFON,
     }
     KFAR_SABBA = {
         "code": "KS",
         "code2": "16",
-        "name": "כפר סבא"
+        "name": "כפר סבא",
+        "dis": Districts.SHARON,
     }
     HAIFA = {
         "code": "HAIFA",
         "code2": "9",
-        "name": "חיפה"
+        "name": "חיפה",
+        "dis": Districts.ZAFON,
     }
     PETACH_TIKVA = {
         "code": "PT",
         "code2": "14",
-        "name": "פתח תקווה"
+        "name": "פתח תקווה",
+        "dis": Districts.DAN,
     }
     RECHOVOT = {
         "code": "RH",
         "code2": "17",
-        "name": "רחובות"
+        "name": "רחובות",
+        "dis": Districts.DAN,
     }
     ASHKELON = {
         "code": "ASHK",
         "code2": "8",
-        "name": "אשקלון"
+        "name": "אשקלון",
+        "dis": Districts.DAROM,
     }
     KARMIEL = {
         "code": "KAR",
         "code2": "15",
-        "name": "כרמיאל"
+        "name": "כרמיאל",
+        "dis": Districts.ZAFON,
     }
     NAHARIA = {
         "code": "NHR",
         "code2": "6",
-        "name": "נהריה"
+        "name": "נהריה",
+        "dis": Districts.ZAFON,
     }
     ASHDOD = {
         "code": "ASHDOD",
         "code2": "5",
-        "name": "אשדוד"
+        "name": "אשדוד",
+        "dis": Districts.DAROM,
     }
 
 
@@ -74,8 +84,10 @@ def get_by_location(location: Locations, date: str, formatted_date: str, s: requ
         name = data.find(class_="movieName").text
         info = data.find(class_="times").text.strip()
         for time in info.split("\n")[2:]:
-            movies.append(Screening(formatted_date, "Hot Cinema", location.value['name'], name, MovieType.m_2D, time,
-                                    f"https://hotcinema.co.il/theater/{location.value['code2']}"))
+            movies.append(
+                Screening(formatted_date, "Hot Cinema", location.value['name'], location.value['dis'], name,
+                          MovieType.m_2D, time, f"https://hotcinema.co.il/theater/{location.value['code2']}")
+            )
     print("DONE")
 
 
