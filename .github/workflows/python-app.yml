@@ -9,7 +9,7 @@ on:
   pull_request:
     branches: [ "master" ]
   schedule:
-    - cron: "23 2 * * *" # 5:23am every day israel time
+    - cron: "23 2 * * *" # 5:23am every day israel time (2:23 UTC time)
 
 permissions: write-all
 
@@ -40,25 +40,15 @@ jobs:
 
       - run: chrome --version
 
-#      - name: cp chromium
-#        run: |
-#          sudo chmod -R 777 .github/workflows/chromium-browser
-#          sudo cp .github/workflows/chromium-browser /usr/bin/chromium-browser
-#          sudo chmod +x /usr/bin/chromium-browser
-#
-#      - name: update chromium
-#        run: sudo apt-get install --only-upgrade chromium-browser
-
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Run main.py
-        run: |
+      - run:
           python main.py
 
-      - name: commit file
+      - name: commit file and push
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
