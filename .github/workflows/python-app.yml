@@ -42,7 +42,7 @@ jobs:
           sudo chmod +x /usr/bin/chromium-browser
 
       - name: update chromium
-        run: apt-get install --only-upgrade chromium-browser
+        run: sudo apt-get install --only-upgrade chromium-browser
 
       - name: Install dependencies
         run: |
