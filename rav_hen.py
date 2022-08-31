@@ -59,6 +59,8 @@ def get_by_location(location: Locations, date: str, format_date: str):
             data = type_data.text
             for info in type_data.find_elements(By.TAG_NAME, "a"):
                 link = info.get_attribute("data-url")
+                if not link:
+                    continue
                 m_time = info.text
                 movies.append(
                     Screening(format_date, "רב חן", location.value['name'], location.value['dis'], movie_name,
