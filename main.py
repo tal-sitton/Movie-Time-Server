@@ -15,7 +15,7 @@ days_to_check = 5
 
 
 def create_json():
-    movies.sort(key=lambda x: (x.m_district.value[1], x.m_location))
+    movies.sort(key=lambda x: (x.m_district.value[1], x.m_location, x.m_cinema))
     js = '{\n"time": "' + d.now().strftime("%d-%m-%Y") + '",\n"Screenings": ['
     for movie in movies:
         js += movie.json() + ",\n"
