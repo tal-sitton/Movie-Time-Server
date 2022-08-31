@@ -1,3 +1,4 @@
+import json
 from datetime import datetime as d, timedelta
 
 import pytz
@@ -22,7 +23,7 @@ def create_json():
     js += "]\n}"
 
     with open("movies.json", "w", encoding='utf-8') as f:
-        f.write(js)
+        f.write(json.dumps(json.loads(js), indent=2))
 
 
 def get_all_movies():
