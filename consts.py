@@ -38,11 +38,11 @@ class MovieType(Enum):
 
 
 class Districts(Enum):
-    DAN = "גוש דן"
-    SHARON = "השרון"
-    JERUSALEM = "ירושלים"
-    ZAFON = "הצפון"
-    DAROM = "הדרום"
+    DAN = ("גוש דן", 0)
+    SHARON = ("השרון", 1)
+    JERUSALEM = ("ירושלים", 2)
+    ZAFON = ("הצפון", 3)
+    DAROM = ("הדרום", 4)
 
 
 movies = []
