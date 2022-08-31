@@ -85,7 +85,7 @@ def get_by_location(location: Locations, date: str, format_date: str):
                     continue
                 m_time = info.text
                 movies.append(
-                    Screening(format_date, "Yes Planet", location.value['name'], location.value['dis'], movie_name,
+                    Screening(format_date, "יס פלאנט", location.value['name'], location.value['dis'], movie_name,
                               movie_type, m_time, link)
                 )
     print("DONE")

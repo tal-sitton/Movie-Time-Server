@@ -85,7 +85,7 @@ def get_by_location(location: Locations, date: str, formatted_date: str, s: requ
         info = data.find(class_="times").text.strip()
         for time in info.split("\n")[2:]:
             movies.append(
-                Screening(formatted_date, "Hot Cinema", location.value['name'], location.value['dis'], name,
+                Screening(formatted_date, "הוט סינמה", location.value['name'], location.value['dis'], name,
                           MovieType.m_2D, time, f"https://hotcinema.co.il/theater/{location.value['code2']}")
             )
     print("DONE")
