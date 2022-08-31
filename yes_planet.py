@@ -4,7 +4,7 @@ from enum import Enum
 from selenium.webdriver.common.by import By
 
 from Screening import Screening
-from consts import driver, MovieType, movies
+from consts import driver, MovieType, movies, Districts
 
 
 class Locations(Enum):
@@ -13,27 +13,33 @@ class Locations(Enum):
     """
     RISHON = {
         "code": "1072",
-        "name": "ראשון לציון"
+        "name": "ראשון לציון",
+        "dis": Districts.DAN,
     }
     AYALON = {
         "code": "1025",
-        "name": "קניון אילון"
+        "name": "קניון אילון",
+        "dis": Districts.DAN,
     }
     ZICHRON = {
         "code": "1075",
-        "name": "זכרון יעקב"
+        "name": "זכרון יעקב",
+        "dis": Districts.ZAFON,
     }
     HAIFA = {
         "code": "1070",
-        "name": "חיפה"
+        "name": "חיפה",
+        "dis": Districts.ZAFON,
     }
     JERUSALEM = {
         "code": "1073",
-        "name": "ירושלים"
+        "name": "ירושלים",
+        "dis": Districts.JERUSALEM,
     }
     BEER_SHEVA = {
         "code": "1074",
-        "name": "באר שבע"
+        "name": "באר שבע",
+        "dis": Districts.DAROM,
     }
 
 
@@ -77,10 +83,11 @@ def get_by_location(location: Locations, date: str, format_date: str):
                 link = info.get_attribute("data-url")
                 if not link:
                     continue
-                time = info.text
+                m_time = info.text
                 movies.append(
-                    Screening(format_date, "Yes Planet", location.value['name'], movie_name, movie_type, time,
-                              link))
+                    Screening(format_date, "Yes Planet", location.value['name'], location.value['dis'], movie_name,
+                              movie_type, m_time, link)
+                )
     print("DONE")
 
 

@@ -1,3 +1,6 @@
+import json
+from datetime import datetime as d, timedelta
+
 import pytz
 import requests
 
@@ -6,14 +9,13 @@ import hot_cinema
 import lev
 import rav_hen
 import yes_planet
-from consts import movies, headers, driver
-
-from datetime import datetime as d, timedelta
+from consts import movies, headers
 
 days_to_check = 5
 
 
 def create_json():
+    movies.sort(key=lambda x: (x.m_district.value[1], x.m_location))
     js = '{\n"time": "' + d.now().strftime("%d-%m-%Y") + '",\n"Screenings": ['
     for movie in movies:
         js += movie.json() + ",\n"
@@ -21,7 +23,7 @@ def create_json():
     js += "]\n}"
 
     with open("movies.json", "w", encoding='utf-8') as f:
-        f.write(js)
+        f.write(json.dumps(json.loads(js), indent=2))
 
 
 def get_all_movies():

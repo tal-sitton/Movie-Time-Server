@@ -6,7 +6,7 @@ from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
 from Screening import Screening
-from consts import driver, movies, MovieType
+from consts import driver, movies, MovieType, Districts
 
 
 class Locations(Enum):
@@ -15,19 +15,23 @@ class Locations(Enum):
     """
     GIVATAIM = {
         "code": "1058",
-        "name": "גבעתיים"
+        "name": "גבעתיים",
+        "dis": Districts.DAN,
     }
     DIZINGOF = {
         "code": "1071",
-        "name": "דיזינגוף"
+        "name": "דיזינגוף",
+        "dis": Districts.DAN,
     }
     MODIIN = {
         "code": "1069",
-        "name": "מודיעין"
+        "name": "מודיעין",
+        "dis": Districts.JERUSALEM,
     }
     KIRYAT_ONO = {
         "code": "1062",
-        "name": "קרית אונו"
+        "name": "קריית אונו",
+        "dis": Districts.DAN,
     }
 
 
@@ -57,8 +61,9 @@ def get_by_location(location: Locations, date: str, format_date: str):
                 link = info.get_attribute("data-url")
                 m_time = info.text
                 movies.append(
-                    Screening(format_date, "Rav Hen", location.value['name'], movie_name, MovieType.m_2D, m_time,
-                              link))
+                    Screening(format_date, "רב חן", location.value['name'], location.value['dis'], movie_name,
+                              MovieType.m_2D, m_time, link)
+                )
     print("DONE")
 
 
