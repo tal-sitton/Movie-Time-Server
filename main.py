@@ -29,7 +29,6 @@ def create_json():
 def get_all_movies():
     s = requests.session()
     s.headers.update(headers)
-    s.cookies.update({"hfSKey": "%7C%7C%7C%7C%7C%7C%7C%7C%7C1182_res%7C98163%7C"})
 
     date = d.now(pytz.timezone('ASIA/TEL_AVIV'))
     for i in range(days_to_check):
