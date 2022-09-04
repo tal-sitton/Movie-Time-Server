@@ -70,13 +70,9 @@ def get_by_location(location: Locations, date: str, format_date: str, s: request
     movies_ids, events = prepare(location, date, s)
     for event in events:
         movie_name = movies_ids.get(event.get("filmId"))
-        print(movie_name)
         m_time = ":".join(event.get("eventDateTime").split("T")[1].split(":")[:2])
         movie_type = find_type(event.get("attributeIds"))
         link = event.get("bookingLink")
-        print(movie_type)
-        print(event.get("attributeIds"))
-        print(link)
         movies.append(
             Screening(format_date, "יס פלאנט", location.value['name'], location.value['dis'], movie_name,
                       movie_type, m_time, link)
