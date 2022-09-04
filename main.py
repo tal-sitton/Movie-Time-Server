@@ -15,7 +15,7 @@ days_to_check = 5
 
 
 def create_json():
-    movies.sort(key=lambda x: (x.m_district.value[1], x.m_location, x.m_cinema, x.m_time))
+    movies.sort(key=lambda x: (x.m_district.value[1], x.m_location, x.m_cinema, x.m_date, x.m_time))
     js = '{\n"time": "' + d.now().strftime("%d-%m-%Y") + '",\n"Screenings": ['
     for movie in movies:
         js += movie.json() + ",\n"
@@ -39,8 +39,7 @@ def get_all_movies():
         day = str(date.day).zfill(2)
 
         yes_planet.get_movies(year, month, day, s)
-        rav_hen.get_movies(year, month, day)
-        # driver.close()
+        rav_hen.get_movies(year, month, day, s)
         hot_cinema.get_movies(year, month, day, s)
         cinema_city.get_movies(year, month, day, s)
         lev.get_movies(year, month, day, s)
