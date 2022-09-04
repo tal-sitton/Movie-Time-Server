@@ -38,7 +38,7 @@ def get_all_movies():
         month = str(date.month).zfill(2)
         day = str(date.day).zfill(2)
 
-        yes_planet.get_movies(year, month, day)
+        yes_planet.get_movies(year, month, day, s)
         rav_hen.get_movies(year, month, day)
         # driver.close()
         hot_cinema.get_movies(year, month, day, s)

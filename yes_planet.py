@@ -1,10 +1,9 @@
-import time
 from enum import Enum
 
-from selenium.webdriver.common.by import By
+import requests
 
 from Screening import Screening
-from consts import driver, MovieType, movies, Districts
+from consts import MovieType, movies, Districts
 
 
 class Locations(Enum):
@@ -43,58 +42,48 @@ class Locations(Enum):
     }
 
 
-def find_type(movie_type: str):
-    if "4DX" in movie_type:
+def find_type(movie_type: list):
+    if "4dx" in movie_type:
         return MovieType.m_4DX
-    if "VIP" in movie_type:
+    if "vip" in movie_type:
         return MovieType.m_VIP
-    elif "IMAX" in movie_type:
+    elif "imax" in movie_type:
         return MovieType.m_IMAX
     elif "3D" in movie_type:
         return MovieType.m_3D
-    elif "SCREENX" in movie_type:
+    elif "screenx" in movie_type:
         return MovieType.m_SCREENX
     else:
         return MovieType.m_2D
 
 
-def prepare(location: Locations, date: str):
-    url = f"https://www.yesplanet.co.il/#/buy-tickets-by-cinema?in-cinema={location.value['code']}&at={date}&view-mode=list"
-    driver.get(url)
-    driver.refresh()
-    time.sleep(1)
-    if driver.current_url != url:
-        print("NO DATE FOUND")
-        return []
-    return driver.find_elements(By.CLASS_NAME, "qb-movie")
+def prepare(location: Locations, date: str, s: requests.Session) -> tuple:
+    url = f"https://www.yesplanet.co.il/il/data-api-service/v1/quickbook/10100/film-events/in-cinema/{location.value['code']}/at-date/{date}"
+    res = s.get(url)
+    data = dict(res.json().get("body"))
+    movies_ids = {movie.get("id"): movie.get("name") for movie in data.get("films")}
+    return movies_ids, data.get("events")
 
 
-def get_by_location(location: Locations, date: str, format_date: str):
+def get_by_location(location: Locations, date: str, format_date: str, s: requests.Session):
     print("STARTED YES PLANET ", location.name)
-    movies_data = prepare(location, date)
-    for movie in movies_data:
-        movie_name = movie.find_element(By.CLASS_NAME, "qb-movie-name").text.replace("עברית עם כתוביות", "").strip()
-        all_data = movie.find_elements(By.CLASS_NAME, "qb-movie-info-column")
-        for type_data in all_data:
-            data = type_data.text
-            movie_type = data.split("\n")[0]
-            movie_type = find_type(movie_type)
-            for info in type_data.find_elements(By.TAG_NAME, "a"):
-                link = info.get_attribute("data-url")
-                if not link:
-                    continue
-                m_time = info.text
-                movies.append(
-                    Screening(format_date, "יס פלאנט", location.value['name'], location.value['dis'], movie_name,
-                              movie_type, m_time, link)
-                )
+    movies_ids, events = prepare(location, date, s)
+    for event in events:
+        movie_name = movies_ids.get(event.get("filmId"))
+        m_time = ":".join(event.get("eventDateTime").split("T")[1].split(":")[:2])
+        movie_type = find_type(event.get("attributeIds"))
+        link = event.get("bookingLink")
+        movies.append(
+            Screening(format_date, "יס פלאנט", location.value['name'], location.value['dis'], movie_name,
+                      movie_type, m_time, link)
+        )
     print("DONE")
 
 
-def get_movies(year: str, month: str, day: str):
+def get_movies(year: str, month: str, day: str, s: requests.Session):
     print("STARTED YES PLANET")
     date = "{}-{}-{}".format(year, month.zfill(2), day.zfill(2))
     format_date = "{}-{}-{}".format(day.zfill(2), month.zfill(2), year)
     for location in Locations:
-        get_by_location(location, date, format_date)
+        get_by_location(location, date, format_date, s)
     print("DONE YES PLANET")
