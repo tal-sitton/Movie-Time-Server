@@ -5,9 +5,7 @@ name: run program
 
 on:
   repository_dispatch:
-    types: [test,uptime]
-    
-  workflow_dispatch:
+    types: [test]
   
   push:
     branches: [ "master" ]
