@@ -4,10 +4,8 @@
 name: run program
 
 on:
-  workflow_dispatch:
   repository_dispatch:
-    types:
-     - test
+  workflow_dispatch:
   
   push:
     branches: [ "master" ]
