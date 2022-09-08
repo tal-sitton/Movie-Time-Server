@@ -81,6 +81,11 @@ def get_date(location: Locations, date: str, s: requests.Session):
     return new_date[0]
 
 
+def remove_redundant_from_name(name: str):
+    return name.replace("-מדובב", "").replace("-אנגלית", "").replace("-עברית", "").replace("מדובב לעברית", "").replace(
+        "אנגלית", "").strip()
+
+
 def get_by_location(location: Locations, date: str, s: requests.Session):
     print("STARTED CINEMA CITY ", location.name)
     new_date = get_date(location, date, s)
@@ -89,7 +94,7 @@ def get_by_location(location: Locations, date: str, s: requests.Session):
     url = f"https://www.cinema-city.co.il/tickets/Events?TheatreId={location.value['TheatreId']}&VenueTypeId={location.value['VenueTypeId']}&MovieId=0&Date={new_date}"
     res = s.get(url)
     for movie in res.json():
-        movie_name = movie.get("Name").replace("-מדובב", "").replace("-אנגלית", "").replace("-עברית", "").strip()
+        movie_name = remove_redundant_from_name(movie.get("Name"))
         for show in movie.get("Dates"):
             time = show.get("Hour")
             link = f"https://tickets.cinema-city.co.il/order/{show.get('EventId')}"
