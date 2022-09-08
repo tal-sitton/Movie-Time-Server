@@ -81,7 +81,7 @@ def get_by_location(location: Locations, date: str, formatted_date: str, s: requ
     movies_data = bs.find_all("div", {"class": "item"})
 
     for data in movies_data:
-        name = data.find(class_="movieName").text
+        name = data.find(class_="movieName").text.replace(" אנגלית", "").replace(" עברית", "").strip()
         info = data.find(class_="times").text.strip()
         for time in info.split("\n")[2:]:
             movies.append(
