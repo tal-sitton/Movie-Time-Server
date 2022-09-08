@@ -67,7 +67,7 @@ def get_by_location(location: Locations, date: str, s: requests.Session):
     url = f"https://hotcinema.co.il/tickets/TheaterEvents?date={date.replace('-', '%2F')}&theatreid={location.value['code']}"
     res = s.get(url).json()
     for movie_info in res:
-        name = movie_info["MovieName"]
+        name = movie_info["MovieName"].replace(" אנגלית", "").replace(" עברית", "")
         for m_date in movie_info["Dates"]:
             m_time = m_date["Hour"]
             m_id = m_date["EventId"]
