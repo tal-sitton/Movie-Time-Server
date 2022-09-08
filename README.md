@@ -8,9 +8,17 @@
 
 הוא עושה זאת בעזרת request לאתרים של בתי הקולנוע.
 
-השרת כתוב בשפת python, והתוצאות שהוא מוצא על הסרטים נשמרים [בצורת קובץ json](movies.json)
+השרת כתוב בשפת python, והתוצאות שהוא מוצא על הסרטים נשמרים [בצורת קובץ JSON](movies.json)
 
 ---
 
-[to the app itself](https://github.com/tal-sitton/Movie-Time/tree/add-readme#movie-time)
+[To the app itself](https://github.com/tal-sitton/Movie-Time/tree/add-readme#movie-time)
+
 Using the app, you can see which cinema shows what movies.
+
+## The Server
+Every day, the server gathers information using the cinema's websites about what movies show in each cinema.
+
+It uses the requests module to gather the info.
+
+The server is written in python, and the data is saved in a [JSON file](movies.json)
