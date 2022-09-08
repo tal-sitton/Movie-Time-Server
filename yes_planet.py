@@ -69,7 +69,7 @@ def get_by_location(location: Locations, date: str, format_date: str, s: request
     print("STARTED YES PLANET ", location.name)
     movies_ids, events = prepare(location, date, s)
     for event in events:
-        movie_name = movies_ids.get(event.get("filmId")).replce("עברית עם כתוביות ", "").strip()
+        movie_name = movies_ids.get(event.get("filmId")).replace("עברית עם כתוביות ", "").strip()
         m_time = ":".join(event.get("eventDateTime").split("T")[1].split(":")[:2])
         movie_type = find_type(event.get("attributeIds"))
         link = event.get("bookingLink")
