@@ -4,6 +4,9 @@
 name: run program
 
 on:
+  repository_dispatch:
+    types: [test]
+  
   push:
     branches: [ "master" ]
   pull_request:
