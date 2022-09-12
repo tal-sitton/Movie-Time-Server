@@ -11,7 +11,7 @@ import rav_hen
 import yes_planet
 from consts import movies, headers
 
-days_to_check = 5
+days_to_check = 1
 
 
 def create_json():
@@ -22,7 +22,7 @@ def create_json():
     js = js[:-2]
     js += "]\n}"
 
-    with open("movies.json", "w", encoding='utf-8') as f:
+    with open("movies2.json", "w", encoding='utf-8') as f:
         f.write(json.dumps(json.loads(js), indent=2))
 
 

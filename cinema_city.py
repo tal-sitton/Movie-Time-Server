@@ -17,6 +17,7 @@ class Locations(Enum):
         "VenueTypeId": "1",
         "name": "גלילות",
         "dis": Districts.DAN,
+        "coords": (32.1464, 34.8040),
     }
     RISHON = {
         "code": "2",
@@ -24,6 +25,7 @@ class Locations(Enum):
         "VenueTypeId": "1",
         "name": "ראשון לציון",
         "dis": Districts.DAN,
+        "coords": (31.9833, 34.7711),
     }
     JERUSALEM = {
         "code": "3",
@@ -31,6 +33,7 @@ class Locations(Enum):
         "VenueTypeId": "1",
         "name": "ירושלים",
         "dis": Districts.JERUSALEM,
+        "coords": (31.7830, 35.2036),
     }
     KFAR_SABBA = {
         "code": "4",
@@ -38,6 +41,7 @@ class Locations(Enum):
         "VenueTypeId": "1",
         "name": "כפר סבא",
         "dis": Districts.SHARON,
+        "coords": (32.1728, 34.9297),
     }
     NATANIA = {
         "code": "5",
@@ -45,6 +49,7 @@ class Locations(Enum):
         "VenueTypeId": "1",
         "name": "נתניה",
         "dis": Districts.SHARON,
+        "coords": (32.2911, 34.8618),
     }
     BEER_SHEVA = {
         "code": "17",
@@ -52,6 +57,7 @@ class Locations(Enum):
         "VenueTypeId": "1",
         "name": "באר שבע",
         "dis": Districts.DAROM,
+        "coords": (31.2341, 34.7994),
     }
     HADERA = {
         "code": "13",
@@ -59,6 +65,7 @@ class Locations(Enum):
         "VenueTypeId": "1",
         "name": "חדרה",
         "dis": Districts.ZAFON,
+        "coords": (31.2341, 34.7994),
     }
     ASHDOD = {
         "code": "25",
@@ -66,6 +73,7 @@ class Locations(Enum):
         "VenueTypeId": "1",
         "name": "אשדוד",
         "dis": Districts.DAROM,
+        "coords": (31.7764, 34.6641),
     }
 
 
@@ -100,7 +108,7 @@ def get_by_location(location: Locations, date: str, s: requests.Session):
             link = f"https://tickets.cinema-city.co.il/order/{show.get('EventId')}"
             movies.append(
                 Screening(date, "סינמה סיטי", location.value["name"], location.value['dis'], movie_name,
-                          consts.MovieType.m_2D, time, link)
+                          consts.MovieType.m_2D, time, link, location.value['coords'])
             )
 
     print("DONE")

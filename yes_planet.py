@@ -14,31 +14,37 @@ class Locations(Enum):
         "code": "1072",
         "name": "ראשון לציון",
         "dis": Districts.DAN,
+        "coords": (31.9798, 34.7475),
     }
     AYALON = {
         "code": "1025",
         "name": "קניון אילון",
         "dis": Districts.DAN,
+        "coords": (32.0995, 34.8272),
     }
     ZICHRON = {
         "code": "1075",
         "name": "זכרון יעקב",
         "dis": Districts.ZAFON,
+        "coords": (32.5697, 34.9333),
     }
     HAIFA = {
         "code": "1070",
         "name": "חיפה",
         "dis": Districts.ZAFON,
+        "coords": (32.7937, 35.0383),
     }
     JERUSALEM = {
         "code": "1073",
         "name": "ירושלים",
         "dis": Districts.JERUSALEM,
+        "coords": (31.7624, 35.2257),
     }
     BEER_SHEVA = {
         "code": "1074",
         "name": "באר שבע",
         "dis": Districts.DAROM,
+        "coords": (31.2244, 34.8010),
     }
 
 
@@ -75,9 +81,8 @@ def get_by_location(location: Locations, date: str, format_date: str, s: request
         link = event.get("bookingLink")
         movies.append(
             Screening(format_date, "יס פלאנט", location.value['name'], location.value['dis'], movie_name,
-                      movie_type, m_time, link)
-        )
-    print("DONE")
+                      movie_type, m_time, link, location.value['coords']))
+        print("DONE")
 
 
 def get_movies(year: str, month: str, day: str, s: requests.Session):
