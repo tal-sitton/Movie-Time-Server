@@ -5,7 +5,7 @@ import consts
 
 class Screening:
     def __init__(self, m_date: str, m_cinema: str, m_location: str, m_district: consts.Districts, m_title: str,
-                 m_type: consts.MovieType, m_time: str, m_link: str, cords: tuple):
+                 m_type: consts.MovieType, m_time: str, m_link: str, coords: tuple):
         self.m_date = m_date
         self.m_cinema = m_cinema
         self.m_location = m_location
@@ -14,7 +14,7 @@ class Screening:
         self.m_type = m_type
         self.m_time = m_time
         self.m_link = m_link
-        self.m_cords = cords
+        self.m_coords = coords
 
     def json(self):
         return json.dumps(
@@ -27,11 +27,11 @@ class Screening:
                 "type": self.m_type.name.replace("m_", ""),
                 "time": self.m_time,
                 "link": self.m_link,
-                "cords": self.m_cords
+                "cords": self.m_coords
             }
         )
 
     def __str__(self):
         return f"{self.m_date} \n\t {self.m_cinema} \n\t\t {self.m_location} \n\t\t {self.m_district.value[0]}\n\t\t\t " \
                f"{self.m_title} \n\t\t\t\t {self.m_type.name.replace('m_', '')} \n\t\t\t\t {self.m_time} \n\t\t\t\t " \
-               f"{self.m_link} \n\t\t\t\t {self.m_cords} "
+               f"{self.m_link} \n\t\t\t\t {self.m_coords} "
