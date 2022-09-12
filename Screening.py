@@ -27,7 +27,7 @@ class Screening:
                 "type": self.m_type.name.replace("m_", ""),
                 "time": self.m_time,
                 "link": self.m_link,
-                "cords": self.m_coords
+                "coords": self.m_coords
             }
         )
 
