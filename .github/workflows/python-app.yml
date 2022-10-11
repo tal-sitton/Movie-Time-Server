@@ -11,7 +11,9 @@ on:
     branches: [ "master" ]
   pull_request:
     branches: [ "master" ]
-  
+  schedule:
+    - cron: "23 2 * * *" # 4:23am every day israel time (1:23 UTC time)
+
 permissions: write-all
 
 jobs:
