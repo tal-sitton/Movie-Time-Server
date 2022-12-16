@@ -6,6 +6,7 @@ headers = {
 
 
 class MovieType(Enum):
+    unknown = -1
     m_2D = 1
     m_3D = 2
     m_IMAX = 3

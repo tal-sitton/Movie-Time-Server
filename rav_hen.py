@@ -53,7 +53,7 @@ def get_by_location(location: Locations, date: str, format_date: str, s: request
         link = event.get("bookingLink")
         movies.append(
             Screening(format_date, "רב חן", location.value['name'], location.value['dis'], movie_name,
-                      MovieType.m_2D, m_time, link, location.value['coords'])
+                      MovieType.unknown, m_time, link, location.value['coords'])
         )
     print("DONE")
 
