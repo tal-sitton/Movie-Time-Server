@@ -78,7 +78,7 @@ def get_by_location(location: Locations, date: str, format_date: str, s: request
         time = movie['dateTime'].split(" ")[1]
         link = f"https://ticket.lev.co.il/order/{movie['id']}"
         movies.append(
-            Screening(format_date, "לב", location.value["name"], location.value['dis'], name, consts.MovieType.m_2D,
+            Screening(format_date, "לב", location.value["name"], location.value['dis'], name, consts.MovieType.unknown,
                       time, link, location.value['coords'])
         )
     print("DONE")

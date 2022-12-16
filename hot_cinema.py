@@ -84,7 +84,8 @@ def get_by_location(location: Locations, date: str, s: requests.Session):
             link = f"https://hotcinema.co.il/order?theaterId={location.value['code']}&eventId={m_id}&site=undefined"
             movies.append(
                 Screening(date, "הוט סינמה", location.value['name'], location.value['dis'], name,
-                          MovieType.m_3D if m_date['Is3D'] else MovieType.m_2D, m_time, link, location.value['coords'])
+                          MovieType.m_3D if m_date['Is3D'] else MovieType.unknown, m_time, link,
+                          location.value['coords'])
             )
     print("DONE")
 

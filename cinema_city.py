@@ -108,7 +108,7 @@ def get_by_location(location: Locations, date: str, s: requests.Session):
             link = f"https://tickets.cinema-city.co.il/order/{show.get('EventId')}"
             movies.append(
                 Screening(date, "סינמה סיטי", location.value["name"], location.value['dis'], movie_name,
-                          consts.MovieType.m_2D, time, link, location.value['coords'])
+                          consts.MovieType.unknown, time, link, location.value['coords'])
             )
 
     print("DONE")
