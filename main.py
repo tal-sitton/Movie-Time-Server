@@ -1,8 +1,7 @@
 import json
 import logging
-import os
 import pathlib
-from datetime import datetime as d, timedelta
+from datetime import datetime, timedelta
 
 import pytz
 import requests
@@ -10,6 +9,7 @@ import requests
 import cinema_city
 import hot_cinema
 import lev
+import movieland
 import rav_hen
 import yes_planet
 from consts import movies, headers
@@ -19,7 +19,7 @@ days_to_check = 5
 
 def create_json():
     movies.sort(key=lambda x: (x.m_district.value[1], x.m_location, x.m_cinema, x.m_date, x.m_time))
-    js = '{\n"time": "' + d.now().strftime("%d-%m-%Y") + '",\n"Screenings": ['
+    js = '{\n"time": "' + datetime.now().strftime("%d-%m-%Y") + '",\n"Screenings": ['
     for movie in movies:
         js += movie.json() + ",\n"
     js = js[:-2]
@@ -33,7 +33,7 @@ def get_all_movies():
     s = requests.session()
     s.headers.update(headers)
 
-    date = d.now(pytz.timezone('ASIA/TEL_AVIV'))
+    date = datetime.now(pytz.timezone('ASIA/TEL_AVIV'))
     for i in range(days_to_check):
         print("\n\n\nstarted checking for:", date.strftime("%d-%m-%Y"), "\n")
         year = str(date.year)
@@ -62,6 +62,12 @@ def get_all_movies():
             lev.get_movies(year, month, day, s)
         except Exception as e:
             logging.error('Lev crashed!', exc_info=e)
+
+        try:
+            movieland.get_movies(year, month, day, s)
+        except Exception as e:
+            logging.error('MovieLand crashed!', exc_info=e)
+
         date += timedelta(days=1)
 
     create_json()
