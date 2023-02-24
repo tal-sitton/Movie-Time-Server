@@ -95,7 +95,7 @@ def get_by_location(location: Locations, date: str, s: requests.Session):
     if not new_date:
         return
     for venue in VENUES:
-        url = f"https://www.cinema-city.co.il/tickets/Events?TheatreId={location.value['TheatreId']}&VenueTypeId={venue}&MovieId=0&Date={new_date}"
+        url = f"https://www.cinema-city.co.il/tickets/Events?TheatreId={location.value['TheatreId']}&VenueTypeId={venue}&Date={new_date}"
         res = s.get(url)
         if not res.ok:
             continue

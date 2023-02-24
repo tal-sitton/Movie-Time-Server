@@ -4,6 +4,7 @@ import consts
 
 THREE_D = ["3D", "תלת מימד", "תלת-מימד"]
 IMAX = "IMAX"
+VIP = "VIP"
 REDUNDANT_IN_TITLE = ["דו מימד", "דו-מימד"]
 
 
@@ -17,6 +18,9 @@ def type_from_title(title: str, movie_type: consts.MovieType):
     if IMAX in title:
         title = title.replace(IMAX, "")
         movie_type = consts.MovieType.m_IMAX
+    if VIP in title.upper():
+        title = title.replace(VIP, "")
+        movie_type = consts.MovieType.m_VIP
 
     title = title.strip().strip("-").strip()
     return clear_title(title), movie_type
