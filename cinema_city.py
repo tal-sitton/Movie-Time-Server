@@ -14,7 +14,6 @@ class Locations(Enum):
     GLILOT = {
         "code": "1",
         "TheatreId": "1170",
-        "VenueTypeId": "1",
         "name": "גלילות",
         "dis": Districts.DAN,
         "coords": (32.1464, 34.8040),
@@ -22,7 +21,6 @@ class Locations(Enum):
     RISHON = {
         "code": "2",
         "TheatreId": "1173",
-        "VenueTypeId": "1",
         "name": "ראשון לציון",
         "dis": Districts.DAN,
         "coords": (31.9833, 34.7711),
@@ -30,7 +28,6 @@ class Locations(Enum):
     JERUSALEM = {
         "code": "3",
         "TheatreId": "1174",
-        "VenueTypeId": "1",
         "name": "ירושלים",
         "dis": Districts.JERUSALEM,
         "coords": (31.7830, 35.2036),
@@ -38,7 +35,6 @@ class Locations(Enum):
     KFAR_SABBA = {
         "code": "4",
         "TheatreId": "1175",
-        "VenueTypeId": "1",
         "name": "כפר סבא",
         "dis": Districts.SHARON,
         "coords": (32.1728, 34.9297),
@@ -46,7 +42,6 @@ class Locations(Enum):
     NATANIA = {
         "code": "5",
         "TheatreId": "1176",
-        "VenueTypeId": "1",
         "name": "נתניה",
         "dis": Districts.SHARON,
         "coords": (32.2911, 34.8618),
@@ -54,7 +49,6 @@ class Locations(Enum):
     BEER_SHEVA = {
         "code": "17",
         "TheatreId": "1178",
-        "VenueTypeId": "1",
         "name": "באר שבע",
         "dis": Districts.DAROM,
         "coords": (31.2341, 34.7994),
@@ -62,7 +56,6 @@ class Locations(Enum):
     HADERA = {
         "code": "13",
         "TheatreId": "1350",
-        "VenueTypeId": "1",
         "name": "חדרה",
         "dis": Districts.ZAFON,
         "coords": (31.2341, 34.7994),
@@ -70,11 +63,13 @@ class Locations(Enum):
     ASHDOD = {
         "code": "25",
         "TheatreId": "1181",
-        "VenueTypeId": "1",
         "name": "אשדוד",
         "dis": Districts.DAROM,
         "coords": (31.7764, 34.6641),
     }
+
+
+VENUES = {"1": consts.MovieType.unknown, "3": consts.MovieType.m_VIP}
 
 
 def get_date(location: Locations, date: str, s: requests.Session):
@@ -99,17 +94,20 @@ def get_by_location(location: Locations, date: str, s: requests.Session):
     new_date = get_date(location, date, s)
     if not new_date:
         return
-    url = f"https://www.cinema-city.co.il/tickets/Events?TheatreId={location.value['TheatreId']}&VenueTypeId={location.value['VenueTypeId']}&MovieId=0&Date={new_date}"
-    res = s.get(url)
-    for movie in res.json():
-        movie_name = remove_redundant_from_name(movie.get("Name"))
-        for show in movie.get("Dates"):
-            time = show.get("Hour")
-            link = f"https://tickets.cinema-city.co.il/order/{show.get('EventId')}"
-            movies.append(
-                Screening(date, "סינמה סיטי", location.value["name"], location.value['dis'], movie_name,
-                          consts.MovieType.unknown, time, link, location.value['coords'])
-            )
+    for venue in VENUES:
+        url = f"https://www.cinema-city.co.il/tickets/Events?TheatreId={location.value['TheatreId']}&VenueTypeId={venue}&MovieId=0&Date={new_date}"
+        res = s.get(url)
+        if not res.ok:
+            continue
+        for movie in res.json():
+            movie_name = remove_redundant_from_name(movie.get("Name"))
+            for show in movie.get("Dates"):
+                time = show.get("Hour")
+                link = f"https://tickets.cinema-city.co.il/order/{show.get('EventId')}"
+                movies.append(
+                    Screening(date, "סינמה סיטי", location.value["name"], location.value['dis'], movie_name,
+                              VENUES[venue], time, link, location.value['coords'])
+                )
 
     print("DONE")
 
