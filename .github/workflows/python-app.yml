@@ -5,7 +5,7 @@ name: run program
 
 on:
   repository_dispatch:
-    types: [test]
+    types: [ test ]
   
   push:
     branches: [ "master" ]
@@ -51,5 +51,7 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
           
-          git commit -m "Update movies.json" movies.json
+          git add logs.txt
+          git add movies.json
+          git commit -m "Update movies.json"
           git push

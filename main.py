@@ -63,7 +63,6 @@ def get_all_movies():
         except Exception as e:
             logging.error('Lev crashed!', exc_info=e)
         date += timedelta(days=1)
-        break
 
     create_json()
     print(len(movies))
