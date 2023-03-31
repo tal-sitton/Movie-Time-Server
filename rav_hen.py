@@ -1,4 +1,5 @@
 from enum import Enum
+from typing import List
 
 import requests
 
@@ -44,7 +45,7 @@ def prepare(location: Locations, date: str, s: requests.Session) -> tuple:
     return movies_ids, data.get("events")
 
 
-def get_type(attributes) -> MovieType:
+def get_type(attributes: List[str]) -> MovieType:
     if "2d" in attributes:
         return MovieType.m_2D
     elif "3d" in attributes:
