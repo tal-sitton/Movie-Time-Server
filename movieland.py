@@ -1,6 +1,7 @@
 import json
 from datetime import datetime
 from enum import Enum
+from typing import Dict
 
 import pytz
 import requests
@@ -37,8 +38,16 @@ class Locations(Enum):
 cache = {}
 
 
+def get_type(info: Dict[str, str | bool]) -> consts.MovieType:
+    if info.get("IsVip"):
+        return consts.MovieType.m_VIP
+    if info.get("ThreeD"):
+        return consts.MovieType.m_3D
+    return consts.MovieType.unknown
+
+
 def get_by_location(location: Locations, date: str, format_date: str, s: requests.Session):
-    print("STARTED MovieLand ", location.name)
+    print("STARTED Movie Land ", location.name)
     if location.name not in cache:
         url = f"https://www.movieland-cinema.co.il/api/Events?&TheatreId={location.value['TheatreId']}" \
               f"&isForSelectedTheaterOnly=true&isHideVODRent=true"
@@ -58,10 +67,12 @@ def get_by_location(location: Locations, date: str, format_date: str, s: request
             filtered_movies[movie.get("Name")] = shows
 
     for movie_name, shows in filtered_movies.items():
+        print(json.dumps(shows, indent=4))
+        exit()
         for show in shows:
             time = show.get("Hour")
             link = show.get("BookingNativeUrl")
-            movie_type = consts.MovieType.m_VIP if show.get("IsVip") else consts.MovieType.unknown
+            movie_type = get_type(show)
             movies.append(
                 Screening(format_date, "מובילנד", location.value["name"], location.value['dis'], movie_name,
                           movie_type, time, link, location.value['coords'])
@@ -76,4 +87,4 @@ def get_movies(year: str, month: str, day: str, s: requests.Session):
     format_date = "{}-{}-{}".format(day.zfill(2), month.zfill(2), year)
     for location in Locations:
         get_by_location(location, date, format_date, s)
-    print("DONE CINEMA CITY")
+    print("DONE Movie Land")
