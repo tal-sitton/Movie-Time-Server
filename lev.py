@@ -1,10 +1,11 @@
+import json
 from enum import Enum
 
 import requests
 
 import consts
 from Screening import Screening
-from consts import movies, Districts
+from consts import movies, Districts, MovieType
 
 
 class Locations(Enum):
@@ -67,6 +68,14 @@ class Locations(Enum):
     }
 
 
+def get_type(attribute: str) -> MovieType | None:
+    if "3D" in attribute:
+        return consts.MovieType.m_3D
+    if "EVENT" in attribute:
+        return None
+    return consts.MovieType.unknown
+
+
 def get_by_location(location: Locations, date: str, format_date: str, s: requests.Session):
     print("STARTED LEV ", location.name)
     url = f"https://ticket.lev.co.il/api/presentations?locationId={location.value['code']}&includeSynopsis=0"
@@ -77,8 +86,11 @@ def get_by_location(location: Locations, date: str, format_date: str, s: request
         name = movie['featureName'].replace(" מדובב", "").replace(" אנגלית", "").strip()
         time = movie['dateTime'].split(" ")[1]
         link = f"https://ticket.lev.co.il/order/{movie['id']}"
+        movie_type = get_type(movie['featureAttributeName'])
+        if movie_type is None:
+            continue
         movies.append(
-            Screening(format_date, "לב", location.value["name"], location.value['dis'], name, consts.MovieType.unknown,
+            Screening(format_date, "לב", location.value["name"], location.value['dis'], name, movie_type,
                       time, link, location.value['coords'])
         )
     print("DONE")

@@ -1,4 +1,5 @@
 from enum import Enum
+from typing import List
 
 import requests
 
@@ -44,6 +45,23 @@ def prepare(location: Locations, date: str, s: requests.Session) -> tuple:
     return movies_ids, data.get("events")
 
 
+def get_type(attributes: List[str]) -> MovieType:
+    if "2d" in attributes:
+        return MovieType.m_2D
+    elif "3d" in attributes:
+        return MovieType.m_3D
+    elif "4dx" in attributes:
+        return MovieType.m_4DX
+    elif "imax" in attributes:
+        return MovieType.m_IMAX
+    elif "vip" in attributes:
+        return MovieType.m_VIP
+    elif "screenx" in attributes:
+        return MovieType.m_SCREENX
+    else:
+        return MovieType.unknown
+
+
 def get_by_location(location: Locations, date: str, format_date: str, s: requests.Session):
     print("STARTED RAV HEN ", location.name)
     movies_ids, events = prepare(location, date, s)
@@ -51,9 +69,10 @@ def get_by_location(location: Locations, date: str, format_date: str, s: request
         movie_name = movies_ids.get(event.get("filmId"))
         m_time = ":".join(event.get("eventDateTime").split("T")[1].split(":")[:2])
         link = event.get("bookingLink")
+        move_type = get_type(event['attributeIds'])
         movies.append(
             Screening(format_date, "רב חן", location.value['name'], location.value['dis'], movie_name,
-                      MovieType.unknown, m_time, link, location.value['coords'])
+                      move_type, m_time, link, location.value['coords'])
         )
     print("DONE")
 
