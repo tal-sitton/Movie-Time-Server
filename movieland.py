@@ -1,9 +1,6 @@
-import json
-from datetime import datetime
 from enum import Enum
 from typing import Dict
 
-import pytz
 import requests
 
 import consts
@@ -67,8 +64,6 @@ def get_by_location(location: Locations, date: str, format_date: str, s: request
             filtered_movies[movie.get("Name")] = shows
 
     for movie_name, shows in filtered_movies.items():
-        print(json.dumps(shows, indent=4))
-        exit()
         for show in shows:
             time = show.get("Hour")
             link = show.get("BookingNativeUrl")
