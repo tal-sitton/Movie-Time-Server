@@ -74,7 +74,7 @@ def find_type(attribute: str) -> MovieType | None:
     return MovieType.unknown
 
 
-def find_dubbed(movie_info: dict):
+def find_dubbed(movie_info: dict) -> LanguageType:
     if movie_info['dubbedLanguage'] == 2:
         return LanguageType.DUBBED
     elif movie_info['subbedLanguage'] == 2:

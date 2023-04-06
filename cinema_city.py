@@ -2,9 +2,8 @@ from enum import Enum
 
 import requests
 
-import consts
 from Screening import Screening
-from consts import movies, Districts
+from consts import movies, Districts, LanguageType, MovieType
 
 
 class Locations(Enum):
@@ -69,7 +68,7 @@ class Locations(Enum):
     }
 
 
-VENUES = {"1": consts.MovieType.unknown, "3": consts.MovieType.m_VIP}
+VENUES = {"1": MovieType.unknown, "3": MovieType.m_VIP}
 
 
 def get_date(location: Locations, date: str, s: requests.Session):
@@ -101,7 +100,7 @@ def get_by_location(location: Locations, date: str, s: requests.Session):
                 link = f"https://tickets.cinema-city.co.il/order/{show.get('EventId')}"
                 movies.append(
                     Screening(date, "סינמה סיטי", location.value["name"], location.value['dis'], movie_name,
-                              VENUES[venue], time, link, location.value['coords'])
+                              VENUES[venue], time, link, location.value['coords'], LanguageType.UNKNOWN)
                 )
 
     print("DONE")

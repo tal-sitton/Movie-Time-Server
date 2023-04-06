@@ -63,7 +63,7 @@ def find_type(movie_type: list):
         return MovieType.m_2D
 
 
-def find_dubbed(movie_type: list):
+def find_dubbed(movie_type: list) -> LanguageType:
     if "dubbed" in movie_type:
         return LanguageType.DUBBED
     elif "subbed" in movie_type:

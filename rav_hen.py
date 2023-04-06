@@ -62,7 +62,7 @@ def find_type(attributes: List[str]) -> MovieType:
         return MovieType.unknown
 
 
-def find_dubbed(movie_type: list):
+def find_dubbed(movie_type: list) -> LanguageType:
     if "dubbed" in movie_type:
         return LanguageType.DUBBED
     elif "subbed" in movie_type:

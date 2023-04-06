@@ -72,7 +72,7 @@ class Locations(Enum):
     }
 
 
-def find_dubbed(info: dict):
+def find_dubbed(info: dict) -> LanguageType:
     if info["DubbedLanguage"] == "עברית":
         return LanguageType.DUBBED
     elif info["SubtitledLanguage"] == "עברית":
