@@ -1,9 +1,10 @@
+import json
 from enum import Enum
 
 import requests
 
 from Screening import Screening
-from consts import MovieType, movies, Districts
+from consts import MovieType, movies, Districts, LanguageType
 
 
 class Locations(Enum):
@@ -63,6 +64,14 @@ def find_type(movie_type: list):
         return MovieType.m_2D
 
 
+def find_dubbed(movie_type: list):
+    if "dubbed" in movie_type:
+        return LanguageType.DUBBED
+    elif "subbed" in movie_type:
+        return LanguageType.SUBBED
+    return LanguageType.UNKNOWN
+
+
 def prepare(location: Locations, date: str, s: requests.Session) -> tuple:
     url = f"https://www.yesplanet.co.il/il/data-api-service/v1/quickbook/10100/film-events/in-cinema/{location.value['code']}/at-date/{date}"
     res = s.get(url)
@@ -75,13 +84,14 @@ def get_by_location(location: Locations, date: str, format_date: str, s: request
     print("STARTED YES PLANET ", location.name)
     movies_ids, events = prepare(location, date, s)
     for event in events:
-        movie_name = movies_ids.get(event.get("filmId")).replace("עברית עם כתוביות ", "").strip()
+        movie_name = movies_ids.get(event.get("filmId"))
         m_time = ":".join(event.get("eventDateTime").split("T")[1].split(":")[:2])
         movie_type = find_type(event.get("attributeIds"))
         link = event.get("bookingLink")
+        dubbed = find_dubbed(event.get("attributeIds"))
         movies.append(
             Screening(format_date, "יס פלאנט", location.value['name'], location.value['dis'], movie_name,
-                      movie_type, m_time, link, location.value['coords']))
+                      movie_type, m_time, link, location.value['coords'], dubbed))
         print("DONE")
 
 
