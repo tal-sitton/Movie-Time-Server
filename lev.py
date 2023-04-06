@@ -3,9 +3,8 @@ from enum import Enum
 
 import requests
 
-import consts
 from Screening import Screening
-from consts import movies, Districts, MovieType
+from consts import movies, Districts, MovieType, LanguageType
 
 
 class Locations(Enum):
@@ -68,12 +67,20 @@ class Locations(Enum):
     }
 
 
-def get_type(attribute: str) -> MovieType | None:
+def find_type(attribute: str) -> MovieType | None:
     if "3D" in attribute:
-        return consts.MovieType.m_3D
+        return MovieType.m_3D
     if "EVENT" in attribute:
         return None
-    return consts.MovieType.unknown
+    return MovieType.unknown
+
+
+def find_dubbed(movie_info: dict):
+    if movie_info['dubbedLanguage'] == 2:
+        return LanguageType.DUBBED
+    elif movie_info['subbedLanguage'] == 2:
+        return LanguageType.SUBBED
+    return LanguageType.UNKNOWN
 
 
 def get_by_location(location: Locations, date: str, format_date: str, s: requests.Session):
@@ -83,15 +90,16 @@ def get_by_location(location: Locations, date: str, format_date: str, s: request
     for movie in res.json()['presentations']:
         if date not in movie['dateTime']:
             continue
-        name = movie['featureName'].replace(" מדובב", "").replace(" אנגלית", "").strip()
+        name = movie['featureName']
         time = movie['dateTime'].split(" ")[1]
         link = f"https://ticket.lev.co.il/order/{movie['id']}"
-        movie_type = get_type(movie['featureAttributeName'])
+        movie_type = find_type(movie['featureAttributeName'])
+        dubbed = find_dubbed(movie)
         if movie_type is None:
             continue
         movies.append(
             Screening(format_date, "לב", location.value["name"], location.value['dis'], name, movie_type,
-                      time, link, location.value['coords'])
+                      time, link, location.value['coords'], dubbed)
         )
     print("DONE")
 
