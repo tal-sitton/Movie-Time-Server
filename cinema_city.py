@@ -2,9 +2,8 @@ from enum import Enum
 
 import requests
 
-import consts
 from Screening import Screening
-from consts import movies, Districts
+from consts import movies, Districts, LanguageType, MovieType
 
 
 class Locations(Enum):
@@ -69,7 +68,7 @@ class Locations(Enum):
     }
 
 
-VENUES = {"1": consts.MovieType.unknown, "3": consts.MovieType.m_VIP}
+VENUES = {"1": MovieType.unknown, "3": MovieType.m_VIP}
 
 
 def get_date(location: Locations, date: str, s: requests.Session):
@@ -84,11 +83,6 @@ def get_date(location: Locations, date: str, s: requests.Session):
     return new_date[0]
 
 
-def remove_redundant_from_name(name: str):
-    return name.replace("-מדובב", "").replace("-אנגלית", "").replace("-עברית", "").replace("מדובב לעברית", "").replace(
-        "אנגלית", "").strip()
-
-
 def get_by_location(location: Locations, date: str, s: requests.Session):
     print("STARTED CINEMA CITY ", location.name)
     new_date = get_date(location, date, s)
@@ -100,13 +94,13 @@ def get_by_location(location: Locations, date: str, s: requests.Session):
         if not res.ok:
             continue
         for movie in res.json():
-            movie_name = remove_redundant_from_name(movie.get("Name"))
+            movie_name = movie.get("Name")
             for show in movie.get("Dates"):
                 time = show.get("Hour")
                 link = f"https://tickets.cinema-city.co.il/order/{show.get('EventId')}"
                 movies.append(
                     Screening(date, "סינמה סיטי", location.value["name"], location.value['dis'], movie_name,
-                              VENUES[venue], time, link, location.value['coords'])
+                              VENUES[venue], time, link, location.value['coords'], LanguageType.UNKNOWN)
                 )
 
     print("DONE")
