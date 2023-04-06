@@ -1,10 +1,11 @@
+import json
 from enum import Enum
 from typing import List
 
 import requests
 
 from Screening import Screening
-from consts import movies, MovieType, Districts
+from consts import movies, MovieType, Districts, LanguageType
 
 
 class Locations(Enum):
@@ -45,7 +46,7 @@ def prepare(location: Locations, date: str, s: requests.Session) -> tuple:
     return movies_ids, data.get("events")
 
 
-def get_type(attributes: List[str]) -> MovieType:
+def find_type(attributes: List[str]) -> MovieType:
     if "2d" in attributes:
         return MovieType.m_2D
     elif "3d" in attributes:
@@ -62,6 +63,14 @@ def get_type(attributes: List[str]) -> MovieType:
         return MovieType.unknown
 
 
+def find_dubbed(movie_type: list):
+    if "dubbed" in movie_type:
+        return LanguageType.DUBBED
+    elif "subbed" in movie_type:
+        return LanguageType.SUBBED
+    return LanguageType.UNKNOWN
+
+
 def get_by_location(location: Locations, date: str, format_date: str, s: requests.Session):
     print("STARTED RAV HEN ", location.name)
     movies_ids, events = prepare(location, date, s)
@@ -69,10 +78,11 @@ def get_by_location(location: Locations, date: str, format_date: str, s: request
         movie_name = movies_ids.get(event.get("filmId"))
         m_time = ":".join(event.get("eventDateTime").split("T")[1].split(":")[:2])
         link = event.get("bookingLink")
-        move_type = get_type(event['attributeIds'])
+        move_type = find_type(event['attributeIds'])
+        dubbed = find_dubbed(event.get("attributeIds"))
         movies.append(
             Screening(format_date, "רב חן", location.value['name'], location.value['dis'], movie_name,
-                      move_type, m_time, link, location.value['coords'])
+                      move_type, m_time, link, location.value['coords'], dubbed)
         )
     print("DONE")
 
