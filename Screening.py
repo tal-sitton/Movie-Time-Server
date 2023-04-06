@@ -7,7 +7,7 @@ THREE_D = ["3D", "תלת מימד", "תלת-מימד"]
 DUBBED_TITLE = ["מדובב", "עברית"]
 IMAX = "IMAX"
 VIP = "VIP"
-REDUNDANT_IN_TITLE = ["דו מימד", "דו-מימד", IMAX, VIP, *THREE_D, *DUBBED_TITLE]
+REDUNDANT_IN_TITLE = ["דו מימד", "דו-מימד", IMAX, VIP, *THREE_D, *DUBBED_TITLE, "אנגלית"]
 
 
 def type_from_title(title: str, movie_type: MovieType):
