@@ -15,6 +15,12 @@ class MovieType(Enum):
     m_4DX = 6
 
 
+class LanguageType(Enum):
+    UNKNOWN = -1
+    DUBBED = 1
+    SUBBED = 2
+
+
 class Districts(Enum):
     DAN = ("גוש דן", 0)
     SHARON = ("השרון", 1)
