@@ -3,9 +3,8 @@ from typing import Dict
 
 import requests
 
-import consts
 from Screening import Screening
-from consts import movies, Districts
+from consts import movies, Districts, MovieType, LanguageType
 
 
 class Locations(Enum):
@@ -35,12 +34,18 @@ class Locations(Enum):
 cache = {}
 
 
-def get_type(info: Dict[str, str | bool]) -> consts.MovieType:
+def find_type(info: Dict[str, str | bool]) -> MovieType:
     if info.get("IsVip"):
-        return consts.MovieType.m_VIP
+        return MovieType.m_VIP
     if info.get("ThreeD"):
-        return consts.MovieType.m_3D
-    return consts.MovieType.unknown
+        return MovieType.m_3D
+    return MovieType.unknown
+
+
+def find_dubbed(info: Dict[str, str | bool]) -> LanguageType:
+    if info.get("Dubbed"):
+        return LanguageType.DUBBED
+    return LanguageType.UNKNOWN
 
 
 def get_by_location(location: Locations, date: str, format_date: str, s: requests.Session):
@@ -67,10 +72,11 @@ def get_by_location(location: Locations, date: str, format_date: str, s: request
         for show in shows:
             time = show.get("Hour")
             link = show.get("BookingNativeUrl")
-            movie_type = get_type(show)
+            movie_type = find_type(show)
+            dubbed = find_dubbed(show)
             movies.append(
                 Screening(format_date, "מובילנד", location.value["name"], location.value['dis'], movie_name,
-                          movie_type, time, link, location.value['coords'])
+                          movie_type, time, link, location.value['coords'], dubbed)
             )
 
     print("DONE")
