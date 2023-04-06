@@ -66,7 +66,7 @@ class Screening:
                 "time": self.m_time,
                 "link": self.m_link,
                 "coords": self.m_coords,
-                "dubbed": self.m_dubbed.name,
+                "dubbed": self.m_dubbed == LanguageType.DUBBED,
             }
             , ensure_ascii=False)
 
