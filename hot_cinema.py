@@ -1,9 +1,10 @@
+import json
 from enum import Enum
 
 import requests
 
 from Screening import Screening
-from consts import movies, MovieType, Districts
+from consts import movies, MovieType, Districts, LanguageType
 
 
 class Locations(Enum):
@@ -72,6 +73,14 @@ class Locations(Enum):
     }
 
 
+def find_dubbed(info: dict):
+    if info["DubbedLanguage"] == "עברית":
+        return LanguageType.DUBBED
+    elif info["SubtitledLanguage"] == "עברית":
+        return LanguageType.SUBBED
+    return LanguageType.UNKNOWN
+
+
 def get_by_location(location: Locations, date: str, s: requests.Session):
     print("STARTED HOT CINEMA ", location.name)
     url = f"https://hotcinema.co.il/tickets/TheaterEvents?date={date.replace('-', '%2F')}&theatreid={location.value['code']}"
@@ -82,10 +91,11 @@ def get_by_location(location: Locations, date: str, s: requests.Session):
             m_time = m_date["Hour"]
             m_id = m_date["EventId"]
             link = f"https://hotcinema.co.il/order?theaterId={location.value['code']}&eventId={m_id}&site=undefined"
+            dubbed = find_dubbed(m_date)
             movies.append(
                 Screening(date, "הוט סינמה", location.value['name'], location.value['dis'], name,
                           MovieType.m_3D if m_date['Is3D'] else MovieType.unknown, m_time, link,
-                          location.value['coords'])
+                          location.value['coords'], dubbed)
             )
     print("DONE")
 
