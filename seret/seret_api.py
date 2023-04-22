@@ -88,8 +88,6 @@ def _get_seret_url(session: requests.Session, movie_name: str) -> str:
     except requests.exceptions.ChunkedEncodingError:
         return None
 
-    with open(f"htmls/search {movie_name}.html", "wb") as f:
-        f.write(res.text.encode("utf-8"))
     bs = BeautifulSoup(res.text, "html.parser")
     urls = bs.find_all("a", {"href": re.compile(".*https://www.seret.co.il/movies/s_movies.asp.*")})
     return _choose_seret_url(urls, movie_name)
