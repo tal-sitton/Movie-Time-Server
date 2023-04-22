@@ -9,8 +9,6 @@ from bs4 import BeautifulSoup, Tag
 
 from seret.imdb_api import get_imdb_rating
 
-user_agents: List[str] = []
-
 last_search_request = 0
 
 SEARCH_RETRIES = 5
@@ -82,7 +80,8 @@ def _get_seret_url(session: requests.Session, movie_name: str) -> str:
         time.sleep(1 - (time.time() - last_search_request))
 
     search = f"https://www.bing.com/search?q={movie_name} site:www.seret.co.il"
-    session.headers["User-Agent"] = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+    session.headers[
+        "User-Agent"] = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
     last_search_request = time.time()
     try:
         res = session.get(search)
@@ -127,17 +126,11 @@ def _is_canonical_version(bs: BeautifulSoup, original_url: str):
 
 
 def get_info(session: requests.Session, movie_name: str, retries=0) -> Movie:
-    global user_agents
-    if not user_agents:
-        with open(r"user-agents.txt", "r") as f:
-            user_agents = f.read().splitlines()
-
     if not is_acceptable_language(movie_name):
         return Movie(movie_name, DEFAULT_DESCRIPTION, None, "")
     url = _get_seret_url(session, movie_name)
 
     if not url:
-        print(session.headers['User-Agent'])
         if retries > SEARCH_RETRIES:
             return Movie(movie_name, DEFAULT_DESCRIPTION, None, "")
         print(f"Trying again {movie_name} - {retries}/{SEARCH_RETRIES}")
