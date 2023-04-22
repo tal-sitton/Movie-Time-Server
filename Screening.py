@@ -54,21 +54,22 @@ class Screening:
         self.m_link = link
         self.m_coords = coords
 
+    def to_dict(self):
+        return {
+            "date": self.m_date,
+            "cinema": self.m_cinema,
+            "location": self.m_location,
+            "district": self.m_district.value[0],
+            "title": self.m_title,
+            "type": self.m_type.name.replace("m_", ""),
+            "time": self.m_time,
+            "link": self.m_link,
+            "coords": self.m_coords,
+            "dubbed": self.m_dubbed == LanguageType.DUBBED,
+        }
+
     def json(self):
-        return json.dumps(
-            {
-                "date": self.m_date,
-                "cinema": self.m_cinema,
-                "location": self.m_location,
-                "district": self.m_district.value[0],
-                "title": self.m_title,
-                "type": self.m_type.name.replace("m_", ""),
-                "time": self.m_time,
-                "link": self.m_link,
-                "coords": self.m_coords,
-                "dubbed": self.m_dubbed == LanguageType.DUBBED,
-            }
-            , ensure_ascii=False)
+        return json.dumps(self.to_dict(), ensure_ascii=False)
 
     def __str__(self):
         return f"{self.m_date} \n\t {self.m_cinema} \n\t\t {self.m_location} \n\t\t {self.m_district.value[0]}\n\t\t\t " \
