@@ -61,11 +61,15 @@ def get_imdb_rating(session: requests.Session, movie: str, year: int) -> float |
     :param id: imdb id of the title
     :return: rating given by the API
     """
-    id = get_title_id(session, movie, year)
-    if not id:
+    try:
+        id = get_title_id(session, movie, year)
+        if not id:
+            return None
+        info = get_title_info(session, id)
+        return info["aggregateRating"]['ratingValue']
+    except Exception as e:
+        print(e)
         return None
-    info = get_title_info(session, id)
-    return info["aggregateRating"]['ratingValue']
 
 
 if __name__ == '__main__':
