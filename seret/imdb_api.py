@@ -70,10 +70,3 @@ def get_imdb_rating(session: requests.Session, movie: str, year: int) -> float |
     except Exception as e:
         print(e)
         return None
-
-
-if __name__ == '__main__':
-    s = requests.Session()
-    s.headers.update({"User-Agent": "Mozilla/5.0 (Windows NT)"})
-    reting = get_imdb_rating(s, "mario", 2023)
-    print(reting)

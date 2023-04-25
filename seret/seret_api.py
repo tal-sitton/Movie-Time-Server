@@ -151,8 +151,3 @@ def get_info(session: requests.Session, movie_name: str, retries=0) -> Movie:
     image_url = _get_image_url(bs)
     rating = _get_rating(session, english, _get_year(bs))
     return Movie(hebrew, description, rating, image_url)
-
-
-if __name__ == '__main__':
-    s = requests.Session()
-    print(get_info(s, "הכול בכל מקום בבת אחת"))
