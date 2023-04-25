@@ -27,12 +27,12 @@ def create_json():
         "Screenings": [screening.to_dict() for screening in screenings]
     })
 
-    with open("movies.json", "w", encoding='utf-8') as f:
-        f.write(json.dumps(json.loads(js), indent=2))
+    # with open("movies.json", "w", encoding='utf-8') as f:
+    #     f.write(json.dumps(json.loads(js), indent=2))
 
     # USE FOR DEBUGGING
-    # with open("movies.json", "wb") as f:
-    #     f.write(json.dumps(json.loads(js), indent=2, ensure_ascii=False).encode("utf-8"))
+    with open("movies.json", "wb") as f:
+        f.write(json.dumps(json.loads(js), indent=2, ensure_ascii=False).encode("utf-8"))
 
 
 def get_all_screenings():

@@ -7,6 +7,7 @@ from bs4 import BeautifulSoup
 IMDB_API_DATA = "d"
 IMDB_API_TITLE = "l"
 IMDB_API_YEAR = "y"
+IMDB_API_TYPE = "qid"
 
 
 def get_title_id(session: requests.Session, name: str, year: int) -> str | None:
@@ -23,7 +24,8 @@ def get_title_id(session: requests.Session, name: str, year: int) -> str | None:
     results = response.json()[IMDB_API_DATA]
     movies = []
     for result in results:
-        if result.get(IMDB_API_YEAR) and abs(result[IMDB_API_YEAR] - year) < 2:
+        if result.get(IMDB_API_YEAR) and abs(result[IMDB_API_YEAR] - year) < 2 and result.get(IMDB_API_TYPE) and \
+                result[IMDB_API_TYPE] == "movie":
             movies.append(result)
 
     movies.sort(
