@@ -3,7 +3,7 @@ from enum import Enum
 import requests
 
 from Screening import Screening
-from consts import movies, Districts, MovieType, LanguageType
+from consts import screenings, Districts, MovieType, LanguageType
 
 
 class Locations(Enum):
@@ -96,14 +96,14 @@ def get_by_location(location: Locations, date: str, format_date: str, s: request
         dubbed = find_dubbed(movie)
         if movie_type is None:
             continue
-        movies.append(
+        screenings.append(
             Screening(format_date, "לב", location.value["name"], location.value['dis'], name, movie_type,
                       time, link, location.value['coords'], dubbed)
         )
     print("DONE")
 
 
-def get_movies(year: str, month: str, day: str, s: requests.Session):
+def get_screenings(year: str, month: str, day: str, s: requests.Session):
     print("STARTED LEV")
     date = "{}-{}-{}".format(year, month.zfill(2), day.zfill(2))
     format_date = "{}-{}-{}".format(day.zfill(2), month.zfill(2), year)

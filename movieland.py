@@ -4,7 +4,7 @@ from typing import Dict
 import requests
 
 from Screening import Screening
-from consts import movies, Districts, MovieType, LanguageType
+from consts import screenings, Districts, MovieType, LanguageType
 
 
 class Locations(Enum):
@@ -74,7 +74,7 @@ def get_by_location(location: Locations, date: str, format_date: str, s: request
             link = show.get("BookingNativeUrl")
             movie_type = find_type(show)
             dubbed = find_dubbed(show)
-            movies.append(
+            screenings.append(
                 Screening(format_date, "מובילנד", location.value["name"], location.value['dis'], movie_name,
                           movie_type, time, link, location.value['coords'], dubbed)
             )
@@ -82,7 +82,7 @@ def get_by_location(location: Locations, date: str, format_date: str, s: request
     print("DONE")
 
 
-def get_movies(year: str, month: str, day: str, s: requests.Session):
+def get_screenings(year: str, month: str, day: str, s: requests.Session):
     print("STARTED Movie Land")
     date = "{}.{}".format(day.zfill(2), month.zfill(2))
     format_date = "{}-{}-{}".format(day.zfill(2), month.zfill(2), year)

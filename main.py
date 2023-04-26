@@ -7,33 +7,31 @@ import pytz
 import requests
 
 import cinema_city
+import consts
 import hot_cinema
 import lev
 import movieland
 import rav_hen
 import yes_planet
-from consts import movies, headers
+from consts import screenings, headers
+from seret.seret_movie_info import get_movies_info
 
 days_to_check = 5
 
 
 def create_json():
-    movies.sort(key=lambda x: (x.m_district.value[1], x.m_location, x.m_cinema, x.m_date, x.m_time))
-    js = '{\n"time": "' + datetime.now().strftime("%d-%m-%Y") + '",\n"Screenings": ['
-    for movie in movies:
-        js += movie.json() + ",\n"
-    js = js[:-2]
-    js += "]\n}"
+    screenings.sort(key=lambda x: (x.m_district.value[1], x.m_location, x.m_cinema, x.m_date, x.m_time))
+    js = json.dumps({
+        "time": datetime.now().strftime("%d-%m-%Y"),
+        "Movies": [movie.to_dict() for movie in consts.movies],
+        "Screenings": [screening.to_dict() for screening in screenings]
+    })
 
-    with open("movies.json", "w", encoding='utf-8') as f:
-        f.write(json.dumps(json.loads(js), indent=2))
-
-    # USE FOR DEBUGGING
-    # with open("movies.json", "wb") as f:
-    #     f.write(json.dumps(json.loads(js), indent=2, ensure_ascii=False).encode("utf-8"))
+    with open("movies.json", "wb") as f:
+        f.write(json.dumps(json.loads(js), indent=2, ensure_ascii=False).encode("utf-8"))
 
 
-def get_all_movies():
+def get_all_screenings():
     s = requests.session()
     s.headers.update(headers)
 
@@ -45,37 +43,38 @@ def get_all_movies():
         day = str(date.day).zfill(2)
 
         try:
-            yes_planet.get_movies(year, month, day, s)
+            yes_planet.get_screenings(year, month, day, s)
         except Exception as e:
             logging.error('Yes Planet crashed!', exc_info=e)
         try:
-            rav_hen.get_movies(year, month, day, s)
+            rav_hen.get_screenings(year, month, day, s)
         except Exception as e:
             logging.error('Rav Hen crashed!', exc_info=e)
         try:
-            hot_cinema.get_movies(year, month, day, s)
+            hot_cinema.get_screenings(year, month, day, s)
         except Exception as e:
             logging.error('Hot Cinema crashed!', exc_info=e)
 
         try:
-            cinema_city.get_movies(year, month, day, s)
+            cinema_city.get_screenings(year, month, day, s)
         except Exception as e:
             logging.error('Cinema city crashed!', exc_info=e)
 
         try:
-            lev.get_movies(year, month, day, s)
+            lev.get_screenings(year, month, day, s)
         except Exception as e:
             logging.error('Lev crashed!', exc_info=e)
 
         try:
-            movieland.get_movies(year, month, day, s)
+            movieland.get_screenings(year, month, day, s)
         except Exception as e:
             logging.error('MovieLand crashed!', exc_info=e)
 
         date += timedelta(days=1)
 
+    consts.movies = get_movies_info(s, screenings)
     create_json()
-    print(len(movies))
+    print(len(screenings))
 
 
 def prepare_logs(logs_path):
@@ -90,7 +89,7 @@ def prepare_logs(logs_path):
 def main():
     logs_path = pathlib.Path('logs.txt')
     prepare_logs(logs_path)
-    get_all_movies()
+    get_all_screenings()
 
 
 if __name__ == '__main__':

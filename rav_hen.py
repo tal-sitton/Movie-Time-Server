@@ -4,7 +4,7 @@ from typing import List
 import requests
 
 from Screening import Screening
-from consts import movies, MovieType, Districts, LanguageType
+from consts import screenings, MovieType, Districts, LanguageType
 
 
 class Locations(Enum):
@@ -79,14 +79,14 @@ def get_by_location(location: Locations, date: str, format_date: str, s: request
         link = event.get("bookingLink")
         move_type = find_type(event['attributeIds'])
         dubbed = find_dubbed(event.get("attributeIds"))
-        movies.append(
+        screenings.append(
             Screening(format_date, "רב חן", location.value['name'], location.value['dis'], movie_name,
                       move_type, m_time, link, location.value['coords'], dubbed)
         )
     print("DONE")
 
 
-def get_movies(year: str, month: str, day: str, s: requests.Session):
+def get_screenings(year: str, month: str, day: str, s: requests.Session):
     print("STARTED RAV HEN")
     date = "{}-{}-{}".format(year, month.zfill(2), day.zfill(2))
     format_date = "{}-{}-{}".format(day.zfill(2), month.zfill(2), year)
