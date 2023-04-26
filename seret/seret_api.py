@@ -59,9 +59,7 @@ def _choose_seret_url(urls: List[Tag], wanted_movie: str) -> str | None:
         else:
             continue
 
-        name = name.replace("::", "")
-        name = name.replace("Seret.co.il", "")
-        name = name.replace("סרט", "")
+        name = re.sub(r"::|Seret.co.il|סרט|\|", "", name)
         name = remove_date(name)
         url = url.get("href").replace("/url?q=", "").replace("%3F", "?").replace("%3D", "=").replace("%26", "&")
         if "ביקורת" in name or not url.startswith("https://www.seret.co.il/movies"):
