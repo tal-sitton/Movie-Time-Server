@@ -29,7 +29,7 @@ def get_title_id(session: requests.Session, name: str, year: int) -> str | None:
             movies.append(result)
 
     movies.sort(
-        key=lambda x: (x[IMDB_API_YEAR] == year, difflib.SequenceMatcher(None, x[IMDB_API_TITLE], name).ratio()),
+        key=lambda x: (x[IMDB_API_YEAR] - year, difflib.SequenceMatcher(None, x[IMDB_API_TITLE], name).ratio()),
         reverse=True)
     if not movies:
         return None
