@@ -19,7 +19,6 @@ def get_title_id(session: requests.Session, name: str, year: int) -> str | None:
     :return: imdb id of the title
     """
     url = f"https://v3.sg.media-imdb.com/suggestion/x/{name}.json"
-    print(url)
     response = session.get(url)
     results = response.json()[IMDB_API_DATA]
     movies = []
@@ -45,7 +44,6 @@ def get_title_info(session: requests.Session, title_id: str) -> dict:
     """
     url = f"https://www.imdb.com/title/{title_id}"
     response = session.get(url)
-    print(url)
     bs = BeautifulSoup(response.text, "html.parser")
     data = bs.find("script", type="application/ld+json")
     return json.loads(data.text)

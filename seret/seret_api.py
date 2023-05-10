@@ -84,7 +84,8 @@ def _choose_seret_url(wanted_movie: str, all_movies_urls: List[Tag], recent_urls
     closest_urls = sorted(title_urls.keys(), key=lambda x: title_urls[x][0], reverse=True)
     if not closest_urls:
         return None
-    print(closest_urls[0])
+    elif difflib.SequenceMatcher(None, wanted_movie, title_urls[closest_urls[0]][1]).ratio() < 0.3:
+        return ""
     return closest_urls[0]
 
 
@@ -152,6 +153,9 @@ def get_info(session: requests.Session, movie_name: str, retries=0) -> Movie:
     if not is_acceptable_language(movie_name):
         return Movie(movie_name, DEFAULT_DESCRIPTION, None, "")
     url = _get_seret_url(session, movie_name)
+
+    if url == "":
+        return Movie(movie_name, DEFAULT_DESCRIPTION, None, "")
 
     if not url:
         if retries > SEARCH_RETRIES:
