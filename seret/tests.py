@@ -10,7 +10,8 @@ testData = [
      "https://www.seret.co.il/images/movies/EverythingEverywhereAllAtOnce/EverythingEverywhereAllAtOnce1.jpg"),
     ("הסירו דאגה מלבכם", "הסירו דאגה מלבכם",
      "https://www.seret.co.il/images/movies/ShakeYourCaresAway/ShakeYourCaresAway1.jpg"),
-    ("65", "65", "https://www.seret.co.il/images/movies/65/651.jpg")
+    ("65", "65", "https://www.seret.co.il/images/movies/65/651.jpg"),
+    ("החוזה","החוזה","https://www.seret.co.il/images/movies/TheCovenant/TheCovenant1.jpg"),
 ]
 
 

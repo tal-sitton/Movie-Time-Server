@@ -53,7 +53,7 @@ def rate_urls(wanted_movie: str, urls: List[Tag], previous_rating: Dict[str, Tup
             name = url.find("h3").text
         else:
             continue
-        name = re.sub(r"Seret.co.il| :: |אתר סרט|\|", "", name, flags=re.I).strip().strip("-").strip()
+        name = re.sub(r"Seret.co.il| :: |אתר סרט|\|", "", name, flags=re.I).strip("- סרט").strip().strip("-").strip()
         name = remove_date(name).strip()
         url = url.get("href").replace("/url?q=", "").replace("%3F", "?").replace("%3D", "=").replace("%26", "&")
         if "ביקורת" in name or not url.startswith("https://www.seret.co.il/movies"):
@@ -95,11 +95,11 @@ def _get_seret_url(session: requests.Session, movie_name: str) -> str:
 
     base_search = f"https://www.startpage.com/sp/search"
     try:
-        res = session.post(base_search, data={"query": f"{movie_name} site:www.seret.co.il", "with_date": "y"})
+        res = session.post(base_search, data={"query": f"{movie_name} site:seret.co.il", "with_date": "y"})
     except requests.exceptions.ChunkedEncodingError:
         return None
     bs = BeautifulSoup(res.text, "html.parser")
-    recent_movies_urls = bs.find_all("a", {"href": re.compile(".*https://seret.co.il/movies/s_movies.asp.*")})
+    recent_movies_urls = bs.find_all("a", {"href": re.compile(".*https://www.seret.co.il/movies/s_movies.asp.*")})
 
     time.sleep(0.3)
 
