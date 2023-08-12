@@ -5,6 +5,7 @@ from .seret_api import get_info
 
 testData = [
     ("מריו", "האחים סופר מריו: הסרט", "https://www.seret.co.il/images/movies/Mario/Mario1.jpg"),
+    ("סרט: האחים סופר מריו", "האחים סופר מריו: הסרט", "https://www.seret.co.il/images/movies/Mario/Mario1.jpg"),
     ("צעירים לנצח", "צעירים לנצח", "https://www.seret.co.il/images/movies/ForeverYoung/ForeverYoung1.jpg"),
     ("הכל בכל מקום בבת אחת", "הכל בכל מקום בבת אחת",
      "https://www.seret.co.il/images/movies/EverythingEverywhereAllAtOnce/EverythingEverywhereAllAtOnce1.jpg"),
@@ -12,6 +13,7 @@ testData = [
      "https://www.seret.co.il/images/movies/ShakeYourCaresAway/ShakeYourCaresAway1.jpg"),
     ("65", "65", "https://www.seret.co.il/images/movies/65/651.jpg"),
     ("החוזה","החוזה","https://www.seret.co.il/images/movies/TheCovenant/TheCovenant1.jpg"),
+    ("העיר הזאת", "העיר הזאת", "https://www.seret.co.il/images/movies/TheCity/TheCity1.jpg"),
 ]
 
 
