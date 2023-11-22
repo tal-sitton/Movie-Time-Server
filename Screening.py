@@ -33,6 +33,8 @@ def dubbed_from_title(title: str, lang_type: LanguageType):
 
 
 def clear_title(title: str):
+    if title is None:
+        return None
     for keyword in REDUNDANT_IN_TITLE:
         title = title.split(keyword)[0]
     return re.sub(r"\W*$", "", title)
