@@ -1,6 +1,7 @@
 import dataclasses
 import re
 import time
+import traceback
 from typing import List, Dict, Tuple
 
 import requests
@@ -115,14 +116,20 @@ def _is_canonical_version(bs: BeautifulSoup, original_url: str):
 
 
 def get_info(session: requests.Session, movie_name: str, retries=0) -> Movie | None:
+    if retries > SEARCH_RETRIES:
+        return None
     if not is_acceptable_language(movie_name):
         return None
-    url = _get_seret_url(session, movie_name)
+    try:
+        url = _get_seret_url(session, movie_name)
+    except Exception as e:
+        print(e, traceback.format_exc())
+        print(f"Trying again {movie_name} - {retries}/{SEARCH_RETRIES}")
+        return get_info(session, movie_name, retries + 1)
+
     if url == "":
         return None
     if not url:
-        if retries > SEARCH_RETRIES:
-            return None
         print(f"Trying again {movie_name} - {retries}/{SEARCH_RETRIES}")
         return get_info(session, movie_name, retries + 1)
     print(url)
