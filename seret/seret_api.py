@@ -48,6 +48,7 @@ def remove_date(name: str) -> str:
 
 def rate_urls(urls_data: List[Tuple[str, str]], wanted_movie_name: str):
     rating = {}
+    index = 0
     for data in urls_data:
         name, url = data
         name = re.sub(r"Seret.co.il| :: |אתר סרט|\||<b>|</b>", "", name, flags=re.I).strip("- סרט").strip().strip(
@@ -56,12 +57,12 @@ def rate_urls(urls_data: List[Tuple[str, str]], wanted_movie_name: str):
         url = url.replace("/url?q=", "").replace("%3F", "?").replace("%3D", "=").replace("%26", "&")
 
         diff = difflib.SequenceMatcher(None, name, wanted_movie_name).ratio()
-        print(name, diff)
         if "ביקורת" in name or not url.startswith("https://www.seret.co.il/movies/s_movies.asp?") \
-                or diff < 0.35:
+                or diff < 0.2:
             continue
-
-        rating[url] = (rating.get(url, (0, ""))[0] + 1, name)
+        rate = diff - (index / 10)
+        rating[url] = (rating.get(url, (0, ""))[0] + rate, name)
+        index += 1
     return rating
 
 
@@ -139,7 +140,6 @@ def get_info(session: requests.Session, movie_name: str, wanted_movie_name: str,
     if not url:
         print(f"Trying again {movie_name} - {retries}/{SEARCH_RETRIES}")
         return get_info(session, movie_name, wanted_movie_name, retries + 1)
-    print(url)
     res = session.get(url)
     res.encoding = "windows-1255"
     bs = BeautifulSoup(res.text, "html.parser")
