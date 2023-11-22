@@ -45,7 +45,7 @@ class Screening:
         screening_type = type_from_title(title, screening_type)
         self.m_dubbed = dubbed_from_title(title, dubbed)
         self.m_title = clear_title(title)
-        self.m_eng_title = eng_title
+        self.m_eng_title = clear_title(eng_title)
         self.m_date = date
         self.m_cinema = cinema
         self.m_location = location
