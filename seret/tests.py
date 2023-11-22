@@ -24,6 +24,8 @@ testData = [
     ("Seven Blessings", "7 ברכות", "7 ברכות",
      "https://www.seret.co.il/images/movies/SevenBlessings/SevenBlessings1.jpg"),
     ("Puppy Love", "אהבה עד העצם", "אהבה עד העצם", "https://www.seret.co.il/images/movies/PuppyLove/PuppyLove1.jpg"),
+    ("המופלאה", "המופלאה", "המופלאה: הרפתקאות ליידי באג וחתול שחור",
+     "https://www.seret.co.il/images/movies/LadybugandCatNoirTheMovie/LadybugandCatNoirTheMovie1.jpg"),
 ]
 
 
