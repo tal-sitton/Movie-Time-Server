@@ -1,5 +1,6 @@
 import difflib
 import json
+import traceback
 
 import requests
 from bs4 import BeautifulSoup
@@ -66,5 +67,5 @@ def get_imdb_rating(session: requests.Session, movie: str, year: int) -> float |
         info = get_title_info(session, id)
         return info["aggregateRating"]['ratingValue']
     except Exception as e:
-        print(e)
+        print(e, traceback.format_exc())
         return None
