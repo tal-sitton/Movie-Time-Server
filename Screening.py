@@ -39,12 +39,13 @@ def clear_title(title: str):
 
 
 class Screening:
-    def __init__(self, date: str, cinema: str, location: str, district: Districts, title: str,
+    def __init__(self, date: str, cinema: str, location: str, district: Districts, title: str, eng_title: str,
                  screening_type: MovieType, time: str, link: str, coords: tuple,
                  dubbed: LanguageType):
         screening_type = type_from_title(title, screening_type)
         self.m_dubbed = dubbed_from_title(title, dubbed)
         self.m_title = clear_title(title)
+        self.m_eng_title = eng_title
         self.m_date = date
         self.m_cinema = cinema
         self.m_location = location

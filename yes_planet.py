@@ -1,3 +1,5 @@
+import json
+import re
 from enum import Enum
 
 import requests
@@ -71,27 +73,43 @@ def find_dubbed(movie_info: list) -> LanguageType:
     return LanguageType.UNKNOWN
 
 
+cached_english_names = {}
+
+
+def get_english_name(movie_url: str, s: requests.Session) -> str:
+    if movie_url in cached_english_names:
+        return cached_english_names[movie_url]
+    res = s.get(movie_url)
+    raw = re.search("var filmDetails = (.*);", res.text).group(1)
+    data: dict = json.loads(raw)
+    title = data.get("originalName")
+    cached_english_names[movie_url] = title
+    return title
+
+
 def prepare(location: Locations, date: str, s: requests.Session) -> tuple:
     url = f"https://www.yesplanet.co.il/il/data-api-service/v1/quickbook/10100/film-events/in-cinema/{location.value['code']}/at-date/{date}"
     res = s.get(url)
     data = dict(res.json().get("body"))
-    movies_ids = {movie.get("id"): movie.get("name") for movie in data.get("films")}
-    return movies_ids, data.get("events")
+    movies_data = {movie.get("id"): movie for movie in data.get("films")}
+    return movies_data, data.get("events")
 
 
 def get_by_location(location: Locations, date: str, format_date: str, s: requests.Session):
     print("STARTED YES PLANET ", location.name)
-    movies_ids, events = prepare(location, date, s)
+    movies_data, events = prepare(location, date, s)
     for event in events:
-        movie_name = movies_ids.get(event.get("filmId"))
+        movie_info = movies_data.get(event.get("filmId"))
+        movie_name = movie_info.get("name")
         m_time = ":".join(event.get("eventDateTime").split("T")[1].split(":")[:2])
         movie_type = find_type(event.get("attributeIds"))
         link = event.get("bookingLink")
         dubbed = find_dubbed(event.get("attributeIds"))
+        english_name = get_english_name(movie_info.get("link"), s)
         screenings.append(
             Screening(format_date, "יס פלאנט", location.value['name'], location.value['dis'], movie_name,
-                      movie_type, m_time, link, location.value['coords'], dubbed))
-        print("DONE")
+                      english_name, movie_type, m_time, link, location.value['coords'], dubbed))
+    print("DONE")
 
 
 def get_screenings(year: str, month: str, day: str, s: requests.Session):
