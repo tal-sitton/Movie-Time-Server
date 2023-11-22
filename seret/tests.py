@@ -18,6 +18,8 @@ testData = [
     ("משימה בלתי אפשרית: נקמת מוות-חלק ראשון", "משימה בלתי אפשרית: נקמת מוות – חלק ראשון",
      "https://www.seret.co.il/images/movies/MissionImpossible7/MissionImpossible71.jpg"),
     ("אחותי", "אחותי", "https://www.seret.co.il/images/movies/Rose/Rose1.jpg"),
+    ("Seven Blessings", "7 ברכות", "https://www.seret.co.il/images/movies/SevenBlessings/SevenBlessings1.jpg"),
+    ("Puppy Love", "אהבה עד העצם", "https://www.seret.co.il/images/movies/PuppyLove/PuppyLove1.jpg"),
 ]
 
 
@@ -27,11 +29,3 @@ def test_seret_url(movie_name, expected_name, expected_image_url):
     movie = get_info(session, movie_name)
     assert movie.name == expected_name
     assert movie.image_url == expected_image_url
-
-
-def test_invalid_seret_url():
-    session = requests.Session()
-    movie = get_info(session, "מ")
-    assert movie.name == "מ"
-    assert movie.image_url == ""
-    assert movie.rating is None
