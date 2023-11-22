@@ -33,9 +33,9 @@ def get_movies_info(session: requests.Session, screenings: List[Screening]) -> L
         print(fr'{checked}\{len(movie_titles)} Getting info for {screening.m_title} ...')
         info = None
         if screening.m_eng_title:
-            info = seret_api.get_info(session, screening.m_eng_title)
+            info = seret_api.get_info(session, screening.m_eng_title, screening.m_title)
         if not info:
-            info = seret_api.get_info(session, screening.m_title)
+            info = seret_api.get_info(session, screening.m_title, screening.m_title)
 
         if not info:
             info = Movie(screening.m_title, DEFAULT_DESCRIPTION, None, "")
