@@ -58,7 +58,7 @@ def rate_urls(urls_data: List[Tuple[str, str]], wanted_movie_name: str):
 
         diff = difflib.SequenceMatcher(None, name, wanted_movie_name).ratio()
         if "ביקורת" in name or not url.startswith("https://www.seret.co.il/movies/s_movies.asp?") \
-                or diff < 0.2:
+                or diff < 0.3:
             continue
         rate = diff - (index / 10)
         rating[url] = (rating.get(url, (0, ""))[0] + rate, name)
