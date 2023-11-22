@@ -1,19 +1,16 @@
 import dataclasses
-import difflib
 import re
 import time
 from typing import List, Dict, Tuple
 
 import requests
-from bs4 import BeautifulSoup, Tag
+from bs4 import BeautifulSoup
 
 from seret.imdb_api import get_imdb_rating
 
 last_search_request = 0
 
 SEARCH_RETRIES = 5
-
-DEFAULT_DESCRIPTION = "לא נמצא תיאור"
 
 FIRST_HEBREW_CHAR = ord('א')
 LAST_HEBREW_CHAR = ord('ת')
@@ -47,41 +44,24 @@ def remove_date(name: str) -> str:
     return re.sub(r"\(\d{4}\)$", "", name).strip()
 
 
-def rate_urls(wanted_movie: str, urls: List[Tag], previous_rating: Dict[str, Tuple[int, str]], rating: int = None):
-    for url in urls:
-        if url.find("h3"):
-            name = url.find("h3").text
-        else:
-            continue
+def rate_urls(urls_data: List[Tuple[str, str]], previous_rating: Dict[str, Tuple[int, str]]):
+    for data in urls_data:
+        name, url = data
         name = re.sub(r"Seret.co.il| :: |אתר סרט|\|", "", name, flags=re.I).strip("- סרט").strip().strip("-").strip()
         name = remove_date(name).strip()
-        url = url.get("href").replace("/url?q=", "").replace("%3F", "?").replace("%3D", "=").replace("%26", "&")
-        if "ביקורת" in name or not url.startswith("https://www.seret.co.il/movies"):
+        url = url.replace("/url?q=", "").replace("%3F", "?").replace("%3D", "=").replace("%26", "&")
+        if "ביקורת" in name or not url.startswith("https://www.seret.co.il/movies/s_movies.asp?"):
             continue
 
-        diff = difflib.SequenceMatcher(None, name, wanted_movie).ratio()
-        rate = rating
-        if diff > 0.98:
-            if rating:
-                rate = 3
-            else:
-                rate = 2
-        elif not rating:
-            rate = diff
-        elif diff < 0.3:
-            continue
-        previous_rating[url] = (previous_rating.get(url, (0, ""))[0] + rate, name)
+        previous_rating[url] = (previous_rating.get(url, (0, ""))[0] + 1, name)
     return previous_rating
 
 
-def _choose_seret_url(wanted_movie: str, all_movies_urls: List[Tag], recent_urls: List[Tag]) -> str | None:
-    title_urls = rate_urls(wanted_movie, recent_urls, {}, 1)
-    title_urls = rate_urls(wanted_movie, all_movies_urls, title_urls)
+def _choose_seret_url(all_movies_urls_data: List[Tuple[str, str]]) -> str | None:
+    title_urls = rate_urls(all_movies_urls_data, {})
     closest_urls = sorted(title_urls.keys(), key=lambda x: title_urls[x][0], reverse=True)
     if not closest_urls:
         return None
-    elif difflib.SequenceMatcher(None, wanted_movie, title_urls[closest_urls[0]][1]).ratio() < 0.3:
-        return ""
     return closest_urls[0]
 
 
@@ -93,25 +73,15 @@ def _get_seret_url(session: requests.Session, movie_name: str) -> str:
     session.headers[
         "User-Agent"] = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
 
-    base_search = f"https://www.startpage.com/sp/search"
+    base_search = f"https://spapi.searchencrypt.com/api/search"
     try:
-        res = session.post(base_search, data={"query": f"{movie_name} site:seret.co.il", "with_date": "y"})
+        res = session.get(base_search + f"?q={movie_name} site%3Aseret.co.il")
     except requests.exceptions.ChunkedEncodingError:
         return None
-    bs = BeautifulSoup(res.text, "html.parser")
-    recent_movies_urls = bs.find_all("a", {"href": re.compile(".*https://www.seret.co.il/movies/s_movies.asp.*")})
-
-    time.sleep(0.3)
-
-    last_search_request = time.time()
-    try:
-        res = session.post(base_search, data={"query": f"{movie_name} site:seret.co.il"})
-    except requests.exceptions.ChunkedEncodingError:
-        return None
-
-    bs = BeautifulSoup(res.text, "html.parser")
-    all_movies_urls = bs.find_all("a", {"href": re.compile(".*https://www.seret.co.il/movies/s_movies.asp.*")})
-    return _choose_seret_url(movie_name, all_movies_urls, recent_movies_urls)
+    with open("search.html", "w", encoding="utf-8") as f:
+        f.write(res.text)
+    all_movies_urls = [(result.get('Title'), result.get('ActualClickUrl')) for result in res.json().get("Results")]
+    return _choose_seret_url(all_movies_urls)
 
 
 def _get_names(bs: BeautifulSoup) -> List[str]:
@@ -144,19 +114,18 @@ def _is_canonical_version(bs: BeautifulSoup, original_url: str):
         "href"] == original_url
 
 
-def get_info(session: requests.Session, movie_name: str, retries=0) -> Movie:
+def get_info(session: requests.Session, movie_name: str, retries=0) -> Movie | None:
     if not is_acceptable_language(movie_name):
-        return Movie(movie_name, DEFAULT_DESCRIPTION, None, "")
+        return None
     url = _get_seret_url(session, movie_name)
-
     if url == "":
-        return Movie(movie_name, DEFAULT_DESCRIPTION, None, "")
-
+        return None
     if not url:
         if retries > SEARCH_RETRIES:
-            return Movie(movie_name, DEFAULT_DESCRIPTION, None, "")
+            return None
         print(f"Trying again {movie_name} - {retries}/{SEARCH_RETRIES}")
         return get_info(session, movie_name, retries + 1)
+    print(url)
     res = session.get(url)
     res.encoding = "windows-1255"
     bs = BeautifulSoup(res.text, "html.parser")
