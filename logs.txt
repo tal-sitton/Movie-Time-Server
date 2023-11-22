@@ -1,3 +1,18 @@
+Cinema city crashed!
+Traceback (most recent call last):
+  File "/home/runner/work/Movie-Time-Server/Movie-Time-Server/main.py", line 60, in get_all_screenings
+    cinema_city.get_screenings(year, month, day, s)
+  File "/home/runner/work/Movie-Time-Server/Movie-Time-Server/cinema_city.py", line 132, in get_screenings
+    get_by_location(location, date, s)
+  File "/home/runner/work/Movie-Time-Server/Movie-Time-Server/cinema_city.py", line 121, in get_by_location
+    Screening(date, "סינמה סיטי", location.value["name"], location.value['dis'], movie_name,
+  File "/home/runner/work/Movie-Time-Server/Movie-Time-Server/Screening.py", line 48, in __init__
+    self.m_eng_title = clear_title(eng_title)
+                       ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/Movie-Time-Server/Movie-Time-Server/Screening.py", line 37, in clear_title
+    title = title.split(keyword)[0]
+            ^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'split'
 Lev crashed!
 Traceback (most recent call last):
   File "/opt/hostedtoolcache/Python/3.11.6/x64/lib/python3.11/site-packages/requests/models.py", line 971, in json
@@ -26,6 +41,21 @@ Traceback (most recent call last):
   File "/opt/hostedtoolcache/Python/3.11.6/x64/lib/python3.11/site-packages/requests/models.py", line 975, in json
     raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
 requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+Cinema city crashed!
+Traceback (most recent call last):
+  File "/home/runner/work/Movie-Time-Server/Movie-Time-Server/main.py", line 60, in get_all_screenings
+    cinema_city.get_screenings(year, month, day, s)
+  File "/home/runner/work/Movie-Time-Server/Movie-Time-Server/cinema_city.py", line 132, in get_screenings
+    get_by_location(location, date, s)
+  File "/home/runner/work/Movie-Time-Server/Movie-Time-Server/cinema_city.py", line 121, in get_by_location
+    Screening(date, "סינמה סיטי", location.value["name"], location.value['dis'], movie_name,
+  File "/home/runner/work/Movie-Time-Server/Movie-Time-Server/Screening.py", line 48, in __init__
+    self.m_eng_title = clear_title(eng_title)
+                       ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/Movie-Time-Server/Movie-Time-Server/Screening.py", line 37, in clear_title
+    title = title.split(keyword)[0]
+            ^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'split'
 Lev crashed!
 Traceback (most recent call last):
   File "/opt/hostedtoolcache/Python/3.11.6/x64/lib/python3.11/site-packages/requests/models.py", line 971, in json
@@ -54,6 +84,21 @@ Traceback (most recent call last):
   File "/opt/hostedtoolcache/Python/3.11.6/x64/lib/python3.11/site-packages/requests/models.py", line 975, in json
     raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
 requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+Cinema city crashed!
+Traceback (most recent call last):
+  File "/home/runner/work/Movie-Time-Server/Movie-Time-Server/main.py", line 60, in get_all_screenings
+    cinema_city.get_screenings(year, month, day, s)
+  File "/home/runner/work/Movie-Time-Server/Movie-Time-Server/cinema_city.py", line 132, in get_screenings
+    get_by_location(location, date, s)
+  File "/home/runner/work/Movie-Time-Server/Movie-Time-Server/cinema_city.py", line 121, in get_by_location
+    Screening(date, "סינמה סיטי", location.value["name"], location.value['dis'], movie_name,
+  File "/home/runner/work/Movie-Time-Server/Movie-Time-Server/Screening.py", line 48, in __init__
+    self.m_eng_title = clear_title(eng_title)
+                       ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/Movie-Time-Server/Movie-Time-Server/Screening.py", line 37, in clear_title
+    title = title.split(keyword)[0]
+            ^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'split'
 Lev crashed!
 Traceback (most recent call last):
   File "/opt/hostedtoolcache/Python/3.11.6/x64/lib/python3.11/site-packages/requests/models.py", line 971, in json
@@ -82,6 +127,21 @@ Traceback (most recent call last):
   File "/opt/hostedtoolcache/Python/3.11.6/x64/lib/python3.11/site-packages/requests/models.py", line 975, in json
     raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
 requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+Cinema city crashed!
+Traceback (most recent call last):
+  File "/home/runner/work/Movie-Time-Server/Movie-Time-Server/main.py", line 60, in get_all_screenings
+    cinema_city.get_screenings(year, month, day, s)
+  File "/home/runner/work/Movie-Time-Server/Movie-Time-Server/cinema_city.py", line 132, in get_screenings
+    get_by_location(location, date, s)
+  File "/home/runner/work/Movie-Time-Server/Movie-Time-Server/cinema_city.py", line 121, in get_by_location
+    Screening(date, "סינמה סיטי", location.value["name"], location.value['dis'], movie_name,
+  File "/home/runner/work/Movie-Time-Server/Movie-Time-Server/Screening.py", line 48, in __init__
+    self.m_eng_title = clear_title(eng_title)
+                       ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/Movie-Time-Server/Movie-Time-Server/Screening.py", line 37, in clear_title
+    title = title.split(keyword)[0]
+            ^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'split'
 Lev crashed!
 Traceback (most recent call last):
   File "/opt/hostedtoolcache/Python/3.11.6/x64/lib/python3.11/site-packages/requests/models.py", line 971, in json
@@ -110,6 +170,21 @@ Traceback (most recent call last):
   File "/opt/hostedtoolcache/Python/3.11.6/x64/lib/python3.11/site-packages/requests/models.py", line 975, in json
     raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
 requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+Cinema city crashed!
+Traceback (most recent call last):
+  File "/home/runner/work/Movie-Time-Server/Movie-Time-Server/main.py", line 60, in get_all_screenings
+    cinema_city.get_screenings(year, month, day, s)
+  File "/home/runner/work/Movie-Time-Server/Movie-Time-Server/cinema_city.py", line 132, in get_screenings
+    get_by_location(location, date, s)
+  File "/home/runner/work/Movie-Time-Server/Movie-Time-Server/cinema_city.py", line 121, in get_by_location
+    Screening(date, "סינמה סיטי", location.value["name"], location.value['dis'], movie_name,
+  File "/home/runner/work/Movie-Time-Server/Movie-Time-Server/Screening.py", line 48, in __init__
+    self.m_eng_title = clear_title(eng_title)
+                       ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/Movie-Time-Server/Movie-Time-Server/Screening.py", line 37, in clear_title
+    title = title.split(keyword)[0]
+            ^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'split'
 Lev crashed!
 Traceback (most recent call last):
   File "/opt/hostedtoolcache/Python/3.11.6/x64/lib/python3.11/site-packages/requests/models.py", line 971, in json
