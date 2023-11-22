@@ -28,6 +28,11 @@ testData = [
      "https://www.seret.co.il/images/movies/LadybugandCatNoirTheMovie/LadybugandCatNoirTheMovie1.jpg"),
 ]
 
+bad_movies_names = [
+    ("Miraculous: Le Film", "המופלאה: הרפתקאות ליידי באג וחתול שחור"),
+    ("Blood", "צמא דם"),
+]
+
 
 @pytest.mark.parametrize("movie_name,wanted_movie_name,expected_name,expected_image_url", testData)
 def test_seret_url(movie_name, wanted_movie_name, expected_name, expected_image_url):
@@ -37,7 +42,8 @@ def test_seret_url(movie_name, wanted_movie_name, expected_name, expected_image_
     assert movie.image_url == expected_image_url
 
 
-def test_cant_find_movie():
+@pytest.mark.parametrize("movie_name,wanted_movie_name", bad_movies_names)
+def test_cant_find_movie(movie_name, wanted_movie_name):
     session = requests.Session()
-    movie = get_info(session, "Miraculous: Le Film", "המופלאה: הרפתקאות ליידי באג וחתול שחור")
+    movie = get_info(session, movie_name, wanted_movie_name)
     assert movie is None
