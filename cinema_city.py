@@ -1,3 +1,4 @@
+import traceback
 from enum import Enum
 
 import requests
@@ -74,19 +75,23 @@ VENUES = {"1": MovieType.unknown, "3": MovieType.m_VIP}
 cached_english_names = {}
 
 
-def get_english_name(movie_name: str, s: requests.Session) -> str:
+def get_english_name(movie_name: str, s: requests.Session) -> str | None:
     if movie_name in cached_english_names:
         return cached_english_names[movie_name]
     url = f"https://www.cinema-city.co.il/AutoComplete/SiteSearch?keywords={movie_name}"
     info = s.get(url).json()[1]
     url = f"https://www.cinema-city.co.il{info.get('Link')}"
-    bs = BeautifulSoup(s.get(url).text, "html.parser")
-    raw_title = bs.find("h1", {"class": "title"}).text
-    title = None
-    if "/" in raw_title:
-        title = raw_title.split("/")[1]
-    cached_english_names[movie_name] = title
-    return title
+    try:
+        bs = BeautifulSoup(s.get(url).text, "html.parser")
+        raw_title = bs.find("h1", {"class": "title"}).text
+        title = None
+        if "/" in raw_title:
+            title = raw_title.split("/")[1]
+        cached_english_names[movie_name] = title
+        return title
+    except Exception as e:
+        print(e, traceback.format_exc())
+        return None
 
 
 def get_date(location: Locations, date: str, s: requests.Session):

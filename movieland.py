@@ -1,3 +1,4 @@
+import traceback
 from enum import Enum
 from typing import Dict
 
@@ -52,14 +53,18 @@ def find_dubbed(info: Dict[str, str | bool]) -> LanguageType:
 cached_english_names = {}
 
 
-def get_english_name(movie_id: str, s: requests.Session) -> str:
+def get_english_name(movie_id: str, s: requests.Session) -> str | None:
     if movie_id in cached_english_names:
         return cached_english_names[movie_id]
     url = f"https://www.movieland-cinema.co.il/movie/{movie_id}"
-    bs = BeautifulSoup(s.get(url).text, "html.parser")
-    title = bs.find("div", {"class": "bg-more-b"}).find_all("span")[1].text
-    cached_english_names[movie_id] = title
-    return title
+    try:
+        bs = BeautifulSoup(s.get(url).text, "html.parser")
+        title = bs.find("div", {"class": "bg-more-b"}).find_all("span")[1].text
+        cached_english_names[movie_id] = title
+        return title
+    except Exception as e:
+        print(e, traceback.format_exc())
+        return None
 
 
 def get_by_location(location: Locations, date: str, format_date: str, s: requests.Session):

@@ -56,10 +56,9 @@ def get_imdb_rating(session: requests.Session, movie: str, year: int) -> float |
     :param session: session to use
     :param movie: name of the movie
     :param year: year the movie was released
-    :param retried: if this is the first time to get the rating
-    :param id: imdb id of the title
     :return: rating given by the API
     """
+    id = None
     try:
         id = get_title_id(session, movie, year)
         if not id:
@@ -67,5 +66,5 @@ def get_imdb_rating(session: requests.Session, movie: str, year: int) -> float |
         info = get_title_info(session, id)
         return info["aggregateRating"]['ratingValue']
     except Exception as e:
-        print(e, traceback.format_exc())
+        print(f'id={id}', e, traceback.format_exc())
         return None

@@ -87,8 +87,6 @@ def _get_seret_url(session: requests.Session, movie_name: str, wanted_movie_name
         res = session.get(base_search + f"?q={movie_name} site%3Aseret.co.il")
     except requests.exceptions.ChunkedEncodingError:
         return None
-    with open("search.html", "w", encoding="utf-8") as f:
-        f.write(res.text)
     all_movies_urls = [(result.get('Title'), result.get('ActualClickUrl')) for result in res.json().get("Results")]
     return _choose_seret_url(all_movies_urls, wanted_movie_name)
 

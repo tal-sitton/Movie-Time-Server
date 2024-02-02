@@ -1,5 +1,6 @@
 import json
 import re
+import traceback
 from enum import Enum
 
 import requests
@@ -76,15 +77,19 @@ def find_dubbed(movie_info: list) -> LanguageType:
 cached_english_names = {}
 
 
-def get_english_name(movie_url: str, s: requests.Session) -> str:
+def get_english_name(movie_url: str, s: requests.Session) -> str | None:
     if movie_url in cached_english_names:
         return cached_english_names[movie_url]
-    res = s.get(movie_url)
-    raw = re.search("var filmDetails = (.*);", res.text).group(1)
-    data: dict = json.loads(raw)
-    title = data.get("originalName")
-    cached_english_names[movie_url] = title
-    return title
+    try:
+        res = s.get(movie_url)
+        raw = re.search("var filmDetails = (.*);", res.text).group(1)
+        data: dict = json.loads(raw)
+        title = data.get("originalName")
+        cached_english_names[movie_url] = title
+        return title
+    except Exception as e:
+        print(e, traceback.format_exc())
+        return None
 
 
 def prepare(location: Locations, date: str, s: requests.Session) -> tuple:

@@ -68,10 +68,12 @@ class Locations(Enum):
     }
 
 
-def find_type(attribute: str) -> MovieType | None:
-    if "3D" in attribute:
+def find_type(attributes: list | None) -> MovieType | None:
+    if not attributes:
+        return MovieType.unknown
+    if "3D" in attributes:
         return MovieType.m_3D
-    if "EVENT" in attribute:
+    if "EVENT" in attributes:
         return None
     return MovieType.unknown
 
@@ -95,8 +97,8 @@ def get_by_location(location: Locations, date: str, format_date: str, s: request
         name = movie['featureName']
         time = movie['dateTime'].split(" ")[1]
         link = f"https://ticket.lev.co.il/order/{movie['id']}"
-        movie_type = find_type(movie['featureAttributeName'])
-        english_name = movie['featureAdditionalName'] if movie['featureAdditionalName'] else None
+        movie_type = find_type(movie.get('featureAttributes'))
+        english_name = movie.get('featureAdditionalName')
         dubbed = find_dubbed(movie)
         if movie_type is None:
             continue
