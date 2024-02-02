@@ -4,34 +4,46 @@ import requests
 from .seret_api import get_info
 
 testData = [
-    ("מריו", "האחים סופר מריו: הסרט", "https://www.seret.co.il/images/movies/Mario/Mario1.jpg"),
-    ("סרט: האחים סופר מריו", "האחים סופר מריו: הסרט", "https://www.seret.co.il/images/movies/Mario/Mario1.jpg"),
-    ("צעירים לנצח", "צעירים לנצח", "https://www.seret.co.il/images/movies/ForeverYoung/ForeverYoung1.jpg"),
-    ("הכל בכל מקום בבת אחת", "הכל בכל מקום בבת אחת",
+    ("סרט: האחים סופר מריו", "סרט: האחים סופר מריו", "האחים סופר מריו: הסרט",
+     "https://www.seret.co.il/images/movies/Mario/Mario1.jpg"),
+    ("צעירים לנצח", "צעירים לנצח", "צעירים לנצח",
+     "https://www.seret.co.il/images/movies/ForeverYoung/ForeverYoung1.jpg"),
+    ("הכל בכל מקום בבת אחת", "הכל בכל מקום בבת אחת", "הכל בכל מקום בבת אחת",
      "https://www.seret.co.il/images/movies/EverythingEverywhereAllAtOnce/EverythingEverywhereAllAtOnce1.jpg"),
-    ("הסירו דאגה מלבכם", "הסירו דאגה מלבכם",
+    ("הסירו דאגה מלבכם", "הסירו דאגה מלבכם", "הסירו דאגה מלבכם",
      "https://www.seret.co.il/images/movies/ShakeYourCaresAway/ShakeYourCaresAway1.jpg"),
-    ("65", "65", "https://www.seret.co.il/images/movies/65/651.jpg"),
-    ("החוזה", "החוזה", "https://www.seret.co.il/images/movies/TheCovenant/TheCovenant1.jpg"),
-    ("העיר הזאת", "העיר הזאת", "https://www.seret.co.il/images/movies/TheCity/TheCity1.jpg"),
-    ("ההילולה - שנות ה90 הסרט", "ההילולה", "https://www.seret.co.il/images/movies/ShnotHaTishim/ShnotHaTishim1.jpg"),
-    ("משימה בלתי אפשרית: נקמת מוות-חלק ראשון", "משימה בלתי אפשרית: נקמת מוות – חלק ראשון",
+    ("65", "65", "65", "https://www.seret.co.il/images/movies/65/651.jpg"),
+    ("החוזה", "החוזה", "החוזה", "https://www.seret.co.il/images/movies/TheCovenant/TheCovenant1.jpg"),
+    ("העיר הזאת", "העיר הזאת", "העיר הזאת", "https://www.seret.co.il/images/movies/TheCity/TheCity1.jpg"),
+    ("ההילולה - שנות ה90 הסרט", "ההילולה - שנות ה90 הסרט", "ההילולה",
+     "https://www.seret.co.il/images/movies/ShnotHaTishim/ShnotHaTishim1.jpg"),
+    ("משימה בלתי אפשרית: נקמת מוות-חלק ראשון", "משימה בלתי אפשרית: נקמת מוות-חלק ראשון",
+     "משימה בלתי אפשרית: נקמת מוות – חלק ראשון",
      "https://www.seret.co.il/images/movies/MissionImpossible7/MissionImpossible71.jpg"),
-    ("אחותי", "אחותי", "https://www.seret.co.il/images/movies/Rose/Rose1.jpg"),
+    ("אחותי", "אחותי", "אחותי", "https://www.seret.co.il/images/movies/Rose/Rose1.jpg"),
+    ("Seven Blessings", "7 ברכות", "7 ברכות",
+     "https://www.seret.co.il/images/movies/SevenBlessings/SevenBlessings1.jpg"),
+    ("Puppy Love", "אהבה עד העצם", "אהבה עד העצם", "https://www.seret.co.il/images/movies/PuppyLove/PuppyLove1.jpg"),
+    ("המופלאה", "המופלאה", "המופלאה: הרפתקאות ליידי באג וחתול שחור",
+     "https://www.seret.co.il/images/movies/LadybugandCatNoirTheMovie/LadybugandCatNoirTheMovie1.jpg"),
+]
+
+bad_movies_names = [
+    ("Miraculous: Le Film", "המופלאה: הרפתקאות ליידי באג וחתול שחור"),
+    ("Blood", "צמא דם"),
 ]
 
 
-@pytest.mark.parametrize("movie_name,expected_name,expected_image_url", testData)
-def test_seret_url(movie_name, expected_name, expected_image_url):
+@pytest.mark.parametrize("movie_name,wanted_movie_name,expected_name,expected_image_url", testData)
+def test_seret_url(movie_name, wanted_movie_name, expected_name, expected_image_url):
     session = requests.Session()
-    movie = get_info(session, movie_name)
+    movie = get_info(session, movie_name, wanted_movie_name)
     assert movie.name == expected_name
     assert movie.image_url == expected_image_url
 
 
-def test_invalid_seret_url():
+@pytest.mark.parametrize("movie_name,wanted_movie_name", bad_movies_names)
+def test_cant_find_movie(movie_name, wanted_movie_name):
     session = requests.Session()
-    movie = get_info(session, "מ")
-    assert movie.name == "מ"
-    assert movie.image_url == ""
-    assert movie.rating is None
+    movie = get_info(session, movie_name, wanted_movie_name)
+    assert movie is None

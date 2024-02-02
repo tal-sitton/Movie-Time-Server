@@ -33,18 +33,21 @@ def dubbed_from_title(title: str, lang_type: LanguageType):
 
 
 def clear_title(title: str):
+    if title is None:
+        return None
     for keyword in REDUNDANT_IN_TITLE:
         title = title.split(keyword)[0]
     return re.sub(r"\W*$", "", title)
 
 
 class Screening:
-    def __init__(self, date: str, cinema: str, location: str, district: Districts, title: str,
+    def __init__(self, date: str, cinema: str, location: str, district: Districts, title: str, eng_title: str | None,
                  screening_type: MovieType, time: str, link: str, coords: tuple,
                  dubbed: LanguageType):
         screening_type = type_from_title(title, screening_type)
         self.m_dubbed = dubbed_from_title(title, dubbed)
         self.m_title = clear_title(title)
+        self.m_eng_title = clear_title(eng_title)
         self.m_date = date
         self.m_cinema = cinema
         self.m_location = location

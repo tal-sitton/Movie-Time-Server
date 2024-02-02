@@ -2,28 +2,29 @@ import json
 import logging
 import pathlib
 from datetime import datetime, timedelta
+from typing import List
 
 import pytz
 import requests
 
 import cinema_city
-import consts
 import hot_cinema
 import lev
 import movieland
 import rav_hen
 import yes_planet
 from consts import screenings, headers
+from seret.seret_api import Movie
 from seret.seret_movie_info import get_movies_info
 
 days_to_check = 5
 
 
-def create_json():
+def create_json(movies: List[Movie]):
     screenings.sort(key=lambda x: (x.m_district.value[1], x.m_location, x.m_cinema, x.m_date, x.m_time))
     js = json.dumps({
         "time": datetime.now().strftime("%d-%m-%Y"),
-        "Movies": [movie.to_dict() for movie in consts.movies],
+        "Movies": [movie.to_dict() for movie in movies],
         "Screenings": [screening.to_dict() for screening in screenings]
     })
 
@@ -72,8 +73,8 @@ def get_all_screenings():
 
         date += timedelta(days=1)
 
-    consts.movies = get_movies_info(s, screenings)
-    create_json()
+    movies = get_movies_info(s, screenings)
+    create_json(movies)
     print(len(screenings))
 
 
