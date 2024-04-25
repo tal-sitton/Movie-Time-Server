@@ -19,7 +19,37 @@ permissions: write-all
 jobs:
   test:
     runs-on: ubuntu-latest
+
+    services:
+      elasticsearch:
+        image: ghcr.io/tal-sitton/heb-elastic:latest
+        ports:
+          - 9200:9200
+        options: >-
+          --name elasticsearch
+
+      tor-proxy:
+        image: ghcr.io/tal-sitton/torproxy-israel:latest
+        ports:
+          - 8118:8118
+        options: >-
+          --name proxy
+    
+
     steps:
+      - name: get elastic data
+        run: |
+          curl https://raw.githubusercontent.com/tal-sitton/seret-indexer/master/esdata.zip -o esdata.zip
+          sudo apt install -y zip
+          unzip esdata.zip
+
+      - name: cp elastic data to container
+        run: |
+          docker cp esdata/. elasticsearch:/usr/share/elasticsearch/data
+          docker exec -u root elasticsearch chown -R elasticsearch:elasticsearch /usr/share/elasticsearch/data
+          docker restart elasticsearch
+          timeout 75s sh -c 'until docker ps | grep elasticsearch | grep -q healthy; do echo "Waiting for container to be healthy..."; sleep 5; done'
+
       - uses: actions/checkout@v3
         if: github.event_name == 'pull_request'
         with:
@@ -43,13 +73,42 @@ jobs:
 
       - name: test seret
         run:
-          pytest ./seret/tests.py
+          pytest
 
   build:
 
     runs-on: ubuntu-latest
 
+    services:
+      elasticsearch:
+        image: ghcr.io/tal-sitton/heb-elastic:latest
+        ports:
+          - 9200:9200
+        options: >-
+          --name elasticsearch
+
+      tor-proxy:
+        image: ghcr.io/tal-sitton/torproxy-israel
+        ports:
+          - 8118:8118
+        options: >-
+          --name proxy
+
     steps:
+      - name: get elastic data
+        run: |
+          curl https://raw.githubusercontent.com/tal-sitton/seret-indexer/master/esdata.zip -o esdata.zip
+          sudo apt install -y zip
+          unzip esdata.zip
+
+      - name: cp elastic data to container
+        run: |
+          docker cp esdata/. elasticsearch:/usr/share/elasticsearch/data
+          docker exec -u root elasticsearch chown -R elasticsearch:elasticsearch /usr/share/elasticsearch/data
+          docker restart elasticsearch
+          timeout 75s sh -c 'until docker ps | grep elasticsearch | grep -q healthy; do echo "Waiting for container to be healthy..."; sleep 5; done'
+
+
       - uses: actions/checkout@v3
         if: github.event_name == 'pull_request'
         with:
@@ -74,6 +133,8 @@ jobs:
       - name: run program
         run:
           python main.py
+        env:
+          ELASTIC_HOST: http://localhost:9200
 
       - name: config git
         run: |
