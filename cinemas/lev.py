@@ -5,8 +5,9 @@ import requests
 import urllib3
 from urllib3.exceptions import InsecureRequestWarning
 
-from models import Screening
 from models import Districts, MovieType, LanguageType
+from models import Screening
+from proxy import ProxifiedSession
 
 
 class Locations(Enum):
@@ -123,7 +124,8 @@ def get_screenings(year: str, month: str, day: str, s: requests.Session) -> list
     date = "{}-{}-{}".format(year, month.zfill(2), day.zfill(2))
     format_date = "{}-{}-{}".format(day.zfill(2), month.zfill(2), year)
 
-    for location in Locations:
-        screenings.extend(get_by_location(location, date, format_date, s))
+    with ProxifiedSession(s) as ps:
+        for location in Locations:
+            screenings.extend(get_by_location(location, date, format_date, ps))
     logger.info("DONE LEV")
     return screenings
