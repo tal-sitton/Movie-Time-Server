@@ -48,7 +48,7 @@ jobs:
           docker cp esdata/. elasticsearch:/usr/share/elasticsearch/data
           docker exec -u root elasticsearch chown -R elasticsearch:elasticsearch /usr/share/elasticsearch/data
           docker restart elasticsearch
-          timeout 75s sh -c 'until docker ps | grep elasticsearch | grep -q healthy; do echo "Waiting for container to be healthy..."; sleep 5; done'
+          timeout 200s sh -c 'until docker ps | grep elasticsearch | grep -q healthy; do echo "Waiting for container to be healthy..."; sleep 5; done'
 
       - uses: actions/checkout@v4
         if: github.event_name == 'pull_request'
@@ -106,7 +106,7 @@ jobs:
           docker cp esdata/. elasticsearch:/usr/share/elasticsearch/data
           docker exec -u root elasticsearch chown -R elasticsearch:elasticsearch /usr/share/elasticsearch/data
           docker restart elasticsearch
-          timeout 75s sh -c 'until docker ps | grep elasticsearch | grep -q healthy; do echo "Waiting for container to be healthy..."; sleep 5; done'
+          timeout 200s sh -c 'until docker ps | grep elasticsearch | grep -q healthy; do echo "Waiting for container to be healthy..."; sleep 5; done'
 
 
       - uses: actions/checkout@v4
