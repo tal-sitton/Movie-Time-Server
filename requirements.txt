@@ -1,4 +1,9 @@
 beautifulsoup4>=4.11.1
 pytz>=2022.1
 requests>=2.27.1
-pytest >=7.3.1
+pytest>=7.3.1
+retry2>=0.9.5
+bs4~=0.0.1
+urllib3~=1.26.15
+elasticsearch~=8.13.0
+search_engine_parser~=0.6.8
