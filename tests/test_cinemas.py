@@ -1,4 +1,4 @@
-from datetime import datetime
+from datetime import datetime, timedelta
 
 import pytest
 import pytz
@@ -7,7 +7,7 @@ import requests
 from consts import headers
 from models import cinemas_get_screenings, GetScreeningCallable
 
-date = datetime.now(pytz.timezone('ASIA/TEL_AVIV'))
+date = datetime.now(pytz.timezone('ASIA/TEL_AVIV')) + timedelta(days=1)
 year = str(date.year)
 month = str(date.month).zfill(2)
 day = str(date.day).zfill(2)
