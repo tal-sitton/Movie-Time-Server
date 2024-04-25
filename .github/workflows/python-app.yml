@@ -50,13 +50,13 @@ jobs:
           docker restart elasticsearch
           timeout 75s sh -c 'until docker ps | grep elasticsearch | grep -q healthy; do echo "Waiting for container to be healthy..."; sleep 5; done'
 
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         if: github.event_name == 'pull_request'
         with:
           fetch-depth: 0
           ref: ${{ github.event.pull_request.head.ref }}
 
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         if: github.event_name != 'pull_request'
         with:
           fetch-depth: 0
@@ -109,13 +109,13 @@ jobs:
           timeout 75s sh -c 'until docker ps | grep elasticsearch | grep -q healthy; do echo "Waiting for container to be healthy..."; sleep 5; done'
 
 
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         if: github.event_name == 'pull_request'
         with:
           fetch-depth: 0
           ref: ${{ github.event.pull_request.head.ref }}
 
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         if: github.event_name != 'pull_request'
         with:
           fetch-depth: 0
