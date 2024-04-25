@@ -13,7 +13,7 @@ from models import Screening
 from consts import headers
 from models import cinemas_get_screenings, GetScreeningCallable
 from seret.info_fetcher import fetch_movies_info
-from seret.seret_api import MovieInfo
+from seret.movie_info import MovieInfo
 
 days_to_check = 5
 
