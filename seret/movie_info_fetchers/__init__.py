@@ -1,0 +1,4 @@
+from .movie_info_fetcher import MovieInfoFetcher
+from .elastic_movie_info_fetcher import ElasticMovieInfoFetcher
+from .search_engine_movie_info_fetcher import SearchEngineMovieInfoFetcher
+from .composite import CompositeMovieInfoFetcher
