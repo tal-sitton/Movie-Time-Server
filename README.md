@@ -1,5 +1,5 @@
 # Movie Time (Server)
-[לאפליקציה עצמה](https://github.com/tal-sitton/Movie-Time/tree/add-readme#movie-time)
+[לאפליקציה עצמה](https://github.com/tal-sitton/Movie-Time#movie-time)
 
 בעזרת האפליקציה, תוכלו לראות אילו סרטים מוצגים באילו בתי קולנוע, בקלות וביעילות.
 
@@ -12,7 +12,7 @@
 
 ---
 
-[To the app itself](https://github.com/tal-sitton/Movie-Time/tree/add-readme#movie-time)
+[To the app itself](https://github.com/tal-sitton/Movie-Time#movie-time)
 
 Using the app, you can see which cinema shows what movies.
 
