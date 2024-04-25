@@ -1,5 +1,6 @@
 import difflib
 import json
+import logging
 
 import requests
 from bs4 import BeautifulSoup
@@ -10,7 +11,7 @@ IMDB_API_YEAR = "y"
 IMDB_API_TYPE = "qid"
 
 
-def get_title_id(session: requests.Session, name: str, year: int) -> str | None:
+def get_title_id(session: requests.Session, name: str, year: int | None) -> str | None:
     """
     get imdb id of a title
     :param session: session to use
@@ -23,8 +24,8 @@ def get_title_id(session: requests.Session, name: str, year: int) -> str | None:
     results = response.json()[IMDB_API_DATA]
     movies = []
     for result in results:
-        if result.get(IMDB_API_YEAR) and abs(result[IMDB_API_YEAR] - year) < 2 and result.get(IMDB_API_TYPE) and \
-                result[IMDB_API_TYPE] == "movie":
+        if ((year and result.get(IMDB_API_YEAR) and abs(result[IMDB_API_YEAR] - year) < 2) and
+                result.get(IMDB_API_TYPE) and result[IMDB_API_TYPE] == "movie"):
             movies.append(result)
 
     movies.sort(
@@ -49,16 +50,15 @@ def get_title_info(session: requests.Session, title_id: str) -> dict:
     return json.loads(data.text)
 
 
-def get_imdb_rating(session: requests.Session, movie: str, year: int) -> float | None:
+def get_imdb_rating(session: requests.Session, movie: str, year: int | None) -> float | None:
     """
     get rating of a movie
     :param session: session to use
     :param movie: name of the movie
     :param year: year the movie was released
-    :param retried: if this is the first time to get the rating
-    :param id: imdb id of the title
     :return: rating given by the API
     """
+    id = None
     try:
         id = get_title_id(session, movie, year)
         if not id:
@@ -66,5 +66,5 @@ def get_imdb_rating(session: requests.Session, movie: str, year: int) -> float |
         info = get_title_info(session, id)
         return info["aggregateRating"]['ratingValue']
     except Exception as e:
-        print(e)
+        logging.getLogger('imdb_api').exception(f'{id=}, {movie=}', exc_info=e)
         return None
