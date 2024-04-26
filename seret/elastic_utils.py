@@ -4,9 +4,14 @@ from seret import ELASTIC_HOST, ELASTIC_MOVIES_INDEX, ElasticSearchField
 from seret.movie_info import SeretMovieInfo
 
 
-def search(search_term: str, search_field: ElasticSearchField, min_needed_score: int = 0) -> SeretMovieInfo | None:
+def search(search_term: str, search_field: ElasticSearchField, min_needed_score: int = 0,
+           fuzzy=False) -> SeretMovieInfo | None:
     with Elasticsearch(hosts=[ELASTIC_HOST]) as client:
-        res = client.search(index=ELASTIC_MOVIES_INDEX, body={"query": {"match": {search_field.value: search_term}}})
+        if fuzzy:
+            body = {"query": {"match": {search_field.value: {"query": search_term, "fuzziness": "AUTO"}}}}
+        else:
+            body = {"query": {"match": {search_field.value: search_term}}}
+        res = client.search(index=ELASTIC_MOVIES_INDEX, body=body)
     raw_hits = res.body.get('hits')
     max_score = raw_hits.get('max_score')
 
