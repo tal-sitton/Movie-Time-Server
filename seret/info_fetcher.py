@@ -24,7 +24,7 @@ def fetch_info(fetcher: MovieInfoFetcher, search_movie_name: str, original_movie
     if not info:
         info = fetcher.get_info(original_movie_name, original_movie_name)
     if not info:
-        info = MovieInfo(original_movie_name, DEFAULT_DESCRIPTION, None, "")
+        info = MovieInfo(original_movie_name, None, DEFAULT_DESCRIPTION, None, "")
     return info
 
 
@@ -43,5 +43,8 @@ def fetch_movies_info(session: requests.Session, screenings: list[Screening]) ->
                 failed.append(screening)
 
         screening.m_title = info.name
+        if info.english_name:
+            screening.m_eng_title = info.english_name
+
     logging.getLogger(__name__).error(f"Failed to get info for {len(failed)} movies: {[f.to_dict() for f in failed]}")
     return list(movies.values())
