@@ -14,7 +14,8 @@ class ElasticMovieInfoFetcher(MovieInfoFetcher):
             search_field = ElasticSearchField.NAME
         else:
             search_field = ElasticSearchField.ENGLISH_NAME
-        partial_info = elastic_utils.search(search_movie_name, search_field, ELASTIC_NEEDED_SEARCH_MIN_SCORE)
+        fuzzy = len(search_movie_name.split(" ")) > 1
+        partial_info = elastic_utils.search(search_movie_name, search_field, ELASTIC_NEEDED_SEARCH_MIN_SCORE, fuzzy)
         if not partial_info:
             return None
 
