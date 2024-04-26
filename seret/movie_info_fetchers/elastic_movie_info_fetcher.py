@@ -22,4 +22,5 @@ class ElasticMovieInfoFetcher(MovieInfoFetcher):
         if not rating:
             rating = self.movie_rater.rate(partial_info.name, partial_info.release_year)
 
-        return MovieInfo(partial_info.name, partial_info.description, rating, partial_info.image_url)
+        return MovieInfo(partial_info.name, partial_info.english_name, partial_info.description, rating,
+                         partial_info.image_url)

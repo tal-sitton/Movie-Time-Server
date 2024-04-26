@@ -15,6 +15,7 @@ class SeretMovieInfo:
 @dataclasses.dataclass
 class MovieInfo:
     name: str
+    english_name: str | None
     description: str
     rating: float | None
     image_url: str
