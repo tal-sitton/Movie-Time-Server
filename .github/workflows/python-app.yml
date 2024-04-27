@@ -28,12 +28,16 @@ jobs:
         options: >-
           --name elasticsearch
 
-      tor-proxy:
-        image: ghcr.io/tal-sitton/torproxy-israel:latest
+      proxy-vpn:
+        image: ghcr.io/tal-sitton/proxy-vpn:latest
         ports:
           - 8118:8118
+        env:
+          PASTE_DEV_KEY: ${{ secrets.PASTE_DEV_KEY }}
+          PASTE_USER_KEY: ${{ secrets.PASTE_USER_KEY }}
         options: >-
           --name proxy
+          --privileged
     
 
     steps:
@@ -74,12 +78,17 @@ jobs:
         options: >-
           --name elasticsearch
 
-      tor-proxy:
-        image: ghcr.io/tal-sitton/torproxy-israel
+
+      proxy-vpn:
+        image: ghcr.io/tal-sitton/proxy-vpn:latest
         ports:
           - 8118:8118
+        env:
+          PASTE_DEV_KEY: ${{ secrets.PASTE_DEV_KEY }}
+          PASTE_USER_KEY: ${{ secrets.PASTE_USER_KEY }}
         options: >-
           --name proxy
+          --privileged
 
     steps:
 
