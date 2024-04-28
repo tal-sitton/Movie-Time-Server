@@ -18,11 +18,9 @@ def create_movie_info_fetcher(session: requests.Session) -> MovieInfoFetcher:
 
 
 def fetch_info(fetcher: MovieInfoFetcher, search_movie_name: str, original_movie_name: str) -> MovieInfo:
-    info: MovieInfo = None
-    if search_movie_name:
+    info = fetcher.get_info(original_movie_name, original_movie_name)
+    if not info and search_movie_name:
         info = fetcher.get_info(search_movie_name, original_movie_name)
-    if not info:
-        info = fetcher.get_info(original_movie_name, original_movie_name)
     if not info:
         info = MovieInfo(original_movie_name, None, DEFAULT_DESCRIPTION, None, "")
     return info
