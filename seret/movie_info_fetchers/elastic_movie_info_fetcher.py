@@ -3,6 +3,8 @@ from seret.movie_info import MovieInfo
 from seret.movie_info_fetchers import MovieInfoFetcher
 from seret.movie_raters import MovieRater
 
+def is_hebrew(text: str) -> bool:
+    return any("א" <= char <= "ת" for char in text)
 
 class ElasticMovieInfoFetcher(MovieInfoFetcher):
 
@@ -10,7 +12,7 @@ class ElasticMovieInfoFetcher(MovieInfoFetcher):
         self.movie_rater = movie_rater
 
     def get_info(self, search_movie_name: str, original_movie_name: str) -> MovieInfo | None:
-        if search_movie_name == original_movie_name:
+        if is_hebrew(search_movie_name):
             search_field = ElasticSearchField.NAME
         else:
             search_field = ElasticSearchField.ENGLISH_NAME
