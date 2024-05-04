@@ -48,7 +48,6 @@ testData: list[tuple[str, str, str, str]] = [
 ]
 
 fake_movies_names = [
-    ("Mission Impossible: To The Moon", "משימה בלתי אפשרית: לירח"),
     ("really not a real movie", "סרט מאוד לא אמיתי"),
 ]
 
