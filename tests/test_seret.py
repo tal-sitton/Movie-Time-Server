@@ -45,6 +45,8 @@ testData: list[tuple[str, str, str, str]] = [
     ("Home", "בית", "בית", "https://www.seret.co.il/images/movies/Home2023/Home20231.jpg"),
 
     ("Wish", "המשאלה", "המשאלה", "https://www.seret.co.il/images/movies/Wish/Wish1.jpg"),
+
+    ("Weekend Rebels", 'מורדים לסופ"ש', 'מורדים לסופ"ש', "https://www.seret.co.il/images/movies/WeeekendRebels/WeeekendRebels1.jpg")
 ]
 
 fake_movies_names = [
