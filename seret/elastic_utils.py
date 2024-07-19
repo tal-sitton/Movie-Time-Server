@@ -8,7 +8,9 @@ def search(search_term: str, search_field: ElasticSearchField, min_needed_score:
            fuzzy=False) -> SeretMovieInfo | None:
     with Elasticsearch(hosts=[ELASTIC_HOST]) as client:
         if fuzzy:
-            body = {"query": {"match": {search_field.value: {"query": search_term, "fuzziness": "AUTO"}}}}
+            body = {"query": {"bool": {
+                "should": [{"match": {search_field.value: {"query": search_term, "fuzziness": "AUTO"}}}, {
+                    "match": {search_field.value: {"query": search_term.replace('"', ""), "fuzziness": "AUTO"}}}]}}}
         else:
             body = {"query": {"match": {search_field.value: search_term}}}
         res = client.search(index=ELASTIC_MOVIES_INDEX, body=body)
