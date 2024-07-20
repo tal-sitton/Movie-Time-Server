@@ -34,9 +34,6 @@ testData: list[tuple[str, str, str, str]] = [
 
     ("Puppy Love", "אהבה עד העצם", "אהבה עד העצם", "https://www.seret.co.il/images/movies/PuppyLove/PuppyLove1.jpg"),
 
-    ("Miraculous: Tales of Ladybug & Cat Noir", "המופלאה", "המופלאה: הרפתקאות ליידי באג וחתול שחור",
-     "https://www.seret.co.il/images/movies/LadybugandCatNoirTheMovie/LadybugandCatNoirTheMovie1.jpg"),
-
     ("Miraculous: Le Film", "המופלאה: הרפתקאות ליידי באג וחתול שחור", "המופלאה: הרפתקאות ליידי באג וחתול שחור",
      "https://www.seret.co.il/images/movies/LadybugandCatNoirTheMovie/LadybugandCatNoirTheMovie1.jpg"),
 
@@ -47,6 +44,10 @@ testData: list[tuple[str, str, str, str]] = [
     ("Wish", "המשאלה", "המשאלה", "https://www.seret.co.il/images/movies/Wish/Wish1.jpg"),
 
     ("Weekend Rebels", 'מורדים לסופ"ש', 'מורדים לסופש', "https://www.seret.co.il/images/movies/WeeekendRebels/WeeekendRebels1.jpg"),
+
+    ("Kalki 2898 AD", 'קאלקי - אחרית הימים', 'קאלקי: אחרית הימים', "https://www.edb.co.il/photos/187762024_poster01.poster.jpg"),
+
+    ("Kalki 2898 AD", 'קאלקי-אחרית הימים-סרט הודי', 'קאלקי: אחרית הימים', "https://www.edb.co.il/photos/187762024_poster01.poster.jpg"),
 ]
 
 fake_movies_names = [

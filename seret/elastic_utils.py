@@ -22,8 +22,10 @@ def search(search_term: str, search_field: ElasticSearchField, min_needed_score:
 
     hits = raw_hits.get('hits')
 
-    if len(hits) > 2:
-        difference_in_score = hits[0].get('_score') - hits[1].get('_score')
+    same_source_hits = [hit for hit in hits if hits[0].get("_id").isdigit() == hit.get("_id").isdigit()]
+
+    if len(same_source_hits) > 2:
+        difference_in_score = same_source_hits[0].get('_score') - same_source_hits[1].get('_score')
     else:
         difference_in_score = 99
 
@@ -31,5 +33,6 @@ def search(search_term: str, search_field: ElasticSearchField, min_needed_score:
         return None
 
     wanted_result: dict = hits[0].get('_source')
-    return SeretMovieInfo(wanted_result.get('english_name'), wanted_result.get('name'),
-                          wanted_result.get('description'), wanted_result.get('image_url'), wanted_result.get('year'))
+    return SeretMovieInfo(wanted_result.get('english_name').strip(), wanted_result.get('name').strip(),
+                          wanted_result.get('description').strip(), wanted_result.get('image_url'),
+                          wanted_result.get('year'))

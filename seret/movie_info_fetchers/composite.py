@@ -23,7 +23,7 @@ class CompositeMovieInfoFetcher(MovieInfoFetcher):
 
         self.fetchers = [
             ElasticMovieInfoFetcher(movie_rater),
-            SearchEngineMovieInfoFetcher(search_engine, seret_fetcher, movie_rater, session)
+            # SearchEngineMovieInfoFetcher(search_engine, seret_fetcher, movie_rater, session)
         ]
 
     @lru_cache(maxsize=None)
