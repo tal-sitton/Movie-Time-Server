@@ -5,7 +5,7 @@ from seret.movie_info import SeretMovieInfo
 
 
 def search(search_term: str, search_field: ElasticSearchField, min_needed_score: int = 0,
-           fuzzy=False) -> SeretMovieInfo | None:
+           fuzzy=False) -> tuple[(SeretMovieInfo | None), float]:
     with Elasticsearch(hosts=[ELASTIC_HOST]) as client:
         if fuzzy:
             body = {"query": {"bool": {
@@ -18,7 +18,7 @@ def search(search_term: str, search_field: ElasticSearchField, min_needed_score:
     max_score = raw_hits.get('max_score')
 
     if not raw_hits or not raw_hits.get('hits'):
-        return None
+        return None, 0
 
     hits = raw_hits.get('hits')
 
@@ -30,9 +30,9 @@ def search(search_term: str, search_field: ElasticSearchField, min_needed_score:
         difference_in_score = 99
 
     if not max_score or max_score < min_needed_score or difference_in_score < 0.65:
-        return None
+        return None, 0
 
     wanted_result: dict = hits[0].get('_source')
     return SeretMovieInfo(wanted_result.get('english_name').strip(), wanted_result.get('name').strip(),
                           wanted_result.get('description').strip(), wanted_result.get('image_url'),
-                          wanted_result.get('year'))
+                          wanted_result.get('year')), max_score

@@ -16,21 +16,21 @@ class SearchEngineMovieInfoFetcher(MovieInfoFetcher):
         self.session = session
         self.movie_rater = movie_rater
 
-    def get_info(self, search_movie_name: str, original_movie_name: str) -> MovieInfo | None:
+    def get_info(self, search_movie_name: str, original_movie_name: str) -> tuple[(MovieInfo | None), float]:
         query = f"{search_movie_name} site:seret.co.il"
         needed_in_url = "movies/s_movies.asp?MID="
         remove_regex = r"Seret.co.il|סרט ::| :: |אתר סרט|\||<b>|</b>"
         results = self.search_engine(query, original_movie_name, remove_regex, needed_in_url, self.session)
         if not results or results[0].score < 0.4:
-            return None
+            return None, 0
 
         url = results[0].url
         partial_info = self.seret_fetcher.get_from_url(url)
         if not partial_info:
-            return None
+            return None, 0
         rating = self.movie_rater.rate(partial_info.english_name, partial_info.release_year)
         if not rating:
             rating = self.movie_rater.rate(partial_info.name, partial_info.release_year)
 
         return MovieInfo(partial_info.name, partial_info.english_name, partial_info.description, rating,
-                         partial_info.image_url)
+                         partial_info.image_url), results[0].score
