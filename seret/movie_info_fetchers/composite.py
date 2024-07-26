@@ -5,7 +5,7 @@ import requests
 
 from consts import LOGGING_LEVEL
 from seret.movie_info import MovieInfo
-from seret.movie_info_fetchers import MovieInfoFetcher, ElasticMovieInfoFetcher, SearchEngineMovieInfoFetcher
+from seret.movie_info_fetchers import MovieInfoFetcher, ElasticMovieInfoFetcher
 from seret.movie_info_fetchers.search_engines_api import search_callable
 from seret.movie_raters.movie_rater import MovieRater
 from seret.seret_fetchers import SeretMovieInfoFetcher
@@ -27,7 +27,7 @@ class CompositeMovieInfoFetcher(MovieInfoFetcher):
         ]
 
     @lru_cache(maxsize=None)
-    def get_info(self, search_movie_name: str, original_movie_name: str) -> MovieInfo | None:
+    def get_info(self, search_movie_name: str, original_movie_name: str) -> tuple[(MovieInfo | None), float]:
         for fetcher in self.fetchers:
             try:
                 info = fetcher.get_info(search_movie_name, original_movie_name)
@@ -38,4 +38,4 @@ class CompositeMovieInfoFetcher(MovieInfoFetcher):
                 self.logger.info(f"Got info for {search_movie_name} using {fetcher.__class__.__name__}")
                 return info
         self.logger.warning(f"Failed to get info for {search_movie_name}")
-        return None
+        return None, 0

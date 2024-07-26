@@ -43,15 +43,17 @@ testData: list[tuple[str, str, str, str]] = [
 
     ("Wish", "המשאלה", "המשאלה", "https://www.seret.co.il/images/movies/Wish/Wish1.jpg"),
 
-    ("Weekend Rebels", 'מורדים לסופ"ש', 'מורדים לסופש', "https://www.seret.co.il/images/movies/WeeekendRebels/WeeekendRebels1.jpg"),
+    ("Weekend Rebels", 'מורדים לסופ"ש', 'מורדים לסופ"ש', "https://www.edb.co.il/photos/187202023_poster01.poster.jpg"),
 
     ("Kalki 2898 AD", 'קאלקי - אחרית הימים', 'קאלקי: אחרית הימים', "https://www.edb.co.il/photos/187762024_poster01.poster.jpg"),
 
     ("Kalki 2898 AD", 'קאלקי-אחרית הימים-סרט הודי', 'קאלקי: אחרית הימים', "https://www.edb.co.il/photos/187762024_poster01.poster.jpg"),
+
+    ("Deadpool and Wolverine", 'דדפול ווולברין', 'דדפול & וולברין', "https://www.edb.co.il/photos/187052024_poster05.poster.jpg"),
 ]
 
 fake_movies_names = [
-    ("really not a real movie", "סרט מאוד לא אמיתי"),
+    ("Mission Imposibble: the last man standing", "משימה בלתי אפשרית: האיש האחרון בחיים"),
 ]
 
 
