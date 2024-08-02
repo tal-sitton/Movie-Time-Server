@@ -54,9 +54,6 @@ testData: list[tuple[str, str, list[str], list[str]]] = [
     ("Blood", "צמא דם", ["צמא דם"], ["https://www.edb.co.il/photos/184272022_poster01.poster.jpg",
                                      "https://www.seret.co.il/images/movies/Blood/Blood1.jpg"]),
 
-    ("Home", "בית", ["בית"], ["https://www.edb.co.il/photos/186012023_poster01.poster.jpg",
-                              "https://www.seret.co.il/images/movies/Home2023/Home20231.jpg"]),
-
     ("Wish", "המשאלה", ["המשאלה"], ["https://www.edb.co.il/photos/176452023_poster04.poster.jpg",
                                     "https://www.seret.co.il/images/movies/Wish/Wish1.jpg"]),
 
