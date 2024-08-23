@@ -4,8 +4,7 @@ from enum import Enum
 import requests
 from bs4 import BeautifulSoup
 
-from models import Screening
-from models import MovieType, Districts, LanguageType
+from models import MovieType, Districts, LanguageType, Screening
 
 
 class Locations(Enum):
@@ -110,7 +109,11 @@ def get_by_location(location: Locations, date: str, s: requests.Session) -> list
             m_id = m_date["EventId"]
             link = f"https://hotcinema.co.il/order?theaterId={location.value['code']}&eventId={m_id}&site=undefined"
             dubbed = find_dubbed(m_date)
-            eng_title = get_english_title(movie_info['MovieId'], s)
+            try:
+                eng_title = get_english_title(movie_info['MovieId'], s)
+            except Exception as e:
+                eng_title = name
+                logger.error(f"Failed to get english title for {name} {e}")
             screenings.append(
                 Screening(date, "הוט סינמה", location.value['name'], location.value['dis'], name, eng_title,
                           MovieType.m_3D if m_date['Is3D'] else MovieType.unknown, m_time, link,
