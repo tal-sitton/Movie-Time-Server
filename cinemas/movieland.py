@@ -5,8 +5,8 @@ from typing import Dict
 import requests
 from bs4 import BeautifulSoup
 
-from models import Screening
 from models import Districts, MovieType, LanguageType
+from models import Screening
 
 
 class Locations(Enum):
@@ -118,3 +118,11 @@ def get_screenings(year: str, month: str, day: str, s: requests.Session) -> list
         screenings.extend(get_by_location(location, date, format_date, s))
     logger.info("DONE Movie Land")
     return screenings
+
+
+if __name__ == '__main__':
+    from datetime import datetime
+
+    s = requests.Session()
+    print(get_screenings(str(datetime.now().year), str(datetime.now().month).zfill(2),
+                         str(datetime.now().day + 1).zfill(2), s))
