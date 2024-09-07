@@ -5,8 +5,9 @@ from enum import Enum
 
 import requests
 
-from models import Screening
 from models import MovieType, Districts, LanguageType
+from models import Screening
+from proxy import ProxifiedSession
 
 
 class Locations(Enum):
@@ -82,6 +83,7 @@ logger = logging.getLogger(__name__)
 def get_english_name(movie_url: str, s: requests.Session) -> str | None:
     if movie_url in cached_english_names:
         return cached_english_names[movie_url]
+    res = None
     try:
         res = s.get(movie_url)
         raw = re.search("var filmDetails = (.*);", res.text).group(1)
@@ -91,15 +93,22 @@ def get_english_name(movie_url: str, s: requests.Session) -> str | None:
         return title
     except Exception as e:
         logger.exception(f"Failed to get english name for {movie_url}", exc_info=e)
+        if res:
+            logger.info(res.text)
         return None
 
 
 def prepare(location: Locations, date: str, s: requests.Session) -> tuple:
-    url = f"https://www.yesplanet.co.il/il/data-api-service/v1/quickbook/10100/film-events/in-cinema/{location.value['code']}/at-date/{date}"
+    url = f"https://www.planetcinema.co.il/il/data-api-service/v1/quickbook/10100/film-events/in-cinema/{location.value['code']}/at-date/{date}"
     res = s.get(url)
-    data = dict(res.json().get("body"))
-    movies_data = {movie.get("id"): movie for movie in data.get("films")}
-    return movies_data, data.get("events")
+    try:
+        data = dict(res.json().get("body"))
+        movies_data = {movie.get("id"): movie for movie in data.get("films")}
+        return movies_data, data.get("events")
+    except Exception as e:
+        logger.info(url)
+        logger.info(res.text)
+        raise e
 
 
 def get_by_location(location: Locations, date: str, format_date: str, s: requests.Session) -> list[Screening]:
@@ -128,8 +137,20 @@ def get_screenings(year: str, month: str, day: str, s: requests.Session) -> list
     date = "{}-{}-{}".format(year, month.zfill(2), day.zfill(2))
     format_date = "{}-{}-{}".format(day.zfill(2), month.zfill(2), year)
 
-    for location in Locations:
-        screenings.extend(get_by_location(location, date, format_date, s))
+    with ProxifiedSession(s) as ps:
+        for location in Locations:
+            try:
+                screenings.extend(get_by_location(location, date, format_date, ps))
+            except Exception as e:
+                logger.exception(f"Failed to get screenings for {location.name}", exc_info=e)
 
     logger.info("DONE YES PLANET")
     return screenings
+
+
+if __name__ == '__main__':
+    from datetime import datetime
+
+    s = requests.Session()
+    print(get_screenings(str(datetime.now().year), str(datetime.now().month).zfill(2),
+                         str(datetime.now().day + 1).zfill(2), s))

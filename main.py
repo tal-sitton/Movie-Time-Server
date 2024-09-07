@@ -71,12 +71,13 @@ def unsafe_get_screenings_from_cinema(get_screening: GetScreeningCallable, cinem
     screenings = get_screening(year, month, day, s)
     if not screenings:
         raise AssertionError(f'{cinema} returned empty list')
-    return get_screening(year, month, day, s)
+    return screenings
 
 
 def mute_other_loggers():
     logging.getLogger("urllib3").setLevel(logging.ERROR)
     logging.getLogger('elastic_transport').setLevel(logging.ERROR)
+    logging.getLogger('selenium').setLevel(logging.ERROR)
 
 
 def prepare_logs(logs_path: pathlib.Path):
