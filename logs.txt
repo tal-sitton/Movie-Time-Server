@@ -1,827 +1,874 @@
-2024-09-08 02:55:57,880 - root - INFO - ********************
-2024-09-08 02:55:57,880 - root - INFO - started checking for:08-09-2024
-2024-09-08 02:55:57,880 - cinemas.yes_planet - INFO - STARTED YES PLANET
-2024-09-08 02:55:59,986 - proxy - INFO - Proxy: {'YourFuckingIPAddress': '45.150.108.125', 'YourFuckingLocation': 'Israel', 'YourFuckingHostname': '45.150.108.125', 'YourFuckingISP': 'BlueVPS OU', 'YourFuckingTorExit': False, 'YourFuckingCity': '', 'YourFuckingCountry': 'Israel', 'YourFuckingCountryCode': 'IL'}
-2024-09-08 02:55:59,987 - cinemas.yes_planet - INFO - STARTED YES PLANET RISHON
-2024-09-08 02:57:24,330 - cinemas.yes_planet - INFO - DONE YES PLANET RISHON
-2024-09-08 02:57:24,331 - cinemas.yes_planet - INFO - STARTED YES PLANET AYALON
-2024-09-08 02:57:35,312 - cinemas.yes_planet - INFO - DONE YES PLANET AYALON
-2024-09-08 02:57:35,312 - cinemas.yes_planet - INFO - STARTED YES PLANET ZICHRON
-2024-09-08 02:57:35,744 - cinemas.yes_planet - INFO - DONE YES PLANET ZICHRON
-2024-09-08 02:57:35,744 - cinemas.yes_planet - INFO - STARTED YES PLANET HAIFA
-2024-09-08 02:57:40,493 - cinemas.yes_planet - INFO - DONE YES PLANET HAIFA
-2024-09-08 02:57:40,493 - cinemas.yes_planet - INFO - STARTED YES PLANET JERUSALEM
-2024-09-08 02:57:40,912 - cinemas.yes_planet - INFO - DONE YES PLANET JERUSALEM
-2024-09-08 02:57:40,913 - cinemas.yes_planet - INFO - STARTED YES PLANET BEER_SHEVA
-2024-09-08 02:57:45,940 - cinemas.yes_planet - INFO - DONE YES PLANET BEER_SHEVA
-2024-09-08 02:57:46,022 - proxy - INFO - Proxy removed
-2024-09-08 02:57:46,022 - cinemas.yes_planet - INFO - DONE YES PLANET
-2024-09-08 02:57:46,022 - cinemas.rav_hen - INFO - STARTED RAV HEN
-2024-09-08 02:57:46,023 - cinemas.rav_hen - INFO - STARTED RAV HEN GIVATAIM
-2024-09-08 02:57:54,367 - cinemas.rav_hen - INFO - DONE RAV HEN GIVATAIM
-2024-09-08 02:57:54,368 - cinemas.rav_hen - INFO - STARTED RAV HEN DIZINGOF
-2024-09-08 02:57:54,934 - cinemas.rav_hen - INFO - DONE RAV HEN DIZINGOF
-2024-09-08 02:57:54,934 - cinemas.rav_hen - INFO - STARTED RAV HEN MODIIN
-2024-09-08 02:57:55,460 - cinemas.rav_hen - INFO - DONE RAV HEN MODIIN
-2024-09-08 02:57:55,460 - cinemas.rav_hen - INFO - STARTED RAV HEN KIRYAT_ONO
-2024-09-08 02:57:55,942 - cinemas.rav_hen - INFO - DONE RAV HEN KIRYAT_ONO
-2024-09-08 02:57:55,943 - cinemas.rav_hen - INFO - DONE RAV HEN
-2024-09-08 02:57:55,943 - cinemas.hot_cinema - INFO - STARTED HOT CINEMA
-2024-09-08 02:57:55,943 - cinemas.hot_cinema - INFO - STARTED HOT CINEMA MODIIN
-2024-09-08 02:58:06,847 - cinemas.hot_cinema - INFO - DONE HOT CINEMA MODIIN
-2024-09-08 02:58:06,847 - cinemas.hot_cinema - INFO - STARTED HOT CINEMA KIRYON
-2024-09-08 02:58:13,786 - cinemas.hot_cinema - INFO - DONE HOT CINEMA KIRYON
-2024-09-08 02:58:13,786 - cinemas.hot_cinema - INFO - STARTED HOT CINEMA KFAR_SABBA
-2024-09-08 02:58:15,849 - cinemas.hot_cinema - INFO - DONE HOT CINEMA KFAR_SABBA
-2024-09-08 02:58:15,849 - cinemas.hot_cinema - INFO - STARTED HOT CINEMA HAIFA
-2024-09-08 02:58:16,481 - cinemas.hot_cinema - INFO - DONE HOT CINEMA HAIFA
-2024-09-08 02:58:16,481 - cinemas.hot_cinema - INFO - STARTED HOT CINEMA PETACH_TIKVA
-2024-09-08 02:58:17,613 - cinemas.hot_cinema - INFO - DONE HOT CINEMA PETACH_TIKVA
-2024-09-08 02:58:17,613 - cinemas.hot_cinema - INFO - STARTED HOT CINEMA RECHOVOT
-2024-09-08 02:58:17,754 - cinemas.hot_cinema - INFO - DONE HOT CINEMA RECHOVOT
-2024-09-08 02:58:17,754 - cinemas.hot_cinema - INFO - STARTED HOT CINEMA ASHKELON
-2024-09-08 02:58:17,892 - cinemas.hot_cinema - INFO - DONE HOT CINEMA ASHKELON
-2024-09-08 02:58:17,892 - cinemas.hot_cinema - INFO - STARTED HOT CINEMA KARMIEL
-2024-09-08 02:58:18,028 - cinemas.hot_cinema - INFO - DONE HOT CINEMA KARMIEL
-2024-09-08 02:58:18,028 - cinemas.hot_cinema - INFO - STARTED HOT CINEMA NAHARIA
-2024-09-08 02:58:18,164 - cinemas.hot_cinema - INFO - DONE HOT CINEMA NAHARIA
-2024-09-08 02:58:18,164 - cinemas.hot_cinema - INFO - STARTED HOT CINEMA ASHDOD
-2024-09-08 02:58:18,300 - cinemas.hot_cinema - INFO - DONE HOT CINEMA ASHDOD
-2024-09-08 02:58:18,300 - cinemas.hot_cinema - INFO - DONE HOT CINEMA
-2024-09-08 02:58:18,300 - cinemas.cinema_city - INFO - STARTED CINEMA CITY
-2024-09-08 02:58:18,300 - cinemas.cinema_city - INFO - STARTED CINEMA CITY GLILOT
-2024-09-08 02:58:39,311 - cinemas.cinema_city - INFO - DONE CINEMA CITY GLILOT
-2024-09-08 02:58:39,311 - cinemas.cinema_city - INFO - STARTED CINEMA CITY RISHON
-2024-09-08 02:58:42,913 - cinemas.cinema_city - INFO - DONE CINEMA CITY RISHON
-2024-09-08 02:58:42,913 - cinemas.cinema_city - INFO - STARTED CINEMA CITY JERUSALEM
-2024-09-08 02:58:44,903 - cinemas.cinema_city - INFO - DONE CINEMA CITY JERUSALEM
-2024-09-08 02:58:44,903 - cinemas.cinema_city - INFO - STARTED CINEMA CITY KFAR_SABBA
-2024-09-08 02:58:45,578 - cinemas.cinema_city - INFO - DONE CINEMA CITY KFAR_SABBA
-2024-09-08 02:58:45,578 - cinemas.cinema_city - INFO - STARTED CINEMA CITY NATANIA
-2024-09-08 02:58:46,227 - cinemas.cinema_city - INFO - DONE CINEMA CITY NATANIA
-2024-09-08 02:58:46,227 - cinemas.cinema_city - INFO - STARTED CINEMA CITY BEER_SHEVA
-2024-09-08 02:58:47,430 - cinemas.cinema_city - INFO - DONE CINEMA CITY BEER_SHEVA
-2024-09-08 02:58:47,431 - cinemas.cinema_city - INFO - STARTED CINEMA CITY HADERA
-2024-09-08 02:58:48,084 - cinemas.cinema_city - INFO - DONE CINEMA CITY HADERA
-2024-09-08 02:58:48,084 - cinemas.cinema_city - INFO - STARTED CINEMA CITY ASHDOD
-2024-09-08 02:58:48,746 - cinemas.cinema_city - INFO - DONE CINEMA CITY ASHDOD
-2024-09-08 02:58:48,746 - cinemas.cinema_city - INFO - DONE CINEMA CITY
-2024-09-08 02:58:48,746 - cinemas.lev - INFO - STARTED LEV
-2024-09-08 02:58:50,537 - proxy - INFO - Proxy: {'YourFuckingIPAddress': '45.150.108.125', 'YourFuckingLocation': 'Israel', 'YourFuckingHostname': '45.150.108.125', 'YourFuckingISP': 'BlueVPS OU', 'YourFuckingTorExit': False, 'YourFuckingCity': '', 'YourFuckingCountry': 'Israel', 'YourFuckingCountryCode': 'IL'}
-2024-09-08 02:58:50,537 - cinemas.lev - INFO - STARTED LEV TEL_AVIV
-2024-09-08 02:58:54,728 - cinemas.lev - INFO - DONE LEV TEL_AVIV
-2024-09-08 02:58:54,728 - cinemas.lev - INFO - STARTED LEV RAMAT_HASHARON
-2024-09-08 02:58:55,055 - cinemas.lev - INFO - DONE LEV RAMAT_HASHARON
-2024-09-08 02:58:55,055 - cinemas.lev - INFO - STARTED LEV MANDARIN
-2024-09-08 02:58:55,572 - cinemas.lev - INFO - DONE LEV MANDARIN
-2024-09-08 02:58:55,572 - cinemas.lev - INFO - STARTED LEV EVEN_YEHUDA
-2024-09-08 02:58:56,444 - cinemas.lev - INFO - DONE LEV EVEN_YEHUDA
-2024-09-08 02:58:56,444 - cinemas.lev - INFO - STARTED LEV SMADAR
-2024-09-08 02:58:56,778 - cinemas.lev - INFO - DONE LEV SMADAR
-2024-09-08 02:58:56,778 - cinemas.lev - INFO - STARTED LEV RAANANA
-2024-09-08 02:58:59,909 - cinemas.lev - INFO - DONE LEV RAANANA
-2024-09-08 02:58:59,909 - cinemas.lev - INFO - STARTED LEV OMER
-2024-09-08 02:59:00,251 - cinemas.lev - INFO - DONE LEV OMER
-2024-09-08 02:59:00,251 - cinemas.lev - INFO - STARTED LEV SHOHAM
-2024-09-08 02:59:00,775 - cinemas.lev - INFO - DONE LEV SHOHAM
-2024-09-08 02:59:00,775 - cinemas.lev - INFO - STARTED LEV DANIEL
-2024-09-08 02:59:01,085 - cinemas.lev - INFO - DONE LEV DANIEL
-2024-09-08 02:59:01,149 - proxy - INFO - Proxy removed
-2024-09-08 02:59:01,149 - cinemas.lev - INFO - DONE LEV
-2024-09-08 02:59:01,149 - cinemas.movieland - INFO - STARTED Movie Land
-2024-09-08 02:59:01,149 - cinemas.movieland - INFO - STARTED Movie Land CARMIEL
-2024-09-08 02:59:06,391 - cinemas.movieland - INFO - DONE Movie Land CARMIEL
-2024-09-08 02:59:06,391 - cinemas.movieland - INFO - STARTED Movie Land HAIFA
-2024-09-08 02:59:06,796 - cinemas.movieland - INFO - DONE Movie Land HAIFA
-2024-09-08 02:59:06,796 - cinemas.movieland - INFO - STARTED Movie Land NATANYA
-2024-09-08 02:59:07,623 - cinemas.movieland - INFO - DONE Movie Land NATANYA
-2024-09-08 02:59:07,623 - cinemas.movieland - INFO - DONE Movie Land
-2024-09-08 02:59:07,623 - root - INFO - ********************
-2024-09-08 02:59:07,623 - root - INFO - started checking for:09-09-2024
-2024-09-08 02:59:07,624 - cinemas.yes_planet - INFO - STARTED YES PLANET
-2024-09-08 02:59:09,383 - proxy - INFO - Proxy: {'YourFuckingIPAddress': '45.150.108.125', 'YourFuckingLocation': 'Israel', 'YourFuckingHostname': '45.150.108.125', 'YourFuckingISP': 'BlueVPS OU', 'YourFuckingTorExit': False, 'YourFuckingCity': '', 'YourFuckingCountry': 'Israel', 'YourFuckingCountryCode': 'IL'}
-2024-09-08 02:59:09,383 - cinemas.yes_planet - INFO - STARTED YES PLANET RISHON
-2024-09-08 02:59:10,179 - cinemas.yes_planet - INFO - DONE YES PLANET RISHON
-2024-09-08 02:59:10,179 - cinemas.yes_planet - INFO - STARTED YES PLANET AYALON
-2024-09-08 02:59:10,553 - cinemas.yes_planet - INFO - DONE YES PLANET AYALON
-2024-09-08 02:59:10,553 - cinemas.yes_planet - INFO - STARTED YES PLANET ZICHRON
-2024-09-08 02:59:11,556 - cinemas.yes_planet - INFO - DONE YES PLANET ZICHRON
-2024-09-08 02:59:11,556 - cinemas.yes_planet - INFO - STARTED YES PLANET HAIFA
-2024-09-08 02:59:12,009 - cinemas.yes_planet - INFO - DONE YES PLANET HAIFA
-2024-09-08 02:59:12,009 - cinemas.yes_planet - INFO - STARTED YES PLANET JERUSALEM
-2024-09-08 02:59:12,494 - cinemas.yes_planet - INFO - DONE YES PLANET JERUSALEM
-2024-09-08 02:59:12,494 - cinemas.yes_planet - INFO - STARTED YES PLANET BEER_SHEVA
-2024-09-08 02:59:13,033 - cinemas.yes_planet - INFO - DONE YES PLANET BEER_SHEVA
-2024-09-08 02:59:13,096 - proxy - INFO - Proxy removed
-2024-09-08 02:59:13,096 - cinemas.yes_planet - INFO - DONE YES PLANET
-2024-09-08 02:59:13,096 - cinemas.rav_hen - INFO - STARTED RAV HEN
-2024-09-08 02:59:13,096 - cinemas.rav_hen - INFO - STARTED RAV HEN GIVATAIM
-2024-09-08 02:59:13,662 - cinemas.rav_hen - INFO - DONE RAV HEN GIVATAIM
-2024-09-08 02:59:13,662 - cinemas.rav_hen - INFO - STARTED RAV HEN DIZINGOF
-2024-09-08 02:59:14,154 - cinemas.rav_hen - INFO - DONE RAV HEN DIZINGOF
-2024-09-08 02:59:14,154 - cinemas.rav_hen - INFO - STARTED RAV HEN MODIIN
-2024-09-08 02:59:14,567 - cinemas.rav_hen - INFO - DONE RAV HEN MODIIN
-2024-09-08 02:59:14,567 - cinemas.rav_hen - INFO - STARTED RAV HEN KIRYAT_ONO
-2024-09-08 02:59:15,067 - cinemas.rav_hen - INFO - DONE RAV HEN KIRYAT_ONO
-2024-09-08 02:59:15,067 - cinemas.rav_hen - INFO - DONE RAV HEN
-2024-09-08 02:59:15,067 - cinemas.hot_cinema - INFO - STARTED HOT CINEMA
-2024-09-08 02:59:15,067 - cinemas.hot_cinema - INFO - STARTED HOT CINEMA MODIIN
-2024-09-08 02:59:15,205 - cinemas.hot_cinema - INFO - DONE HOT CINEMA MODIIN
-2024-09-08 02:59:15,205 - cinemas.hot_cinema - INFO - STARTED HOT CINEMA KIRYON
-2024-09-08 02:59:15,816 - cinemas.hot_cinema - INFO - DONE HOT CINEMA KIRYON
-2024-09-08 02:59:15,816 - cinemas.hot_cinema - INFO - STARTED HOT CINEMA KFAR_SABBA
-2024-09-08 02:59:15,954 - cinemas.hot_cinema - INFO - DONE HOT CINEMA KFAR_SABBA
-2024-09-08 02:59:15,954 - cinemas.hot_cinema - INFO - STARTED HOT CINEMA HAIFA
-2024-09-08 02:59:16,094 - cinemas.hot_cinema - INFO - DONE HOT CINEMA HAIFA
-2024-09-08 02:59:16,094 - cinemas.hot_cinema - INFO - STARTED HOT CINEMA PETACH_TIKVA
-2024-09-08 02:59:16,233 - cinemas.hot_cinema - INFO - DONE HOT CINEMA PETACH_TIKVA
-2024-09-08 02:59:16,233 - cinemas.hot_cinema - INFO - STARTED HOT CINEMA RECHOVOT
-2024-09-08 02:59:16,847 - cinemas.hot_cinema - INFO - DONE HOT CINEMA RECHOVOT
-2024-09-08 02:59:16,847 - cinemas.hot_cinema - INFO - STARTED HOT CINEMA ASHKELON
-2024-09-08 02:59:16,985 - cinemas.hot_cinema - INFO - DONE HOT CINEMA ASHKELON
-2024-09-08 02:59:16,985 - cinemas.hot_cinema - INFO - STARTED HOT CINEMA KARMIEL
-2024-09-08 02:59:18,059 - cinemas.hot_cinema - INFO - DONE HOT CINEMA KARMIEL
-2024-09-08 02:59:18,059 - cinemas.hot_cinema - INFO - STARTED HOT CINEMA NAHARIA
-2024-09-08 02:59:18,196 - cinemas.hot_cinema - INFO - DONE HOT CINEMA NAHARIA
-2024-09-08 02:59:18,196 - cinemas.hot_cinema - INFO - STARTED HOT CINEMA ASHDOD
-2024-09-08 02:59:18,332 - cinemas.hot_cinema - INFO - DONE HOT CINEMA ASHDOD
-2024-09-08 02:59:18,333 - cinemas.hot_cinema - INFO - DONE HOT CINEMA
-2024-09-08 02:59:18,333 - cinemas.cinema_city - INFO - STARTED CINEMA CITY
-2024-09-08 02:59:18,333 - cinemas.cinema_city - INFO - STARTED CINEMA CITY GLILOT
-2024-09-08 02:59:18,993 - cinemas.cinema_city - INFO - DONE CINEMA CITY GLILOT
-2024-09-08 02:59:18,993 - cinemas.cinema_city - INFO - STARTED CINEMA CITY RISHON
-2024-09-08 02:59:20,223 - cinemas.cinema_city - INFO - DONE CINEMA CITY RISHON
-2024-09-08 02:59:20,223 - cinemas.cinema_city - INFO - STARTED CINEMA CITY JERUSALEM
-2024-09-08 02:59:21,671 - cinemas.cinema_city - INFO - DONE CINEMA CITY JERUSALEM
-2024-09-08 02:59:21,671 - cinemas.cinema_city - INFO - STARTED CINEMA CITY KFAR_SABBA
-2024-09-08 02:59:22,358 - cinemas.cinema_city - INFO - DONE CINEMA CITY KFAR_SABBA
-2024-09-08 02:59:22,358 - cinemas.cinema_city - INFO - STARTED CINEMA CITY NATANIA
-2024-09-08 02:59:22,864 - cinemas.cinema_city - INFO - DONE CINEMA CITY NATANIA
-2024-09-08 02:59:22,864 - cinemas.cinema_city - INFO - STARTED CINEMA CITY BEER_SHEVA
-2024-09-08 02:59:23,511 - cinemas.cinema_city - INFO - DONE CINEMA CITY BEER_SHEVA
-2024-09-08 02:59:23,511 - cinemas.cinema_city - INFO - STARTED CINEMA CITY HADERA
-2024-09-08 02:59:24,143 - cinemas.cinema_city - INFO - DONE CINEMA CITY HADERA
-2024-09-08 02:59:24,143 - cinemas.cinema_city - INFO - STARTED CINEMA CITY ASHDOD
-2024-09-08 02:59:25,365 - cinemas.cinema_city - INFO - DONE CINEMA CITY ASHDOD
-2024-09-08 02:59:25,365 - cinemas.cinema_city - INFO - DONE CINEMA CITY
-2024-09-08 02:59:25,365 - cinemas.lev - INFO - STARTED LEV
-2024-09-08 02:59:27,140 - proxy - INFO - Proxy: {'YourFuckingIPAddress': '45.150.108.125', 'YourFuckingLocation': 'Israel', 'YourFuckingHostname': '45.150.108.125', 'YourFuckingISP': 'BlueVPS OU', 'YourFuckingTorExit': False, 'YourFuckingCity': '', 'YourFuckingCountry': 'Israel', 'YourFuckingCountryCode': 'IL'}
-2024-09-08 02:59:27,140 - cinemas.lev - INFO - STARTED LEV TEL_AVIV
-2024-09-08 02:59:28,240 - cinemas.lev - INFO - DONE LEV TEL_AVIV
-2024-09-08 02:59:28,241 - cinemas.lev - INFO - STARTED LEV RAMAT_HASHARON
-2024-09-08 02:59:28,562 - cinemas.lev - INFO - DONE LEV RAMAT_HASHARON
-2024-09-08 02:59:28,562 - cinemas.lev - INFO - STARTED LEV MANDARIN
-2024-09-08 02:59:29,034 - cinemas.lev - INFO - DONE LEV MANDARIN
-2024-09-08 02:59:29,034 - cinemas.lev - INFO - STARTED LEV EVEN_YEHUDA
-2024-09-08 02:59:29,366 - cinemas.lev - INFO - DONE LEV EVEN_YEHUDA
-2024-09-08 02:59:29,366 - cinemas.lev - INFO - STARTED LEV SMADAR
-2024-09-08 02:59:29,662 - cinemas.lev - INFO - DONE LEV SMADAR
-2024-09-08 02:59:29,662 - cinemas.lev - INFO - STARTED LEV RAANANA
-2024-09-08 02:59:29,991 - cinemas.lev - INFO - DONE LEV RAANANA
-2024-09-08 02:59:29,991 - cinemas.lev - INFO - STARTED LEV OMER
-2024-09-08 02:59:30,282 - cinemas.lev - INFO - DONE LEV OMER
-2024-09-08 02:59:30,282 - cinemas.lev - INFO - STARTED LEV SHOHAM
-2024-09-08 02:59:30,613 - cinemas.lev - INFO - DONE LEV SHOHAM
-2024-09-08 02:59:30,613 - cinemas.lev - INFO - STARTED LEV DANIEL
-2024-09-08 02:59:30,905 - cinemas.lev - INFO - DONE LEV DANIEL
-2024-09-08 02:59:30,968 - proxy - INFO - Proxy removed
-2024-09-08 02:59:30,968 - cinemas.lev - INFO - DONE LEV
-2024-09-08 02:59:30,969 - cinemas.movieland - INFO - STARTED Movie Land
-2024-09-08 02:59:30,969 - cinemas.movieland - INFO - STARTED Movie Land CARMIEL
-2024-09-08 02:59:31,656 - cinemas.movieland - INFO - DONE Movie Land CARMIEL
-2024-09-08 02:59:31,656 - cinemas.movieland - INFO - STARTED Movie Land HAIFA
-2024-09-08 02:59:31,657 - cinemas.movieland - INFO - DONE Movie Land HAIFA
-2024-09-08 02:59:31,657 - cinemas.movieland - INFO - STARTED Movie Land NATANYA
-2024-09-08 02:59:31,886 - cinemas.movieland - INFO - DONE Movie Land NATANYA
-2024-09-08 02:59:31,886 - cinemas.movieland - INFO - DONE Movie Land
-2024-09-08 02:59:31,886 - root - INFO - ********************
-2024-09-08 02:59:31,886 - root - INFO - started checking for:10-09-2024
-2024-09-08 02:59:31,886 - cinemas.yes_planet - INFO - STARTED YES PLANET
-2024-09-08 02:59:33,604 - proxy - INFO - Proxy: {'YourFuckingIPAddress': '45.150.108.125', 'YourFuckingLocation': 'Israel', 'YourFuckingHostname': '45.150.108.125', 'YourFuckingISP': 'BlueVPS OU', 'YourFuckingTorExit': False, 'YourFuckingCity': '', 'YourFuckingCountry': 'Israel', 'YourFuckingCountryCode': 'IL'}
-2024-09-08 02:59:33,604 - cinemas.yes_planet - INFO - STARTED YES PLANET RISHON
-2024-09-08 02:59:34,838 - cinemas.yes_planet - INFO - DONE YES PLANET RISHON
-2024-09-08 02:59:34,838 - cinemas.yes_planet - INFO - STARTED YES PLANET AYALON
-2024-09-08 02:59:35,228 - cinemas.yes_planet - INFO - DONE YES PLANET AYALON
-2024-09-08 02:59:35,229 - cinemas.yes_planet - INFO - STARTED YES PLANET ZICHRON
-2024-09-08 02:59:35,752 - cinemas.yes_planet - INFO - DONE YES PLANET ZICHRON
-2024-09-08 02:59:35,752 - cinemas.yes_planet - INFO - STARTED YES PLANET HAIFA
-2024-09-08 02:59:36,524 - cinemas.yes_planet - INFO - DONE YES PLANET HAIFA
-2024-09-08 02:59:36,525 - cinemas.yes_planet - INFO - STARTED YES PLANET JERUSALEM
-2024-09-08 02:59:37,016 - cinemas.yes_planet - INFO - DONE YES PLANET JERUSALEM
-2024-09-08 02:59:37,016 - cinemas.yes_planet - INFO - STARTED YES PLANET BEER_SHEVA
-2024-09-08 02:59:37,583 - cinemas.yes_planet - INFO - DONE YES PLANET BEER_SHEVA
-2024-09-08 02:59:37,646 - proxy - INFO - Proxy removed
-2024-09-08 02:59:37,646 - cinemas.yes_planet - INFO - DONE YES PLANET
-2024-09-08 02:59:37,647 - cinemas.rav_hen - INFO - STARTED RAV HEN
-2024-09-08 02:59:37,647 - cinemas.rav_hen - INFO - STARTED RAV HEN GIVATAIM
-2024-09-08 02:59:38,156 - cinemas.rav_hen - INFO - DONE RAV HEN GIVATAIM
-2024-09-08 02:59:38,156 - cinemas.rav_hen - INFO - STARTED RAV HEN DIZINGOF
-2024-09-08 02:59:38,644 - cinemas.rav_hen - INFO - DONE RAV HEN DIZINGOF
-2024-09-08 02:59:38,644 - cinemas.rav_hen - INFO - STARTED RAV HEN MODIIN
-2024-09-08 02:59:39,066 - cinemas.rav_hen - INFO - DONE RAV HEN MODIIN
-2024-09-08 02:59:39,066 - cinemas.rav_hen - INFO - STARTED RAV HEN KIRYAT_ONO
-2024-09-08 02:59:39,581 - cinemas.rav_hen - INFO - DONE RAV HEN KIRYAT_ONO
-2024-09-08 02:59:39,581 - cinemas.rav_hen - INFO - DONE RAV HEN
-2024-09-08 02:59:39,581 - cinemas.hot_cinema - INFO - STARTED HOT CINEMA
-2024-09-08 02:59:39,581 - cinemas.hot_cinema - INFO - STARTED HOT CINEMA MODIIN
-2024-09-08 02:59:43,529 - cinemas.hot_cinema - INFO - DONE HOT CINEMA MODIIN
-2024-09-08 02:59:43,529 - cinemas.hot_cinema - INFO - STARTED HOT CINEMA KIRYON
-2024-09-08 02:59:44,634 - cinemas.hot_cinema - INFO - DONE HOT CINEMA KIRYON
-2024-09-08 02:59:44,634 - cinemas.hot_cinema - INFO - STARTED HOT CINEMA KFAR_SABBA
-2024-09-08 02:59:44,775 - cinemas.hot_cinema - INFO - DONE HOT CINEMA KFAR_SABBA
-2024-09-08 02:59:44,775 - cinemas.hot_cinema - INFO - STARTED HOT CINEMA HAIFA
-2024-09-08 02:59:44,916 - cinemas.hot_cinema - INFO - DONE HOT CINEMA HAIFA
-2024-09-08 02:59:44,916 - cinemas.hot_cinema - INFO - STARTED HOT CINEMA PETACH_TIKVA
-2024-09-08 02:59:45,056 - cinemas.hot_cinema - INFO - DONE HOT CINEMA PETACH_TIKVA
-2024-09-08 02:59:45,056 - cinemas.hot_cinema - INFO - STARTED HOT CINEMA RECHOVOT
-2024-09-08 02:59:45,195 - cinemas.hot_cinema - INFO - DONE HOT CINEMA RECHOVOT
-2024-09-08 02:59:45,195 - cinemas.hot_cinema - INFO - STARTED HOT CINEMA ASHKELON
-2024-09-08 02:59:45,332 - cinemas.hot_cinema - INFO - DONE HOT CINEMA ASHKELON
-2024-09-08 02:59:45,332 - cinemas.hot_cinema - INFO - STARTED HOT CINEMA KARMIEL
-2024-09-08 02:59:45,468 - cinemas.hot_cinema - INFO - DONE HOT CINEMA KARMIEL
-2024-09-08 02:59:45,468 - cinemas.hot_cinema - INFO - STARTED HOT CINEMA NAHARIA
-2024-09-08 02:59:45,605 - cinemas.hot_cinema - INFO - DONE HOT CINEMA NAHARIA
-2024-09-08 02:59:45,605 - cinemas.hot_cinema - INFO - STARTED HOT CINEMA ASHDOD
-2024-09-08 02:59:45,742 - cinemas.hot_cinema - INFO - DONE HOT CINEMA ASHDOD
-2024-09-08 02:59:45,742 - cinemas.hot_cinema - INFO - DONE HOT CINEMA
-2024-09-08 02:59:45,742 - cinemas.cinema_city - INFO - STARTED CINEMA CITY
-2024-09-08 02:59:45,742 - cinemas.cinema_city - INFO - STARTED CINEMA CITY GLILOT
-2024-09-08 02:59:50,610 - cinemas.cinema_city - INFO - DONE CINEMA CITY GLILOT
-2024-09-08 02:59:50,611 - cinemas.cinema_city - INFO - STARTED CINEMA CITY RISHON
-2024-09-08 02:59:51,261 - cinemas.cinema_city - INFO - DONE CINEMA CITY RISHON
-2024-09-08 02:59:51,261 - cinemas.cinema_city - INFO - STARTED CINEMA CITY JERUSALEM
-2024-09-08 02:59:51,911 - cinemas.cinema_city - INFO - DONE CINEMA CITY JERUSALEM
-2024-09-08 02:59:51,911 - cinemas.cinema_city - INFO - STARTED CINEMA CITY KFAR_SABBA
-2024-09-08 02:59:52,552 - cinemas.cinema_city - INFO - DONE CINEMA CITY KFAR_SABBA
-2024-09-08 02:59:52,552 - cinemas.cinema_city - INFO - STARTED CINEMA CITY NATANIA
-2024-09-08 02:59:53,067 - cinemas.cinema_city - INFO - DONE CINEMA CITY NATANIA
-2024-09-08 02:59:53,067 - cinemas.cinema_city - INFO - STARTED CINEMA CITY BEER_SHEVA
-2024-09-08 02:59:53,725 - cinemas.cinema_city - INFO - DONE CINEMA CITY BEER_SHEVA
-2024-09-08 02:59:53,726 - cinemas.cinema_city - INFO - STARTED CINEMA CITY HADERA
-2024-09-08 02:59:54,368 - cinemas.cinema_city - INFO - DONE CINEMA CITY HADERA
-2024-09-08 02:59:54,368 - cinemas.cinema_city - INFO - STARTED CINEMA CITY ASHDOD
-2024-09-08 02:59:55,201 - cinemas.cinema_city - INFO - DONE CINEMA CITY ASHDOD
-2024-09-08 02:59:55,201 - cinemas.cinema_city - INFO - DONE CINEMA CITY
-2024-09-08 02:59:55,201 - cinemas.lev - INFO - STARTED LEV
-2024-09-08 02:59:56,906 - proxy - INFO - Proxy: {'YourFuckingIPAddress': '45.150.108.125', 'YourFuckingLocation': 'Israel', 'YourFuckingHostname': '45.150.108.125', 'YourFuckingISP': 'BlueVPS OU', 'YourFuckingTorExit': False, 'YourFuckingCity': '', 'YourFuckingCountry': 'Israel', 'YourFuckingCountryCode': 'IL'}
-2024-09-08 02:59:56,906 - cinemas.lev - INFO - STARTED LEV TEL_AVIV
-2024-09-08 02:59:58,053 - cinemas.lev - INFO - DONE LEV TEL_AVIV
-2024-09-08 02:59:58,054 - cinemas.lev - INFO - STARTED LEV RAMAT_HASHARON
-2024-09-08 02:59:58,373 - cinemas.lev - INFO - DONE LEV RAMAT_HASHARON
-2024-09-08 02:59:58,373 - cinemas.lev - INFO - STARTED LEV MANDARIN
-2024-09-08 02:59:58,843 - cinemas.lev - INFO - DONE LEV MANDARIN
-2024-09-08 02:59:58,843 - cinemas.lev - INFO - STARTED LEV EVEN_YEHUDA
-2024-09-08 02:59:59,123 - cinemas.lev - INFO - DONE LEV EVEN_YEHUDA
-2024-09-08 02:59:59,123 - cinemas.lev - INFO - STARTED LEV SMADAR
-2024-09-08 02:59:59,356 - cinemas.lev - INFO - DONE LEV SMADAR
-2024-09-08 02:59:59,356 - cinemas.lev - INFO - STARTED LEV RAANANA
-2024-09-08 02:59:59,748 - cinemas.lev - INFO - DONE LEV RAANANA
-2024-09-08 02:59:59,748 - cinemas.lev - INFO - STARTED LEV OMER
-2024-09-08 03:00:00,110 - cinemas.lev - INFO - DONE LEV OMER
-2024-09-08 03:00:00,110 - cinemas.lev - INFO - STARTED LEV SHOHAM
-2024-09-08 03:00:00,506 - cinemas.lev - INFO - DONE LEV SHOHAM
-2024-09-08 03:00:00,506 - cinemas.lev - INFO - STARTED LEV DANIEL
-2024-09-08 03:00:00,927 - cinemas.lev - INFO - DONE LEV DANIEL
-2024-09-08 03:00:00,990 - proxy - INFO - Proxy removed
-2024-09-08 03:00:00,991 - cinemas.lev - INFO - DONE LEV
-2024-09-08 03:00:00,991 - cinemas.movieland - INFO - STARTED Movie Land
-2024-09-08 03:00:00,991 - cinemas.movieland - INFO - STARTED Movie Land CARMIEL
-2024-09-08 03:00:03,099 - cinemas.movieland - INFO - DONE Movie Land CARMIEL
-2024-09-08 03:00:03,099 - cinemas.movieland - INFO - STARTED Movie Land HAIFA
-2024-09-08 03:00:03,100 - cinemas.movieland - INFO - DONE Movie Land HAIFA
-2024-09-08 03:00:03,100 - cinemas.movieland - INFO - STARTED Movie Land NATANYA
-2024-09-08 03:00:03,100 - cinemas.movieland - INFO - DONE Movie Land NATANYA
-2024-09-08 03:00:03,100 - cinemas.movieland - INFO - DONE Movie Land
-2024-09-08 03:00:03,101 - root - INFO - ********************
-2024-09-08 03:00:03,101 - root - INFO - started checking for:11-09-2024
-2024-09-08 03:00:03,101 - cinemas.yes_planet - INFO - STARTED YES PLANET
-2024-09-08 03:00:04,826 - proxy - INFO - Proxy: {'YourFuckingIPAddress': '45.150.108.125', 'YourFuckingLocation': 'Israel', 'YourFuckingHostname': '45.150.108.125', 'YourFuckingISP': 'BlueVPS OU', 'YourFuckingTorExit': False, 'YourFuckingCity': '', 'YourFuckingCountry': 'Israel', 'YourFuckingCountryCode': 'IL'}
-2024-09-08 03:00:04,827 - cinemas.yes_planet - INFO - STARTED YES PLANET RISHON
-2024-09-08 03:00:06,023 - cinemas.yes_planet - INFO - DONE YES PLANET RISHON
-2024-09-08 03:00:06,023 - cinemas.yes_planet - INFO - STARTED YES PLANET AYALON
-2024-09-08 03:00:06,549 - cinemas.yes_planet - INFO - DONE YES PLANET AYALON
-2024-09-08 03:00:06,549 - cinemas.yes_planet - INFO - STARTED YES PLANET ZICHRON
-2024-09-08 03:00:07,306 - cinemas.yes_planet - INFO - DONE YES PLANET ZICHRON
-2024-09-08 03:00:07,306 - cinemas.yes_planet - INFO - STARTED YES PLANET HAIFA
-2024-09-08 03:00:07,759 - cinemas.yes_planet - INFO - DONE YES PLANET HAIFA
-2024-09-08 03:00:07,759 - cinemas.yes_planet - INFO - STARTED YES PLANET JERUSALEM
-2024-09-08 03:00:08,107 - cinemas.yes_planet - INFO - DONE YES PLANET JERUSALEM
-2024-09-08 03:00:08,107 - cinemas.yes_planet - INFO - STARTED YES PLANET BEER_SHEVA
-2024-09-08 03:00:08,566 - cinemas.yes_planet - INFO - DONE YES PLANET BEER_SHEVA
-2024-09-08 03:00:08,630 - proxy - INFO - Proxy removed
-2024-09-08 03:00:08,630 - cinemas.yes_planet - INFO - DONE YES PLANET
-2024-09-08 03:00:08,631 - cinemas.rav_hen - INFO - STARTED RAV HEN
-2024-09-08 03:00:08,631 - cinemas.rav_hen - INFO - STARTED RAV HEN GIVATAIM
-2024-09-08 03:00:09,121 - cinemas.rav_hen - INFO - DONE RAV HEN GIVATAIM
-2024-09-08 03:00:09,122 - cinemas.rav_hen - INFO - STARTED RAV HEN DIZINGOF
-2024-09-08 03:00:09,776 - cinemas.rav_hen - INFO - DONE RAV HEN DIZINGOF
-2024-09-08 03:00:09,776 - cinemas.rav_hen - INFO - STARTED RAV HEN MODIIN
-2024-09-08 03:00:10,192 - cinemas.rav_hen - INFO - DONE RAV HEN MODIIN
-2024-09-08 03:00:10,192 - cinemas.rav_hen - INFO - STARTED RAV HEN KIRYAT_ONO
-2024-09-08 03:00:10,695 - cinemas.rav_hen - INFO - DONE RAV HEN KIRYAT_ONO
-2024-09-08 03:00:10,696 - cinemas.rav_hen - INFO - DONE RAV HEN
-2024-09-08 03:00:10,696 - cinemas.hot_cinema - INFO - STARTED HOT CINEMA
-2024-09-08 03:00:10,696 - cinemas.hot_cinema - INFO - STARTED HOT CINEMA MODIIN
-2024-09-08 03:00:10,835 - cinemas.hot_cinema - INFO - DONE HOT CINEMA MODIIN
-2024-09-08 03:00:10,835 - cinemas.hot_cinema - INFO - STARTED HOT CINEMA KIRYON
-2024-09-08 03:00:11,443 - cinemas.hot_cinema - INFO - DONE HOT CINEMA KIRYON
-2024-09-08 03:00:11,443 - cinemas.hot_cinema - INFO - STARTED HOT CINEMA KFAR_SABBA
-2024-09-08 03:00:11,582 - cinemas.hot_cinema - INFO - DONE HOT CINEMA KFAR_SABBA
-2024-09-08 03:00:11,582 - cinemas.hot_cinema - INFO - STARTED HOT CINEMA HAIFA
-2024-09-08 03:00:11,722 - cinemas.hot_cinema - INFO - DONE HOT CINEMA HAIFA
-2024-09-08 03:00:11,722 - cinemas.hot_cinema - INFO - STARTED HOT CINEMA PETACH_TIKVA
-2024-09-08 03:00:11,861 - cinemas.hot_cinema - INFO - DONE HOT CINEMA PETACH_TIKVA
-2024-09-08 03:00:11,861 - cinemas.hot_cinema - INFO - STARTED HOT CINEMA RECHOVOT
-2024-09-08 03:00:11,998 - cinemas.hot_cinema - INFO - DONE HOT CINEMA RECHOVOT
-2024-09-08 03:00:11,998 - cinemas.hot_cinema - INFO - STARTED HOT CINEMA ASHKELON
-2024-09-08 03:00:12,138 - cinemas.hot_cinema - INFO - DONE HOT CINEMA ASHKELON
-2024-09-08 03:00:12,138 - cinemas.hot_cinema - INFO - STARTED HOT CINEMA KARMIEL
-2024-09-08 03:00:12,277 - cinemas.hot_cinema - INFO - DONE HOT CINEMA KARMIEL
-2024-09-08 03:00:12,277 - cinemas.hot_cinema - INFO - STARTED HOT CINEMA NAHARIA
-2024-09-08 03:00:12,414 - cinemas.hot_cinema - INFO - DONE HOT CINEMA NAHARIA
-2024-09-08 03:00:12,414 - cinemas.hot_cinema - INFO - STARTED HOT CINEMA ASHDOD
-2024-09-08 03:00:12,553 - cinemas.hot_cinema - INFO - DONE HOT CINEMA ASHDOD
-2024-09-08 03:00:12,553 - cinemas.hot_cinema - INFO - DONE HOT CINEMA
-2024-09-08 03:00:12,553 - cinemas.cinema_city - INFO - STARTED CINEMA CITY
-2024-09-08 03:00:12,553 - cinemas.cinema_city - INFO - STARTED CINEMA CITY GLILOT
-2024-09-08 03:00:13,389 - cinemas.cinema_city - INFO - DONE CINEMA CITY GLILOT
-2024-09-08 03:00:13,389 - cinemas.cinema_city - INFO - STARTED CINEMA CITY RISHON
-2024-09-08 03:00:14,046 - cinemas.cinema_city - INFO - DONE CINEMA CITY RISHON
-2024-09-08 03:00:14,046 - cinemas.cinema_city - INFO - STARTED CINEMA CITY JERUSALEM
-2024-09-08 03:00:14,563 - cinemas.cinema_city - INFO - DONE CINEMA CITY JERUSALEM
-2024-09-08 03:00:14,563 - cinemas.cinema_city - INFO - STARTED CINEMA CITY KFAR_SABBA
-2024-09-08 03:00:15,076 - cinemas.cinema_city - INFO - DONE CINEMA CITY KFAR_SABBA
-2024-09-08 03:00:15,076 - cinemas.cinema_city - INFO - STARTED CINEMA CITY NATANIA
-2024-09-08 03:00:16,178 - cinemas.cinema_city - INFO - DONE CINEMA CITY NATANIA
-2024-09-08 03:00:16,178 - cinemas.cinema_city - INFO - STARTED CINEMA CITY BEER_SHEVA
-2024-09-08 03:00:16,848 - cinemas.cinema_city - INFO - DONE CINEMA CITY BEER_SHEVA
-2024-09-08 03:00:16,849 - cinemas.cinema_city - INFO - STARTED CINEMA CITY HADERA
-2024-09-08 03:00:17,382 - cinemas.cinema_city - INFO - DONE CINEMA CITY HADERA
-2024-09-08 03:00:17,382 - cinemas.cinema_city - INFO - STARTED CINEMA CITY ASHDOD
-2024-09-08 03:00:17,916 - cinemas.cinema_city - INFO - DONE CINEMA CITY ASHDOD
-2024-09-08 03:00:17,916 - cinemas.cinema_city - INFO - DONE CINEMA CITY
-2024-09-08 03:00:17,916 - cinemas.lev - INFO - STARTED LEV
-2024-09-08 03:00:19,695 - proxy - INFO - Proxy: {'YourFuckingIPAddress': '45.150.108.125', 'YourFuckingLocation': 'Israel', 'YourFuckingHostname': '45.150.108.125', 'YourFuckingISP': 'BlueVPS OU', 'YourFuckingTorExit': False, 'YourFuckingCity': '', 'YourFuckingCountry': 'Israel', 'YourFuckingCountryCode': 'IL'}
-2024-09-08 03:00:19,696 - cinemas.lev - INFO - STARTED LEV TEL_AVIV
-2024-09-08 03:00:20,809 - cinemas.lev - INFO - DONE LEV TEL_AVIV
-2024-09-08 03:00:20,809 - cinemas.lev - INFO - STARTED LEV RAMAT_HASHARON
-2024-09-08 03:00:21,133 - cinemas.lev - INFO - DONE LEV RAMAT_HASHARON
-2024-09-08 03:00:21,133 - cinemas.lev - INFO - STARTED LEV MANDARIN
-2024-09-08 03:00:21,609 - cinemas.lev - INFO - DONE LEV MANDARIN
-2024-09-08 03:00:21,609 - cinemas.lev - INFO - STARTED LEV EVEN_YEHUDA
-2024-09-08 03:00:21,940 - cinemas.lev - INFO - DONE LEV EVEN_YEHUDA
-2024-09-08 03:00:21,940 - cinemas.lev - INFO - STARTED LEV SMADAR
-2024-09-08 03:00:22,342 - cinemas.lev - INFO - DONE LEV SMADAR
-2024-09-08 03:00:22,342 - cinemas.lev - INFO - STARTED LEV RAANANA
-2024-09-08 03:00:22,590 - cinemas.lev - INFO - DONE LEV RAANANA
-2024-09-08 03:00:22,590 - cinemas.lev - INFO - STARTED LEV OMER
-2024-09-08 03:00:22,991 - cinemas.lev - INFO - DONE LEV OMER
-2024-09-08 03:00:22,991 - cinemas.lev - INFO - STARTED LEV SHOHAM
-2024-09-08 03:00:23,271 - cinemas.lev - INFO - DONE LEV SHOHAM
-2024-09-08 03:00:23,271 - cinemas.lev - INFO - STARTED LEV DANIEL
-2024-09-08 03:00:23,545 - cinemas.lev - INFO - DONE LEV DANIEL
-2024-09-08 03:00:23,609 - proxy - INFO - Proxy removed
-2024-09-08 03:00:23,609 - cinemas.lev - INFO - DONE LEV
-2024-09-08 03:00:23,610 - cinemas.movieland - INFO - STARTED Movie Land
-2024-09-08 03:00:23,610 - cinemas.movieland - INFO - STARTED Movie Land CARMIEL
-2024-09-08 03:00:24,075 - cinemas.movieland - INFO - DONE Movie Land CARMIEL
-2024-09-08 03:00:24,075 - cinemas.movieland - INFO - STARTED Movie Land HAIFA
-2024-09-08 03:00:24,075 - cinemas.movieland - INFO - DONE Movie Land HAIFA
-2024-09-08 03:00:24,076 - cinemas.movieland - INFO - STARTED Movie Land NATANYA
-2024-09-08 03:00:24,076 - cinemas.movieland - INFO - DONE Movie Land NATANYA
-2024-09-08 03:00:24,076 - cinemas.movieland - INFO - DONE Movie Land
-2024-09-08 03:00:24,076 - root - INFO - ********************
-2024-09-08 03:00:24,076 - root - INFO - started checking for:12-09-2024
-2024-09-08 03:00:24,076 - cinemas.yes_planet - INFO - STARTED YES PLANET
-2024-09-08 03:00:25,787 - proxy - INFO - Proxy: {'YourFuckingIPAddress': '45.150.108.125', 'YourFuckingLocation': 'Israel', 'YourFuckingHostname': '45.150.108.125', 'YourFuckingISP': 'BlueVPS OU', 'YourFuckingTorExit': False, 'YourFuckingCity': '', 'YourFuckingCountry': 'Israel', 'YourFuckingCountryCode': 'IL'}
-2024-09-08 03:00:25,787 - cinemas.yes_planet - INFO - STARTED YES PLANET RISHON
-2024-09-08 03:00:36,030 - cinemas.yes_planet - INFO - DONE YES PLANET RISHON
-2024-09-08 03:00:36,030 - cinemas.yes_planet - INFO - STARTED YES PLANET AYALON
-2024-09-08 03:00:36,399 - cinemas.yes_planet - INFO - DONE YES PLANET AYALON
-2024-09-08 03:00:36,399 - cinemas.yes_planet - INFO - STARTED YES PLANET ZICHRON
-2024-09-08 03:00:36,832 - cinemas.yes_planet - INFO - DONE YES PLANET ZICHRON
-2024-09-08 03:00:36,832 - cinemas.yes_planet - INFO - STARTED YES PLANET HAIFA
-2024-09-08 03:00:37,500 - cinemas.yes_planet - INFO - DONE YES PLANET HAIFA
-2024-09-08 03:00:37,501 - cinemas.yes_planet - INFO - STARTED YES PLANET JERUSALEM
-2024-09-08 03:00:37,896 - cinemas.yes_planet - INFO - DONE YES PLANET JERUSALEM
-2024-09-08 03:00:37,896 - cinemas.yes_planet - INFO - STARTED YES PLANET BEER_SHEVA
-2024-09-08 03:00:38,509 - cinemas.yes_planet - INFO - DONE YES PLANET BEER_SHEVA
-2024-09-08 03:00:38,578 - proxy - INFO - Proxy removed
-2024-09-08 03:00:38,578 - cinemas.yes_planet - INFO - DONE YES PLANET
-2024-09-08 03:00:38,578 - cinemas.rav_hen - INFO - STARTED RAV HEN
-2024-09-08 03:00:38,579 - cinemas.rav_hen - INFO - STARTED RAV HEN GIVATAIM
-2024-09-08 03:00:38,956 - cinemas.rav_hen - INFO - DONE RAV HEN GIVATAIM
-2024-09-08 03:00:38,956 - cinemas.rav_hen - INFO - STARTED RAV HEN DIZINGOF
-2024-09-08 03:00:39,401 - cinemas.rav_hen - INFO - DONE RAV HEN DIZINGOF
-2024-09-08 03:00:39,401 - cinemas.rav_hen - INFO - STARTED RAV HEN MODIIN
-2024-09-08 03:00:39,799 - cinemas.rav_hen - INFO - DONE RAV HEN MODIIN
-2024-09-08 03:00:39,799 - cinemas.rav_hen - INFO - STARTED RAV HEN KIRYAT_ONO
-2024-09-08 03:00:40,252 - cinemas.rav_hen - INFO - DONE RAV HEN KIRYAT_ONO
-2024-09-08 03:00:40,252 - cinemas.rav_hen - INFO - DONE RAV HEN
-2024-09-08 03:00:40,252 - retry.api - WARNING - AssertionError: rav hen returned empty list in __main__.unsafe_get_screenings_from_cinema, retrying in 1 seconds...
-2024-09-08 03:00:41,253 - cinemas.rav_hen - INFO - STARTED RAV HEN
-2024-09-08 03:00:41,253 - cinemas.rav_hen - INFO - STARTED RAV HEN GIVATAIM
-2024-09-08 03:00:41,274 - cinemas.rav_hen - INFO - DONE RAV HEN GIVATAIM
-2024-09-08 03:00:41,274 - cinemas.rav_hen - INFO - STARTED RAV HEN DIZINGOF
-2024-09-08 03:00:41,296 - cinemas.rav_hen - INFO - DONE RAV HEN DIZINGOF
-2024-09-08 03:00:41,296 - cinemas.rav_hen - INFO - STARTED RAV HEN MODIIN
-2024-09-08 03:00:41,319 - cinemas.rav_hen - INFO - DONE RAV HEN MODIIN
-2024-09-08 03:00:41,319 - cinemas.rav_hen - INFO - STARTED RAV HEN KIRYAT_ONO
-2024-09-08 03:00:41,347 - cinemas.rav_hen - INFO - DONE RAV HEN KIRYAT_ONO
-2024-09-08 03:00:41,347 - cinemas.rav_hen - INFO - DONE RAV HEN
-2024-09-08 03:00:41,347 - retry.api - WARNING - AssertionError: rav hen returned empty list in __main__.unsafe_get_screenings_from_cinema, retrying in 2 seconds...
-2024-09-08 03:00:43,348 - cinemas.rav_hen - INFO - STARTED RAV HEN
-2024-09-08 03:00:43,348 - cinemas.rav_hen - INFO - STARTED RAV HEN GIVATAIM
-2024-09-08 03:00:43,370 - cinemas.rav_hen - INFO - DONE RAV HEN GIVATAIM
-2024-09-08 03:00:43,370 - cinemas.rav_hen - INFO - STARTED RAV HEN DIZINGOF
-2024-09-08 03:00:43,392 - cinemas.rav_hen - INFO - DONE RAV HEN DIZINGOF
-2024-09-08 03:00:43,392 - cinemas.rav_hen - INFO - STARTED RAV HEN MODIIN
-2024-09-08 03:00:43,414 - cinemas.rav_hen - INFO - DONE RAV HEN MODIIN
-2024-09-08 03:00:43,414 - cinemas.rav_hen - INFO - STARTED RAV HEN KIRYAT_ONO
-2024-09-08 03:00:43,436 - cinemas.rav_hen - INFO - DONE RAV HEN KIRYAT_ONO
-2024-09-08 03:00:43,437 - cinemas.rav_hen - INFO - DONE RAV HEN
-2024-09-08 03:00:43,437 - root - ERROR - rav hen crashed: rav hen returned empty list
-2024-09-08 03:00:43,437 - cinemas.hot_cinema - INFO - STARTED HOT CINEMA
-2024-09-08 03:00:43,437 - cinemas.hot_cinema - INFO - STARTED HOT CINEMA MODIIN
-2024-09-08 03:00:43,572 - cinemas.hot_cinema - INFO - DONE HOT CINEMA MODIIN
-2024-09-08 03:00:43,572 - cinemas.hot_cinema - INFO - STARTED HOT CINEMA KIRYON
-2024-09-08 03:00:44,177 - cinemas.hot_cinema - INFO - DONE HOT CINEMA KIRYON
-2024-09-08 03:00:44,177 - cinemas.hot_cinema - INFO - STARTED HOT CINEMA KFAR_SABBA
-2024-09-08 03:00:44,775 - cinemas.hot_cinema - INFO - DONE HOT CINEMA KFAR_SABBA
-2024-09-08 03:00:44,775 - cinemas.hot_cinema - INFO - STARTED HOT CINEMA HAIFA
-2024-09-08 03:00:44,911 - cinemas.hot_cinema - INFO - DONE HOT CINEMA HAIFA
-2024-09-08 03:00:44,911 - cinemas.hot_cinema - INFO - STARTED HOT CINEMA PETACH_TIKVA
-2024-09-08 03:00:45,046 - cinemas.hot_cinema - INFO - DONE HOT CINEMA PETACH_TIKVA
-2024-09-08 03:00:45,046 - cinemas.hot_cinema - INFO - STARTED HOT CINEMA RECHOVOT
-2024-09-08 03:00:45,185 - cinemas.hot_cinema - INFO - DONE HOT CINEMA RECHOVOT
-2024-09-08 03:00:45,185 - cinemas.hot_cinema - INFO - STARTED HOT CINEMA ASHKELON
-2024-09-08 03:00:45,321 - cinemas.hot_cinema - INFO - DONE HOT CINEMA ASHKELON
-2024-09-08 03:00:45,321 - cinemas.hot_cinema - INFO - STARTED HOT CINEMA KARMIEL
-2024-09-08 03:00:45,457 - cinemas.hot_cinema - INFO - DONE HOT CINEMA KARMIEL
-2024-09-08 03:00:45,457 - cinemas.hot_cinema - INFO - STARTED HOT CINEMA NAHARIA
-2024-09-08 03:00:45,596 - cinemas.hot_cinema - INFO - DONE HOT CINEMA NAHARIA
-2024-09-08 03:00:45,597 - cinemas.hot_cinema - INFO - STARTED HOT CINEMA ASHDOD
-2024-09-08 03:00:45,732 - cinemas.hot_cinema - INFO - DONE HOT CINEMA ASHDOD
-2024-09-08 03:00:45,732 - cinemas.hot_cinema - INFO - DONE HOT CINEMA
-2024-09-08 03:00:45,732 - cinemas.cinema_city - INFO - STARTED CINEMA CITY
-2024-09-08 03:00:45,732 - cinemas.cinema_city - INFO - STARTED CINEMA CITY GLILOT
-2024-09-08 03:00:45,904 - cinemas.cinema_city - ERROR - NO DATE FOUND FOR GLILOT
-2024-09-08 03:00:45,905 - cinemas.cinema_city - INFO - STARTED CINEMA CITY RISHON
-2024-09-08 03:00:46,068 - cinemas.cinema_city - ERROR - NO DATE FOUND FOR RISHON
-2024-09-08 03:00:46,068 - cinemas.cinema_city - INFO - STARTED CINEMA CITY JERUSALEM
-2024-09-08 03:00:46,230 - cinemas.cinema_city - ERROR - NO DATE FOUND FOR JERUSALEM
-2024-09-08 03:00:46,230 - cinemas.cinema_city - INFO - STARTED CINEMA CITY KFAR_SABBA
-2024-09-08 03:00:46,396 - cinemas.cinema_city - ERROR - NO DATE FOUND FOR KFAR_SABBA
-2024-09-08 03:00:46,396 - cinemas.cinema_city - INFO - STARTED CINEMA CITY NATANIA
-2024-09-08 03:00:46,559 - cinemas.cinema_city - ERROR - NO DATE FOUND FOR NATANIA
-2024-09-08 03:00:46,560 - cinemas.cinema_city - INFO - STARTED CINEMA CITY BEER_SHEVA
-2024-09-08 03:00:46,722 - cinemas.cinema_city - ERROR - NO DATE FOUND FOR BEER_SHEVA
-2024-09-08 03:00:46,722 - cinemas.cinema_city - INFO - STARTED CINEMA CITY HADERA
-2024-09-08 03:00:46,883 - cinemas.cinema_city - ERROR - NO DATE FOUND FOR HADERA
-2024-09-08 03:00:46,883 - cinemas.cinema_city - INFO - STARTED CINEMA CITY ASHDOD
-2024-09-08 03:00:47,051 - cinemas.cinema_city - ERROR - NO DATE FOUND FOR ASHDOD
-2024-09-08 03:00:47,051 - cinemas.cinema_city - INFO - DONE CINEMA CITY
-2024-09-08 03:00:47,051 - retry.api - WARNING - AssertionError: cinema city returned empty list in __main__.unsafe_get_screenings_from_cinema, retrying in 1 seconds...
-2024-09-08 03:00:48,052 - cinemas.cinema_city - INFO - STARTED CINEMA CITY
-2024-09-08 03:00:48,052 - cinemas.cinema_city - INFO - STARTED CINEMA CITY GLILOT
-2024-09-08 03:00:48,355 - cinemas.cinema_city - ERROR - NO DATE FOUND FOR GLILOT
-2024-09-08 03:00:48,355 - cinemas.cinema_city - INFO - STARTED CINEMA CITY RISHON
-2024-09-08 03:00:48,522 - cinemas.cinema_city - ERROR - NO DATE FOUND FOR RISHON
-2024-09-08 03:00:48,522 - cinemas.cinema_city - INFO - STARTED CINEMA CITY JERUSALEM
-2024-09-08 03:00:48,685 - cinemas.cinema_city - ERROR - NO DATE FOUND FOR JERUSALEM
-2024-09-08 03:00:48,686 - cinemas.cinema_city - INFO - STARTED CINEMA CITY KFAR_SABBA
-2024-09-08 03:00:48,848 - cinemas.cinema_city - ERROR - NO DATE FOUND FOR KFAR_SABBA
-2024-09-08 03:00:48,848 - cinemas.cinema_city - INFO - STARTED CINEMA CITY NATANIA
-2024-09-08 03:00:49,014 - cinemas.cinema_city - ERROR - NO DATE FOUND FOR NATANIA
-2024-09-08 03:00:49,014 - cinemas.cinema_city - INFO - STARTED CINEMA CITY BEER_SHEVA
-2024-09-08 03:00:49,178 - cinemas.cinema_city - ERROR - NO DATE FOUND FOR BEER_SHEVA
-2024-09-08 03:00:49,178 - cinemas.cinema_city - INFO - STARTED CINEMA CITY HADERA
-2024-09-08 03:00:49,342 - cinemas.cinema_city - ERROR - NO DATE FOUND FOR HADERA
-2024-09-08 03:00:49,342 - cinemas.cinema_city - INFO - STARTED CINEMA CITY ASHDOD
-2024-09-08 03:00:49,513 - cinemas.cinema_city - ERROR - NO DATE FOUND FOR ASHDOD
-2024-09-08 03:00:49,513 - cinemas.cinema_city - INFO - DONE CINEMA CITY
-2024-09-08 03:00:49,513 - retry.api - WARNING - AssertionError: cinema city returned empty list in __main__.unsafe_get_screenings_from_cinema, retrying in 2 seconds...
-2024-09-08 03:00:51,514 - cinemas.cinema_city - INFO - STARTED CINEMA CITY
-2024-09-08 03:00:51,514 - cinemas.cinema_city - INFO - STARTED CINEMA CITY GLILOT
-2024-09-08 03:00:51,819 - cinemas.cinema_city - ERROR - NO DATE FOUND FOR GLILOT
-2024-09-08 03:00:51,819 - cinemas.cinema_city - INFO - STARTED CINEMA CITY RISHON
-2024-09-08 03:00:51,981 - cinemas.cinema_city - ERROR - NO DATE FOUND FOR RISHON
-2024-09-08 03:00:51,981 - cinemas.cinema_city - INFO - STARTED CINEMA CITY JERUSALEM
-2024-09-08 03:00:52,144 - cinemas.cinema_city - ERROR - NO DATE FOUND FOR JERUSALEM
-2024-09-08 03:00:52,144 - cinemas.cinema_city - INFO - STARTED CINEMA CITY KFAR_SABBA
-2024-09-08 03:00:52,305 - cinemas.cinema_city - ERROR - NO DATE FOUND FOR KFAR_SABBA
-2024-09-08 03:00:52,305 - cinemas.cinema_city - INFO - STARTED CINEMA CITY NATANIA
-2024-09-08 03:00:52,468 - cinemas.cinema_city - ERROR - NO DATE FOUND FOR NATANIA
-2024-09-08 03:00:52,469 - cinemas.cinema_city - INFO - STARTED CINEMA CITY BEER_SHEVA
-2024-09-08 03:00:52,632 - cinemas.cinema_city - ERROR - NO DATE FOUND FOR BEER_SHEVA
-2024-09-08 03:00:52,632 - cinemas.cinema_city - INFO - STARTED CINEMA CITY HADERA
-2024-09-08 03:00:52,798 - cinemas.cinema_city - ERROR - NO DATE FOUND FOR HADERA
-2024-09-08 03:00:52,798 - cinemas.cinema_city - INFO - STARTED CINEMA CITY ASHDOD
-2024-09-08 03:00:52,964 - cinemas.cinema_city - ERROR - NO DATE FOUND FOR ASHDOD
-2024-09-08 03:00:52,964 - cinemas.cinema_city - INFO - DONE CINEMA CITY
-2024-09-08 03:00:52,964 - root - ERROR - cinema city crashed: cinema city returned empty list
-2024-09-08 03:00:52,964 - cinemas.lev - INFO - STARTED LEV
-2024-09-08 03:00:54,660 - proxy - INFO - Proxy: {'YourFuckingIPAddress': '45.150.108.125', 'YourFuckingLocation': 'Israel', 'YourFuckingHostname': '45.150.108.125', 'YourFuckingISP': 'BlueVPS OU', 'YourFuckingTorExit': False, 'YourFuckingCity': '', 'YourFuckingCountry': 'Israel', 'YourFuckingCountryCode': 'IL'}
-2024-09-08 03:00:54,660 - cinemas.lev - INFO - STARTED LEV TEL_AVIV
-2024-09-08 03:00:55,805 - cinemas.lev - INFO - DONE LEV TEL_AVIV
-2024-09-08 03:00:55,805 - cinemas.lev - INFO - STARTED LEV RAMAT_HASHARON
-2024-09-08 03:00:56,129 - cinemas.lev - INFO - DONE LEV RAMAT_HASHARON
-2024-09-08 03:00:56,129 - cinemas.lev - INFO - STARTED LEV MANDARIN
-2024-09-08 03:00:56,497 - cinemas.lev - INFO - DONE LEV MANDARIN
-2024-09-08 03:00:56,497 - cinemas.lev - INFO - STARTED LEV EVEN_YEHUDA
-2024-09-08 03:00:56,772 - cinemas.lev - INFO - DONE LEV EVEN_YEHUDA
-2024-09-08 03:00:56,772 - cinemas.lev - INFO - STARTED LEV SMADAR
-2024-09-08 03:00:57,139 - cinemas.lev - INFO - DONE LEV SMADAR
-2024-09-08 03:00:57,139 - cinemas.lev - INFO - STARTED LEV RAANANA
-2024-09-08 03:00:57,474 - cinemas.lev - INFO - DONE LEV RAANANA
-2024-09-08 03:00:57,474 - cinemas.lev - INFO - STARTED LEV OMER
-2024-09-08 03:00:57,876 - cinemas.lev - INFO - DONE LEV OMER
-2024-09-08 03:00:57,876 - cinemas.lev - INFO - STARTED LEV SHOHAM
-2024-09-08 03:00:58,203 - cinemas.lev - INFO - DONE LEV SHOHAM
-2024-09-08 03:00:58,203 - cinemas.lev - INFO - STARTED LEV DANIEL
-2024-09-08 03:00:58,498 - cinemas.lev - INFO - DONE LEV DANIEL
-2024-09-08 03:00:58,562 - proxy - INFO - Proxy removed
-2024-09-08 03:00:58,562 - cinemas.lev - INFO - DONE LEV
-2024-09-08 03:00:58,563 - cinemas.movieland - INFO - STARTED Movie Land
-2024-09-08 03:00:58,563 - cinemas.movieland - INFO - STARTED Movie Land CARMIEL
-2024-09-08 03:00:58,563 - cinemas.movieland - INFO - DONE Movie Land CARMIEL
-2024-09-08 03:00:58,563 - cinemas.movieland - INFO - STARTED Movie Land HAIFA
-2024-09-08 03:00:58,563 - cinemas.movieland - INFO - DONE Movie Land HAIFA
-2024-09-08 03:00:58,563 - cinemas.movieland - INFO - STARTED Movie Land NATANYA
-2024-09-08 03:00:58,563 - cinemas.movieland - INFO - DONE Movie Land NATANYA
-2024-09-08 03:00:58,563 - cinemas.movieland - INFO - DONE Movie Land
-2024-09-08 03:00:58,563 - retry.api - WARNING - AssertionError: movieland returned empty list in __main__.unsafe_get_screenings_from_cinema, retrying in 1 seconds...
-2024-09-08 03:00:59,563 - cinemas.movieland - INFO - STARTED Movie Land
-2024-09-08 03:00:59,564 - cinemas.movieland - INFO - STARTED Movie Land CARMIEL
-2024-09-08 03:00:59,564 - cinemas.movieland - INFO - DONE Movie Land CARMIEL
-2024-09-08 03:00:59,564 - cinemas.movieland - INFO - STARTED Movie Land HAIFA
-2024-09-08 03:00:59,564 - cinemas.movieland - INFO - DONE Movie Land HAIFA
-2024-09-08 03:00:59,564 - cinemas.movieland - INFO - STARTED Movie Land NATANYA
-2024-09-08 03:00:59,564 - cinemas.movieland - INFO - DONE Movie Land NATANYA
-2024-09-08 03:00:59,564 - cinemas.movieland - INFO - DONE Movie Land
-2024-09-08 03:00:59,564 - retry.api - WARNING - AssertionError: movieland returned empty list in __main__.unsafe_get_screenings_from_cinema, retrying in 2 seconds...
-2024-09-08 03:01:01,565 - cinemas.movieland - INFO - STARTED Movie Land
-2024-09-08 03:01:01,565 - cinemas.movieland - INFO - STARTED Movie Land CARMIEL
-2024-09-08 03:01:01,565 - cinemas.movieland - INFO - DONE Movie Land CARMIEL
-2024-09-08 03:01:01,565 - cinemas.movieland - INFO - STARTED Movie Land HAIFA
-2024-09-08 03:01:01,565 - cinemas.movieland - INFO - DONE Movie Land HAIFA
-2024-09-08 03:01:01,565 - cinemas.movieland - INFO - STARTED Movie Land NATANYA
-2024-09-08 03:01:01,565 - cinemas.movieland - INFO - DONE Movie Land NATANYA
-2024-09-08 03:01:01,565 - cinemas.movieland - INFO - DONE Movie Land
-2024-09-08 03:01:01,565 - root - ERROR - movieland crashed: movieland returned empty list
-2024-09-08 03:01:03,234 - seret.movie_info_fetchers.composite - INFO - Got info for גולסטאר הסרט: מרוסקים using ElasticMovieInfoFetcher
-2024-09-08 03:01:03,241 - seret.movie_info_fetchers.composite - INFO - Got info for Golstar using ElasticMovieInfoFetcher
-2024-09-08 03:01:04,317 - seret.movie_info_fetchers.composite - INFO - Got info for ביטלג'וס ביטלג'וס using ElasticMovieInfoFetcher
-2024-09-08 03:01:04,885 - seret.movie_info_fetchers.composite - INFO - Got info for Beetlejuice Beetlejuice using ElasticMovieInfoFetcher
-2024-09-08 03:01:05,893 - seret.movie_info_fetchers.composite - INFO - Got info for קח אותי לירח using ElasticMovieInfoFetcher
-2024-09-08 03:01:07,114 - seret.movie_info_fetchers.composite - INFO - Got info for Fly Me to the Moon using ElasticMovieInfoFetcher
-2024-09-08 03:01:07,987 - seret.movie_info_fetchers.composite - INFO - Got info for גנוב על החיים using ElasticMovieInfoFetcher
-2024-09-08 03:01:08,523 - seret.movie_info_fetchers.composite - INFO - Got info for Despicable Me 4 using ElasticMovieInfoFetcher
-2024-09-08 03:01:10,343 - seret.movie_info_fetchers.composite - INFO - Got info for עשרה חודשים - נפלאות האילוזיה using ElasticMovieInfoFetcher
-2024-09-08 03:01:10,848 - seret.movie_info_fetchers.composite - INFO - Got info for ten month using ElasticMovieInfoFetcher
-2024-09-08 03:01:11,365 - seret.movie_info_fetchers.composite - INFO - Got info for דדפול ווולברין using ElasticMovieInfoFetcher
-2024-09-08 03:01:12,223 - seret.movie_info_fetchers.composite - INFO - Got info for Deadpool and Wolverine using ElasticMovieInfoFetcher
-2024-09-08 03:01:12,874 - seret.movie_info_fetchers.composite - INFO - Got info for ג'ולס using ElasticMovieInfoFetcher
-2024-09-08 03:01:13,592 - seret.movie_info_fetchers.composite - INFO - Got info for Jules using ElasticMovieInfoFetcher
-2024-09-08 03:01:14,200 - seret.movie_info_fetchers.composite - INFO - Got info for עיפרון הקסם using ElasticMovieInfoFetcher
-2024-09-08 03:01:14,756 - seret.movie_info_fetchers.composite - INFO - Got info for Harold And The Purple Crayon using ElasticMovieInfoFetcher
-2024-09-08 03:01:16,074 - seret.movie_info_fetchers.composite - INFO - Got info for הנזיר והרובה using ElasticMovieInfoFetcher
-2024-09-08 03:01:16,696 - seret.movie_info_fetchers.composite - INFO - Got info for The Monk and the Gun using ElasticMovieInfoFetcher
-2024-09-08 03:01:18,258 - seret.movie_info_fetchers.composite - INFO - Got info for החתול בעל 10 הנשמות using ElasticMovieInfoFetcher
-2024-09-08 03:01:18,995 - seret.movie_info_fetchers.composite - INFO - Got info for 10 Lives using ElasticMovieInfoFetcher
-2024-09-08 03:01:19,697 - seret.movie_info_fetchers.composite - INFO - Got info for הקול בראש 2 using ElasticMovieInfoFetcher
-2024-09-08 03:01:20,311 - seret.movie_info_fetchers.composite - INFO - Got info for Inside out 2 using ElasticMovieInfoFetcher
-2024-09-08 03:01:21,684 - seret.movie_info_fetchers.composite - INFO - Got info for להציל את היער using ElasticMovieInfoFetcher
-2024-09-08 03:01:22,303 - seret.movie_info_fetchers.composite - INFO - Got info for Ozi: the voice of the forest using ElasticMovieInfoFetcher
-2024-09-08 03:01:24,506 - seret.movie_info_fetchers.composite - INFO - Got info for מחכים לדאלי using ElasticMovieInfoFetcher
-2024-09-08 03:01:25,052 - seret.movie_info_fetchers.composite - INFO - Got info for Waiting for Dali using ElasticMovieInfoFetcher
-2024-09-08 03:01:25,857 - seret.movie_info_fetchers.composite - INFO - Got info for בורדרלנדס using ElasticMovieInfoFetcher
-2024-09-08 03:01:26,505 - seret.movie_info_fetchers.composite - INFO - Got info for Borderlands using ElasticMovieInfoFetcher
-2024-09-08 03:01:27,950 - seret.movie_info_fetchers.composite - INFO - Got info for הגיע הזמן using ElasticMovieInfoFetcher
-2024-09-08 03:01:27,961 - seret.movie_info_fetchers.composite - INFO - Got info for The Present using ElasticMovieInfoFetcher
-2024-09-08 03:01:27,969 - seret.movie_info_fetchers.composite - INFO - Got info for נשימה אחרונה using ElasticMovieInfoFetcher
-2024-09-08 03:01:27,975 - seret.movie_info_fetchers.composite - INFO - Got info for BREATHE using ElasticMovieInfoFetcher
-2024-09-08 03:01:27,976 - seret.info_fetcher - ERROR - Failed to get info for BREATHE and נשימה אחרונה
-2024-09-08 03:01:30,201 - seret.movie_info_fetchers.composite - INFO - Got info for אמילי והיגואר האחרון using ElasticMovieInfoFetcher
-2024-09-08 03:01:30,711 - seret.movie_info_fetchers.composite - INFO - Got info for Autumn and the Black Jaguar using ElasticMovieInfoFetcher
-2024-09-08 03:01:31,496 - seret.movie_info_fetchers.composite - INFO - Got info for איתנו זה נגמר using ElasticMovieInfoFetcher
-2024-09-08 03:01:32,055 - seret.movie_info_fetchers.composite - INFO - Got info for It Ends with Us using ElasticMovieInfoFetcher
-2024-09-08 03:01:33,267 - seret.movie_info_fetchers.composite - INFO - Got info for עולם מפריד בינינו using ElasticMovieInfoFetcher
-2024-09-08 03:01:35,102 - seret.movie_info_fetchers.composite - INFO - Got info for A world Apart using ElasticMovieInfoFetcher
-2024-09-08 03:01:36,250 - seret.movie_info_fetchers.composite - INFO - Got info for קאש אאוט using ElasticMovieInfoFetcher
-2024-09-08 03:01:36,840 - seret.movie_info_fetchers.composite - INFO - Got info for CASH OUT using ElasticMovieInfoFetcher
-2024-09-08 03:01:37,908 - seret.movie_info_fetchers.composite - INFO - Got info for מחר יום חדש using ElasticMovieInfoFetcher
-2024-09-08 03:01:38,421 - seret.movie_info_fetchers.composite - INFO - Got info for There Is Still Tomorrow using ElasticMovieInfoFetcher
-2024-09-08 03:01:39,404 - seret.movie_info_fetchers.composite - INFO - Got info for צאי מזה using ElasticMovieInfoFetcher
-2024-09-08 03:01:40,021 - seret.movie_info_fetchers.composite - INFO - Got info for Blink Twice using ElasticMovieInfoFetcher
-2024-09-08 03:01:40,872 - seret.movie_info_fetchers.composite - INFO - Got info for מים רדודים using ElasticMovieInfoFetcher
-2024-09-08 03:01:41,436 - seret.movie_info_fetchers.composite - INFO - Got info for POOLMAN using ElasticMovieInfoFetcher
-2024-09-08 03:01:42,674 - seret.movie_info_fetchers.composite - INFO - Got info for המושב האחורי using ElasticMovieInfoFetcher
-2024-09-08 03:01:43,218 - seret.movie_info_fetchers.composite - INFO - Got info for Daddio using ElasticMovieInfoFetcher
-2024-09-08 03:01:44,841 - seret.movie_info_fetchers.composite - INFO - Got info for אדוני השופט using ElasticMovieInfoFetcher
-2024-09-08 03:01:45,480 - seret.movie_info_fetchers.composite - INFO - Got info for Take a Chance On Me using ElasticMovieInfoFetcher
-2024-09-08 03:01:46,632 - seret.movie_info_fetchers.composite - INFO - Got info for תלמה using ElasticMovieInfoFetcher
-2024-09-08 03:01:47,226 - seret.movie_info_fetchers.composite - INFO - Got info for Thelma using ElasticMovieInfoFetcher
-2024-09-08 03:01:48,315 - seret.movie_info_fetchers.composite - INFO - Got info for הקבלן using ElasticMovieInfoFetcher
-2024-09-08 03:01:48,754 - seret.movie_info_fetchers.composite - INFO - Got info for The Bricklayer using ElasticMovieInfoFetcher
-2024-09-08 03:01:48,760 - seret.movie_info_fetchers.composite - INFO - Got info for העורב using ElasticMovieInfoFetcher
-2024-09-08 03:01:48,766 - seret.movie_info_fetchers.composite - INFO - Got info for The Crow using ElasticMovieInfoFetcher
-2024-09-08 03:01:48,766 - seret.info_fetcher - ERROR - Failed to get info for The Crow and העורב
-2024-09-08 03:01:49,622 - imdb_api - ERROR - id='tt9371598', movie='This Time Next Year'
+2024-09-09 02:56:42,623 - root - INFO - ********************
+2024-09-09 02:56:42,624 - root - INFO - started checking for:09-09-2024
+2024-09-09 02:56:42,624 - cinemas.yes_planet - INFO - STARTED YES PLANET
+2024-09-09 02:57:00,100 - proxy - INFO - Proxy: {'YourFuckingIPAddress': '81.28.7.51', 'YourFuckingLocation': 'Haifa, HA, Israel', 'YourFuckingHostname': '81.28.7.51', 'YourFuckingISP': 'O.M.C. COMPUTERS & COMMUNICATIONS LTD', 'YourFuckingTorExit': False, 'YourFuckingCity': 'Haifa', 'YourFuckingCountry': 'Israel', 'YourFuckingCountryCode': 'IL'}
+2024-09-09 02:57:00,100 - cinemas.yes_planet - INFO - STARTED YES PLANET RISHON
+2024-09-09 02:59:29,005 - cinemas.yes_planet - INFO - DONE YES PLANET RISHON
+2024-09-09 02:59:29,005 - cinemas.yes_planet - INFO - STARTED YES PLANET AYALON
+2024-09-09 02:59:59,467 - cinemas.yes_planet - INFO - DONE YES PLANET AYALON
+2024-09-09 02:59:59,467 - cinemas.yes_planet - INFO - STARTED YES PLANET ZICHRON
+2024-09-09 03:00:00,480 - cinemas.yes_planet - INFO - DONE YES PLANET ZICHRON
+2024-09-09 03:00:00,480 - cinemas.yes_planet - INFO - STARTED YES PLANET HAIFA
+2024-09-09 03:00:09,677 - cinemas.yes_planet - INFO - DONE YES PLANET HAIFA
+2024-09-09 03:00:09,677 - cinemas.yes_planet - INFO - STARTED YES PLANET JERUSALEM
+2024-09-09 03:00:10,100 - cinemas.yes_planet - INFO - DONE YES PLANET JERUSALEM
+2024-09-09 03:00:10,100 - cinemas.yes_planet - INFO - STARTED YES PLANET BEER_SHEVA
+2024-09-09 03:00:19,757 - cinemas.yes_planet - INFO - DONE YES PLANET BEER_SHEVA
+2024-09-09 03:00:19,861 - proxy - INFO - Proxy removed
+2024-09-09 03:00:19,861 - cinemas.yes_planet - INFO - DONE YES PLANET
+2024-09-09 03:00:19,862 - cinemas.rav_hen - INFO - STARTED RAV HEN
+2024-09-09 03:00:19,862 - cinemas.rav_hen - INFO - STARTED RAV HEN GIVATAIM
+2024-09-09 03:00:31,930 - cinemas.rav_hen - INFO - DONE RAV HEN GIVATAIM
+2024-09-09 03:00:31,930 - cinemas.rav_hen - INFO - STARTED RAV HEN DIZINGOF
+2024-09-09 03:00:32,758 - cinemas.rav_hen - INFO - DONE RAV HEN DIZINGOF
+2024-09-09 03:00:32,758 - cinemas.rav_hen - INFO - STARTED RAV HEN MODIIN
+2024-09-09 03:00:33,307 - cinemas.rav_hen - INFO - DONE RAV HEN MODIIN
+2024-09-09 03:00:33,307 - cinemas.rav_hen - INFO - STARTED RAV HEN KIRYAT_ONO
+2024-09-09 03:00:34,168 - cinemas.rav_hen - INFO - DONE RAV HEN KIRYAT_ONO
+2024-09-09 03:00:34,169 - cinemas.rav_hen - INFO - DONE RAV HEN
+2024-09-09 03:00:34,169 - cinemas.hot_cinema - INFO - STARTED HOT CINEMA
+2024-09-09 03:00:34,169 - cinemas.hot_cinema - INFO - STARTED HOT CINEMA MODIIN
+2024-09-09 03:00:48,396 - cinemas.hot_cinema - INFO - DONE HOT CINEMA MODIIN
+2024-09-09 03:00:48,396 - cinemas.hot_cinema - INFO - STARTED HOT CINEMA KIRYON
+2024-09-09 03:01:10,280 - cinemas.hot_cinema - INFO - DONE HOT CINEMA KIRYON
+2024-09-09 03:01:10,280 - cinemas.hot_cinema - INFO - STARTED HOT CINEMA KFAR_SABBA
+2024-09-09 03:01:14,935 - cinemas.hot_cinema - INFO - DONE HOT CINEMA KFAR_SABBA
+2024-09-09 03:01:14,935 - cinemas.hot_cinema - INFO - STARTED HOT CINEMA HAIFA
+2024-09-09 03:01:17,864 - cinemas.hot_cinema - INFO - DONE HOT CINEMA HAIFA
+2024-09-09 03:01:17,864 - cinemas.hot_cinema - INFO - STARTED HOT CINEMA PETACH_TIKVA
+2024-09-09 03:01:19,314 - cinemas.hot_cinema - INFO - DONE HOT CINEMA PETACH_TIKVA
+2024-09-09 03:01:19,314 - cinemas.hot_cinema - INFO - STARTED HOT CINEMA RECHOVOT
+2024-09-09 03:01:20,762 - cinemas.hot_cinema - INFO - DONE HOT CINEMA RECHOVOT
+2024-09-09 03:01:20,762 - cinemas.hot_cinema - INFO - STARTED HOT CINEMA ASHKELON
+2024-09-09 03:01:22,191 - cinemas.hot_cinema - INFO - DONE HOT CINEMA ASHKELON
+2024-09-09 03:01:22,191 - cinemas.hot_cinema - INFO - STARTED HOT CINEMA KARMIEL
+2024-09-09 03:01:24,950 - cinemas.hot_cinema - INFO - DONE HOT CINEMA KARMIEL
+2024-09-09 03:01:24,950 - cinemas.hot_cinema - INFO - STARTED HOT CINEMA NAHARIA
+2024-09-09 03:01:25,151 - cinemas.hot_cinema - INFO - DONE HOT CINEMA NAHARIA
+2024-09-09 03:01:25,151 - cinemas.hot_cinema - INFO - STARTED HOT CINEMA ASHDOD
+2024-09-09 03:01:25,353 - cinemas.hot_cinema - INFO - DONE HOT CINEMA ASHDOD
+2024-09-09 03:01:25,353 - cinemas.hot_cinema - INFO - DONE HOT CINEMA
+2024-09-09 03:01:25,353 - cinemas.cinema_city - INFO - STARTED CINEMA CITY
+2024-09-09 03:01:25,353 - cinemas.cinema_city - INFO - STARTED CINEMA CITY GLILOT
+2024-09-09 03:01:52,579 - cinemas.cinema_city - INFO - DONE CINEMA CITY GLILOT
+2024-09-09 03:01:52,579 - cinemas.cinema_city - INFO - STARTED CINEMA CITY RISHON
+2024-09-09 03:01:55,768 - cinemas.cinema_city - INFO - DONE CINEMA CITY RISHON
+2024-09-09 03:01:55,769 - cinemas.cinema_city - INFO - STARTED CINEMA CITY JERUSALEM
+2024-09-09 03:01:59,410 - cinemas.cinema_city - INFO - DONE CINEMA CITY JERUSALEM
+2024-09-09 03:01:59,410 - cinemas.cinema_city - INFO - STARTED CINEMA CITY KFAR_SABBA
+2024-09-09 03:02:00,549 - cinemas.cinema_city - INFO - DONE CINEMA CITY KFAR_SABBA
+2024-09-09 03:02:00,550 - cinemas.cinema_city - INFO - STARTED CINEMA CITY NATANIA
+2024-09-09 03:02:01,236 - cinemas.cinema_city - INFO - DONE CINEMA CITY NATANIA
+2024-09-09 03:02:01,236 - cinemas.cinema_city - INFO - STARTED CINEMA CITY BEER_SHEVA
+2024-09-09 03:02:01,920 - cinemas.cinema_city - INFO - DONE CINEMA CITY BEER_SHEVA
+2024-09-09 03:02:01,920 - cinemas.cinema_city - INFO - STARTED CINEMA CITY HADERA
+2024-09-09 03:02:02,800 - cinemas.cinema_city - INFO - DONE CINEMA CITY HADERA
+2024-09-09 03:02:02,800 - cinemas.cinema_city - INFO - STARTED CINEMA CITY ASHDOD
+2024-09-09 03:02:04,399 - cinemas.cinema_city - INFO - DONE CINEMA CITY ASHDOD
+2024-09-09 03:02:04,399 - cinemas.cinema_city - INFO - DONE CINEMA CITY
+2024-09-09 03:02:04,399 - cinemas.lev - INFO - STARTED LEV
+2024-09-09 03:02:06,750 - proxy - INFO - Proxy: {'YourFuckingIPAddress': '81.28.7.51', 'YourFuckingLocation': 'Haifa, HA, Israel', 'YourFuckingHostname': '81.28.7.51', 'YourFuckingISP': 'O.M.C. COMPUTERS & COMMUNICATIONS LTD', 'YourFuckingTorExit': False, 'YourFuckingCity': 'Haifa', 'YourFuckingCountry': 'Israel', 'YourFuckingCountryCode': 'IL'}
+2024-09-09 03:02:06,750 - cinemas.lev - INFO - STARTED LEV TEL_AVIV
+2024-09-09 03:02:11,456 - cinemas.lev - INFO - DONE LEV TEL_AVIV
+2024-09-09 03:02:11,457 - cinemas.lev - INFO - STARTED LEV RAMAT_HASHARON
+2024-09-09 03:02:11,978 - cinemas.lev - INFO - DONE LEV RAMAT_HASHARON
+2024-09-09 03:02:11,978 - cinemas.lev - INFO - STARTED LEV MANDARIN
+2024-09-09 03:02:12,607 - cinemas.lev - INFO - DONE LEV MANDARIN
+2024-09-09 03:02:12,607 - cinemas.lev - INFO - STARTED LEV EVEN_YEHUDA
+2024-09-09 03:02:13,584 - cinemas.lev - INFO - DONE LEV EVEN_YEHUDA
+2024-09-09 03:02:13,584 - cinemas.lev - INFO - STARTED LEV SMADAR
+2024-09-09 03:02:14,253 - cinemas.lev - INFO - DONE LEV SMADAR
+2024-09-09 03:02:14,253 - cinemas.lev - INFO - STARTED LEV RAANANA
+2024-09-09 03:02:17,377 - cinemas.lev - INFO - DONE LEV RAANANA
+2024-09-09 03:02:17,377 - cinemas.lev - INFO - STARTED LEV OMER
+2024-09-09 03:02:18,037 - cinemas.lev - INFO - DONE LEV OMER
+2024-09-09 03:02:18,037 - cinemas.lev - INFO - STARTED LEV SHOHAM
+2024-09-09 03:02:19,789 - cinemas.lev - INFO - DONE LEV SHOHAM
+2024-09-09 03:02:19,789 - cinemas.lev - INFO - STARTED LEV DANIEL
+2024-09-09 03:02:21,912 - cinemas.lev - INFO - DONE LEV DANIEL
+2024-09-09 03:02:21,976 - proxy - INFO - Proxy removed
+2024-09-09 03:02:21,976 - cinemas.lev - INFO - DONE LEV
+2024-09-09 03:02:21,976 - cinemas.movieland - INFO - STARTED Movie Land
+2024-09-09 03:02:21,976 - cinemas.movieland - INFO - STARTED Movie Land CARMIEL
+2024-09-09 03:02:28,776 - cinemas.movieland - INFO - DONE Movie Land CARMIEL
+2024-09-09 03:02:28,776 - cinemas.movieland - INFO - STARTED Movie Land HAIFA
+2024-09-09 03:02:29,867 - cinemas.movieland - INFO - DONE Movie Land HAIFA
+2024-09-09 03:02:29,867 - cinemas.movieland - INFO - STARTED Movie Land NATANYA
+2024-09-09 03:02:31,281 - cinemas.movieland - INFO - DONE Movie Land NATANYA
+2024-09-09 03:02:31,281 - cinemas.movieland - INFO - DONE Movie Land
+2024-09-09 03:02:31,282 - root - INFO - ********************
+2024-09-09 03:02:31,282 - root - INFO - started checking for:10-09-2024
+2024-09-09 03:02:31,282 - cinemas.yes_planet - INFO - STARTED YES PLANET
+2024-09-09 03:02:33,575 - proxy - INFO - Proxy: {'YourFuckingIPAddress': '81.28.7.51', 'YourFuckingLocation': 'Haifa, HA, Israel', 'YourFuckingHostname': '81.28.7.51', 'YourFuckingISP': 'O.M.C. COMPUTERS & COMMUNICATIONS LTD', 'YourFuckingTorExit': False, 'YourFuckingCity': 'Haifa', 'YourFuckingCountry': 'Israel', 'YourFuckingCountryCode': 'IL'}
+2024-09-09 03:02:33,575 - cinemas.yes_planet - INFO - STARTED YES PLANET RISHON
+2024-09-09 03:02:34,829 - cinemas.yes_planet - INFO - DONE YES PLANET RISHON
+2024-09-09 03:02:34,829 - cinemas.yes_planet - INFO - STARTED YES PLANET AYALON
+2024-09-09 03:02:35,656 - cinemas.yes_planet - INFO - DONE YES PLANET AYALON
+2024-09-09 03:02:35,656 - cinemas.yes_planet - INFO - STARTED YES PLANET ZICHRON
+2024-09-09 03:02:36,190 - cinemas.yes_planet - INFO - DONE YES PLANET ZICHRON
+2024-09-09 03:02:36,190 - cinemas.yes_planet - INFO - STARTED YES PLANET HAIFA
+2024-09-09 03:02:37,186 - cinemas.yes_planet - INFO - DONE YES PLANET HAIFA
+2024-09-09 03:02:37,186 - cinemas.yes_planet - INFO - STARTED YES PLANET JERUSALEM
+2024-09-09 03:02:37,591 - cinemas.yes_planet - INFO - DONE YES PLANET JERUSALEM
+2024-09-09 03:02:37,591 - cinemas.yes_planet - INFO - STARTED YES PLANET BEER_SHEVA
+2024-09-09 03:02:38,700 - cinemas.yes_planet - INFO - DONE YES PLANET BEER_SHEVA
+2024-09-09 03:02:38,763 - proxy - INFO - Proxy removed
+2024-09-09 03:02:38,763 - cinemas.yes_planet - INFO - DONE YES PLANET
+2024-09-09 03:02:38,763 - cinemas.rav_hen - INFO - STARTED RAV HEN
+2024-09-09 03:02:38,764 - cinemas.rav_hen - INFO - STARTED RAV HEN GIVATAIM
+2024-09-09 03:02:39,441 - cinemas.rav_hen - INFO - DONE RAV HEN GIVATAIM
+2024-09-09 03:02:39,442 - cinemas.rav_hen - INFO - STARTED RAV HEN DIZINGOF
+2024-09-09 03:02:40,295 - cinemas.rav_hen - INFO - DONE RAV HEN DIZINGOF
+2024-09-09 03:02:40,295 - cinemas.rav_hen - INFO - STARTED RAV HEN MODIIN
+2024-09-09 03:02:40,910 - cinemas.rav_hen - INFO - DONE RAV HEN MODIIN
+2024-09-09 03:02:40,910 - cinemas.rav_hen - INFO - STARTED RAV HEN KIRYAT_ONO
+2024-09-09 03:02:41,704 - cinemas.rav_hen - INFO - DONE RAV HEN KIRYAT_ONO
+2024-09-09 03:02:41,704 - cinemas.rav_hen - INFO - DONE RAV HEN
+2024-09-09 03:02:41,704 - cinemas.hot_cinema - INFO - STARTED HOT CINEMA
+2024-09-09 03:02:41,704 - cinemas.hot_cinema - INFO - STARTED HOT CINEMA MODIIN
+2024-09-09 03:02:53,141 - cinemas.hot_cinema - INFO - DONE HOT CINEMA MODIIN
+2024-09-09 03:02:53,142 - cinemas.hot_cinema - INFO - STARTED HOT CINEMA KIRYON
+2024-09-09 03:02:56,555 - cinemas.hot_cinema - INFO - DONE HOT CINEMA KIRYON
+2024-09-09 03:02:56,555 - cinemas.hot_cinema - INFO - STARTED HOT CINEMA KFAR_SABBA
+2024-09-09 03:02:56,951 - cinemas.hot_cinema - INFO - DONE HOT CINEMA KFAR_SABBA
+2024-09-09 03:02:56,951 - cinemas.hot_cinema - INFO - STARTED HOT CINEMA HAIFA
+2024-09-09 03:02:57,552 - cinemas.hot_cinema - INFO - DONE HOT CINEMA HAIFA
+2024-09-09 03:02:57,552 - cinemas.hot_cinema - INFO - STARTED HOT CINEMA PETACH_TIKVA
+2024-09-09 03:02:57,945 - cinemas.hot_cinema - INFO - DONE HOT CINEMA PETACH_TIKVA
+2024-09-09 03:02:57,945 - cinemas.hot_cinema - INFO - STARTED HOT CINEMA RECHOVOT
+2024-09-09 03:02:58,338 - cinemas.hot_cinema - INFO - DONE HOT CINEMA RECHOVOT
+2024-09-09 03:02:58,338 - cinemas.hot_cinema - INFO - STARTED HOT CINEMA ASHKELON
+2024-09-09 03:02:58,540 - cinemas.hot_cinema - INFO - DONE HOT CINEMA ASHKELON
+2024-09-09 03:02:58,540 - cinemas.hot_cinema - INFO - STARTED HOT CINEMA KARMIEL
+2024-09-09 03:02:58,748 - cinemas.hot_cinema - INFO - DONE HOT CINEMA KARMIEL
+2024-09-09 03:02:58,748 - cinemas.hot_cinema - INFO - STARTED HOT CINEMA NAHARIA
+2024-09-09 03:02:58,948 - cinemas.hot_cinema - INFO - DONE HOT CINEMA NAHARIA
+2024-09-09 03:02:58,948 - cinemas.hot_cinema - INFO - STARTED HOT CINEMA ASHDOD
+2024-09-09 03:02:59,148 - cinemas.hot_cinema - INFO - DONE HOT CINEMA ASHDOD
+2024-09-09 03:02:59,148 - cinemas.hot_cinema - INFO - DONE HOT CINEMA
+2024-09-09 03:02:59,148 - cinemas.cinema_city - INFO - STARTED CINEMA CITY
+2024-09-09 03:02:59,148 - cinemas.cinema_city - INFO - STARTED CINEMA CITY GLILOT
+2024-09-09 03:03:06,195 - cinemas.cinema_city - INFO - DONE CINEMA CITY GLILOT
+2024-09-09 03:03:06,195 - cinemas.cinema_city - INFO - STARTED CINEMA CITY RISHON
+2024-09-09 03:03:07,071 - cinemas.cinema_city - INFO - DONE CINEMA CITY RISHON
+2024-09-09 03:03:07,071 - cinemas.cinema_city - INFO - STARTED CINEMA CITY JERUSALEM
+2024-09-09 03:03:08,191 - cinemas.cinema_city - INFO - DONE CINEMA CITY JERUSALEM
+2024-09-09 03:03:08,191 - cinemas.cinema_city - INFO - STARTED CINEMA CITY KFAR_SABBA
+2024-09-09 03:03:09,066 - cinemas.cinema_city - INFO - DONE CINEMA CITY KFAR_SABBA
+2024-09-09 03:03:09,066 - cinemas.cinema_city - INFO - STARTED CINEMA CITY NATANIA
+2024-09-09 03:03:09,948 - cinemas.cinema_city - INFO - DONE CINEMA CITY NATANIA
+2024-09-09 03:03:09,948 - cinemas.cinema_city - INFO - STARTED CINEMA CITY BEER_SHEVA
+2024-09-09 03:03:10,825 - cinemas.cinema_city - INFO - DONE CINEMA CITY BEER_SHEVA
+2024-09-09 03:03:10,826 - cinemas.cinema_city - INFO - STARTED CINEMA CITY HADERA
+2024-09-09 03:03:11,716 - cinemas.cinema_city - INFO - DONE CINEMA CITY HADERA
+2024-09-09 03:03:11,716 - cinemas.cinema_city - INFO - STARTED CINEMA CITY ASHDOD
+2024-09-09 03:03:12,832 - cinemas.cinema_city - INFO - DONE CINEMA CITY ASHDOD
+2024-09-09 03:03:12,832 - cinemas.cinema_city - INFO - DONE CINEMA CITY
+2024-09-09 03:03:12,832 - cinemas.lev - INFO - STARTED LEV
+2024-09-09 03:03:15,567 - proxy - INFO - Proxy: {'YourFuckingIPAddress': '81.28.7.51', 'YourFuckingLocation': 'Haifa, HA, Israel', 'YourFuckingHostname': '81.28.7.51', 'YourFuckingISP': 'O.M.C. COMPUTERS & COMMUNICATIONS LTD', 'YourFuckingTorExit': False, 'YourFuckingCity': 'Haifa', 'YourFuckingCountry': 'Israel', 'YourFuckingCountryCode': 'IL'}
+2024-09-09 03:03:15,567 - cinemas.lev - INFO - STARTED LEV TEL_AVIV
+2024-09-09 03:03:17,295 - cinemas.lev - INFO - DONE LEV TEL_AVIV
+2024-09-09 03:03:17,295 - cinemas.lev - INFO - STARTED LEV RAMAT_HASHARON
+2024-09-09 03:03:17,851 - cinemas.lev - INFO - DONE LEV RAMAT_HASHARON
+2024-09-09 03:03:17,851 - cinemas.lev - INFO - STARTED LEV MANDARIN
+2024-09-09 03:03:18,599 - cinemas.lev - INFO - DONE LEV MANDARIN
+2024-09-09 03:03:18,599 - cinemas.lev - INFO - STARTED LEV EVEN_YEHUDA
+2024-09-09 03:03:19,302 - cinemas.lev - INFO - DONE LEV EVEN_YEHUDA
+2024-09-09 03:03:19,302 - cinemas.lev - INFO - STARTED LEV SMADAR
+2024-09-09 03:03:19,933 - cinemas.lev - INFO - DONE LEV SMADAR
+2024-09-09 03:03:19,933 - cinemas.lev - INFO - STARTED LEV RAANANA
+2024-09-09 03:03:20,463 - cinemas.lev - INFO - DONE LEV RAANANA
+2024-09-09 03:03:20,463 - cinemas.lev - INFO - STARTED LEV OMER
+2024-09-09 03:03:21,082 - cinemas.lev - INFO - DONE LEV OMER
+2024-09-09 03:03:21,082 - cinemas.lev - INFO - STARTED LEV SHOHAM
+2024-09-09 03:03:21,758 - cinemas.lev - INFO - DONE LEV SHOHAM
+2024-09-09 03:03:21,758 - cinemas.lev - INFO - STARTED LEV DANIEL
+2024-09-09 03:03:22,421 - cinemas.lev - INFO - DONE LEV DANIEL
+2024-09-09 03:03:22,484 - proxy - INFO - Proxy removed
+2024-09-09 03:03:22,484 - cinemas.lev - INFO - DONE LEV
+2024-09-09 03:03:22,485 - cinemas.movieland - INFO - STARTED Movie Land
+2024-09-09 03:03:22,485 - cinemas.movieland - INFO - STARTED Movie Land CARMIEL
+2024-09-09 03:03:25,440 - cinemas.movieland - INFO - DONE Movie Land CARMIEL
+2024-09-09 03:03:25,441 - cinemas.movieland - INFO - STARTED Movie Land HAIFA
+2024-09-09 03:03:25,441 - cinemas.movieland - INFO - DONE Movie Land HAIFA
+2024-09-09 03:03:25,441 - cinemas.movieland - INFO - STARTED Movie Land NATANYA
+2024-09-09 03:03:25,442 - cinemas.movieland - INFO - DONE Movie Land NATANYA
+2024-09-09 03:03:25,442 - cinemas.movieland - INFO - DONE Movie Land
+2024-09-09 03:03:25,442 - root - INFO - ********************
+2024-09-09 03:03:25,442 - root - INFO - started checking for:11-09-2024
+2024-09-09 03:03:25,442 - cinemas.yes_planet - INFO - STARTED YES PLANET
+2024-09-09 03:03:29,137 - proxy - INFO - Proxy: {'YourFuckingIPAddress': '81.28.7.51', 'YourFuckingLocation': 'Haifa, HA, Israel', 'YourFuckingHostname': '81.28.7.51', 'YourFuckingISP': 'O.M.C. COMPUTERS & COMMUNICATIONS LTD', 'YourFuckingTorExit': False, 'YourFuckingCity': 'Haifa', 'YourFuckingCountry': 'Israel', 'YourFuckingCountryCode': 'IL'}
+2024-09-09 03:03:29,137 - cinemas.yes_planet - INFO - STARTED YES PLANET RISHON
+2024-09-09 03:03:30,899 - cinemas.yes_planet - INFO - DONE YES PLANET RISHON
+2024-09-09 03:03:30,900 - cinemas.yes_planet - INFO - STARTED YES PLANET AYALON
+2024-09-09 03:03:31,724 - cinemas.yes_planet - INFO - DONE YES PLANET AYALON
+2024-09-09 03:03:31,725 - cinemas.yes_planet - INFO - STARTED YES PLANET ZICHRON
+2024-09-09 03:03:32,507 - cinemas.yes_planet - INFO - DONE YES PLANET ZICHRON
+2024-09-09 03:03:32,507 - cinemas.yes_planet - INFO - STARTED YES PLANET HAIFA
+2024-09-09 03:03:33,017 - cinemas.yes_planet - INFO - DONE YES PLANET HAIFA
+2024-09-09 03:03:33,017 - cinemas.yes_planet - INFO - STARTED YES PLANET JERUSALEM
+2024-09-09 03:03:34,332 - cinemas.yes_planet - INFO - DONE YES PLANET JERUSALEM
+2024-09-09 03:03:34,332 - cinemas.yes_planet - INFO - STARTED YES PLANET BEER_SHEVA
+2024-09-09 03:03:34,986 - cinemas.yes_planet - INFO - DONE YES PLANET BEER_SHEVA
+2024-09-09 03:03:35,050 - proxy - INFO - Proxy removed
+2024-09-09 03:03:35,050 - cinemas.yes_planet - INFO - DONE YES PLANET
+2024-09-09 03:03:35,051 - cinemas.rav_hen - INFO - STARTED RAV HEN
+2024-09-09 03:03:35,051 - cinemas.rav_hen - INFO - STARTED RAV HEN GIVATAIM
+2024-09-09 03:03:35,827 - cinemas.rav_hen - INFO - DONE RAV HEN GIVATAIM
+2024-09-09 03:03:35,827 - cinemas.rav_hen - INFO - STARTED RAV HEN DIZINGOF
+2024-09-09 03:03:36,616 - cinemas.rav_hen - INFO - DONE RAV HEN DIZINGOF
+2024-09-09 03:03:36,616 - cinemas.rav_hen - INFO - STARTED RAV HEN MODIIN
+2024-09-09 03:03:37,183 - cinemas.rav_hen - INFO - DONE RAV HEN MODIIN
+2024-09-09 03:03:37,183 - cinemas.rav_hen - INFO - STARTED RAV HEN KIRYAT_ONO
+2024-09-09 03:03:38,022 - cinemas.rav_hen - INFO - DONE RAV HEN KIRYAT_ONO
+2024-09-09 03:03:38,022 - cinemas.rav_hen - INFO - DONE RAV HEN
+2024-09-09 03:03:38,022 - cinemas.hot_cinema - INFO - STARTED HOT CINEMA
+2024-09-09 03:03:38,022 - cinemas.hot_cinema - INFO - STARTED HOT CINEMA MODIIN
+2024-09-09 03:03:38,228 - cinemas.hot_cinema - INFO - DONE HOT CINEMA MODIIN
+2024-09-09 03:03:38,229 - cinemas.hot_cinema - INFO - STARTED HOT CINEMA KIRYON
+2024-09-09 03:03:40,041 - cinemas.hot_cinema - INFO - DONE HOT CINEMA KIRYON
+2024-09-09 03:03:40,041 - cinemas.hot_cinema - INFO - STARTED HOT CINEMA KFAR_SABBA
+2024-09-09 03:03:40,434 - cinemas.hot_cinema - INFO - DONE HOT CINEMA KFAR_SABBA
+2024-09-09 03:03:40,435 - cinemas.hot_cinema - INFO - STARTED HOT CINEMA HAIFA
+2024-09-09 03:03:40,829 - cinemas.hot_cinema - INFO - DONE HOT CINEMA HAIFA
+2024-09-09 03:03:40,829 - cinemas.hot_cinema - INFO - STARTED HOT CINEMA PETACH_TIKVA
+2024-09-09 03:03:41,030 - cinemas.hot_cinema - INFO - DONE HOT CINEMA PETACH_TIKVA
+2024-09-09 03:03:41,030 - cinemas.hot_cinema - INFO - STARTED HOT CINEMA RECHOVOT
+2024-09-09 03:03:41,230 - cinemas.hot_cinema - INFO - DONE HOT CINEMA RECHOVOT
+2024-09-09 03:03:41,230 - cinemas.hot_cinema - INFO - STARTED HOT CINEMA ASHKELON
+2024-09-09 03:03:41,433 - cinemas.hot_cinema - INFO - DONE HOT CINEMA ASHKELON
+2024-09-09 03:03:41,434 - cinemas.hot_cinema - INFO - STARTED HOT CINEMA KARMIEL
+2024-09-09 03:03:41,638 - cinemas.hot_cinema - INFO - DONE HOT CINEMA KARMIEL
+2024-09-09 03:03:41,638 - cinemas.hot_cinema - INFO - STARTED HOT CINEMA NAHARIA
+2024-09-09 03:03:41,839 - cinemas.hot_cinema - INFO - DONE HOT CINEMA NAHARIA
+2024-09-09 03:03:41,839 - cinemas.hot_cinema - INFO - STARTED HOT CINEMA ASHDOD
+2024-09-09 03:03:42,040 - cinemas.hot_cinema - INFO - DONE HOT CINEMA ASHDOD
+2024-09-09 03:03:42,040 - cinemas.hot_cinema - INFO - DONE HOT CINEMA
+2024-09-09 03:03:42,040 - cinemas.cinema_city - INFO - STARTED CINEMA CITY
+2024-09-09 03:03:42,040 - cinemas.cinema_city - INFO - STARTED CINEMA CITY GLILOT
+2024-09-09 03:03:42,930 - cinemas.cinema_city - INFO - DONE CINEMA CITY GLILOT
+2024-09-09 03:03:42,931 - cinemas.cinema_city - INFO - STARTED CINEMA CITY RISHON
+2024-09-09 03:03:44,605 - cinemas.cinema_city - INFO - DONE CINEMA CITY RISHON
+2024-09-09 03:03:44,606 - cinemas.cinema_city - INFO - STARTED CINEMA CITY JERUSALEM
+2024-09-09 03:03:45,480 - cinemas.cinema_city - INFO - DONE CINEMA CITY JERUSALEM
+2024-09-09 03:03:45,480 - cinemas.cinema_city - INFO - STARTED CINEMA CITY KFAR_SABBA
+2024-09-09 03:03:46,150 - cinemas.cinema_city - INFO - DONE CINEMA CITY KFAR_SABBA
+2024-09-09 03:03:46,150 - cinemas.cinema_city - INFO - STARTED CINEMA CITY NATANIA
+2024-09-09 03:03:47,746 - cinemas.cinema_city - INFO - DONE CINEMA CITY NATANIA
+2024-09-09 03:03:47,746 - cinemas.cinema_city - INFO - STARTED CINEMA CITY BEER_SHEVA
+2024-09-09 03:03:48,420 - cinemas.cinema_city - INFO - DONE CINEMA CITY BEER_SHEVA
+2024-09-09 03:03:48,421 - cinemas.cinema_city - INFO - STARTED CINEMA CITY HADERA
+2024-09-09 03:03:49,308 - cinemas.cinema_city - INFO - DONE CINEMA CITY HADERA
+2024-09-09 03:03:49,308 - cinemas.cinema_city - INFO - STARTED CINEMA CITY ASHDOD
+2024-09-09 03:03:50,224 - cinemas.cinema_city - INFO - DONE CINEMA CITY ASHDOD
+2024-09-09 03:03:50,224 - cinemas.cinema_city - INFO - DONE CINEMA CITY
+2024-09-09 03:03:50,224 - cinemas.lev - INFO - STARTED LEV
+2024-09-09 03:03:52,493 - proxy - INFO - Proxy: {'YourFuckingIPAddress': '81.28.7.51', 'YourFuckingLocation': 'Haifa, HA, Israel', 'YourFuckingHostname': '81.28.7.51', 'YourFuckingISP': 'O.M.C. COMPUTERS & COMMUNICATIONS LTD', 'YourFuckingTorExit': False, 'YourFuckingCity': 'Haifa', 'YourFuckingCountry': 'Israel', 'YourFuckingCountryCode': 'IL'}
+2024-09-09 03:03:52,493 - cinemas.lev - INFO - STARTED LEV TEL_AVIV
+2024-09-09 03:03:54,208 - cinemas.lev - INFO - DONE LEV TEL_AVIV
+2024-09-09 03:03:54,209 - cinemas.lev - INFO - STARTED LEV RAMAT_HASHARON
+2024-09-09 03:03:54,754 - cinemas.lev - INFO - DONE LEV RAMAT_HASHARON
+2024-09-09 03:03:54,754 - cinemas.lev - INFO - STARTED LEV MANDARIN
+2024-09-09 03:03:55,510 - cinemas.lev - INFO - DONE LEV MANDARIN
+2024-09-09 03:03:55,510 - cinemas.lev - INFO - STARTED LEV EVEN_YEHUDA
+2024-09-09 03:03:56,169 - cinemas.lev - INFO - DONE LEV EVEN_YEHUDA
+2024-09-09 03:03:56,169 - cinemas.lev - INFO - STARTED LEV SMADAR
+2024-09-09 03:03:56,818 - cinemas.lev - INFO - DONE LEV SMADAR
+2024-09-09 03:03:56,818 - cinemas.lev - INFO - STARTED LEV RAANANA
+2024-09-09 03:03:57,328 - cinemas.lev - INFO - DONE LEV RAANANA
+2024-09-09 03:03:57,328 - cinemas.lev - INFO - STARTED LEV OMER
+2024-09-09 03:03:58,393 - cinemas.lev - INFO - DONE LEV OMER
+2024-09-09 03:03:58,394 - cinemas.lev - INFO - STARTED LEV SHOHAM
+2024-09-09 03:03:59,073 - cinemas.lev - INFO - DONE LEV SHOHAM
+2024-09-09 03:03:59,074 - cinemas.lev - INFO - STARTED LEV DANIEL
+2024-09-09 03:03:59,542 - cinemas.lev - INFO - DONE LEV DANIEL
+2024-09-09 03:03:59,605 - proxy - INFO - Proxy removed
+2024-09-09 03:03:59,606 - cinemas.lev - INFO - DONE LEV
+2024-09-09 03:03:59,606 - cinemas.movieland - INFO - STARTED Movie Land
+2024-09-09 03:03:59,606 - cinemas.movieland - INFO - STARTED Movie Land CARMIEL
+2024-09-09 03:04:00,175 - cinemas.movieland - INFO - DONE Movie Land CARMIEL
+2024-09-09 03:04:00,175 - cinemas.movieland - INFO - STARTED Movie Land HAIFA
+2024-09-09 03:04:00,176 - cinemas.movieland - INFO - DONE Movie Land HAIFA
+2024-09-09 03:04:00,176 - cinemas.movieland - INFO - STARTED Movie Land NATANYA
+2024-09-09 03:04:00,176 - cinemas.movieland - INFO - DONE Movie Land NATANYA
+2024-09-09 03:04:00,176 - cinemas.movieland - INFO - DONE Movie Land
+2024-09-09 03:04:00,176 - root - INFO - ********************
+2024-09-09 03:04:00,176 - root - INFO - started checking for:12-09-2024
+2024-09-09 03:04:00,176 - cinemas.yes_planet - INFO - STARTED YES PLANET
+2024-09-09 03:04:02,600 - proxy - INFO - Proxy: {'YourFuckingIPAddress': '81.28.7.51', 'YourFuckingLocation': 'Haifa, HA, Israel', 'YourFuckingHostname': '81.28.7.51', 'YourFuckingISP': 'O.M.C. COMPUTERS & COMMUNICATIONS LTD', 'YourFuckingTorExit': False, 'YourFuckingCity': 'Haifa', 'YourFuckingCountry': 'Israel', 'YourFuckingCountryCode': 'IL'}
+2024-09-09 03:04:02,600 - cinemas.yes_planet - INFO - STARTED YES PLANET RISHON
+2024-09-09 03:04:27,049 - cinemas.yes_planet - INFO - DONE YES PLANET RISHON
+2024-09-09 03:04:27,049 - cinemas.yes_planet - INFO - STARTED YES PLANET AYALON
+2024-09-09 03:04:27,613 - cinemas.yes_planet - INFO - DONE YES PLANET AYALON
+2024-09-09 03:04:27,613 - cinemas.yes_planet - INFO - STARTED YES PLANET ZICHRON
+2024-09-09 03:04:28,727 - cinemas.yes_planet - INFO - DONE YES PLANET ZICHRON
+2024-09-09 03:04:28,727 - cinemas.yes_planet - INFO - STARTED YES PLANET HAIFA
+2024-09-09 03:04:29,823 - cinemas.yes_planet - INFO - DONE YES PLANET HAIFA
+2024-09-09 03:04:29,823 - cinemas.yes_planet - INFO - STARTED YES PLANET JERUSALEM
+2024-09-09 03:04:30,445 - cinemas.yes_planet - INFO - DONE YES PLANET JERUSALEM
+2024-09-09 03:04:30,445 - cinemas.yes_planet - INFO - STARTED YES PLANET BEER_SHEVA
+2024-09-09 03:04:31,098 - cinemas.yes_planet - INFO - DONE YES PLANET BEER_SHEVA
+2024-09-09 03:04:31,169 - proxy - INFO - Proxy removed
+2024-09-09 03:04:31,169 - cinemas.yes_planet - INFO - DONE YES PLANET
+2024-09-09 03:04:31,170 - cinemas.rav_hen - INFO - STARTED RAV HEN
+2024-09-09 03:04:31,170 - cinemas.rav_hen - INFO - STARTED RAV HEN GIVATAIM
+2024-09-09 03:04:31,750 - cinemas.rav_hen - INFO - DONE RAV HEN GIVATAIM
+2024-09-09 03:04:31,750 - cinemas.rav_hen - INFO - STARTED RAV HEN DIZINGOF
+2024-09-09 03:04:32,425 - cinemas.rav_hen - INFO - DONE RAV HEN DIZINGOF
+2024-09-09 03:04:32,425 - cinemas.rav_hen - INFO - STARTED RAV HEN MODIIN
+2024-09-09 03:04:33,122 - cinemas.rav_hen - INFO - DONE RAV HEN MODIIN
+2024-09-09 03:04:33,122 - cinemas.rav_hen - INFO - STARTED RAV HEN KIRYAT_ONO
+2024-09-09 03:04:33,674 - cinemas.rav_hen - INFO - DONE RAV HEN KIRYAT_ONO
+2024-09-09 03:04:33,674 - cinemas.rav_hen - INFO - DONE RAV HEN
+2024-09-09 03:04:33,674 - retry.api - WARNING - AssertionError: rav hen returned empty list in __main__.unsafe_get_screenings_from_cinema, retrying in 1 seconds...
+2024-09-09 03:04:34,674 - cinemas.rav_hen - INFO - STARTED RAV HEN
+2024-09-09 03:04:34,674 - cinemas.rav_hen - INFO - STARTED RAV HEN GIVATAIM
+2024-09-09 03:04:34,692 - cinemas.rav_hen - INFO - DONE RAV HEN GIVATAIM
+2024-09-09 03:04:34,692 - cinemas.rav_hen - INFO - STARTED RAV HEN DIZINGOF
+2024-09-09 03:04:34,710 - cinemas.rav_hen - INFO - DONE RAV HEN DIZINGOF
+2024-09-09 03:04:34,710 - cinemas.rav_hen - INFO - STARTED RAV HEN MODIIN
+2024-09-09 03:04:34,733 - cinemas.rav_hen - INFO - DONE RAV HEN MODIIN
+2024-09-09 03:04:34,733 - cinemas.rav_hen - INFO - STARTED RAV HEN KIRYAT_ONO
+2024-09-09 03:04:34,751 - cinemas.rav_hen - INFO - DONE RAV HEN KIRYAT_ONO
+2024-09-09 03:04:34,751 - cinemas.rav_hen - INFO - DONE RAV HEN
+2024-09-09 03:04:34,751 - retry.api - WARNING - AssertionError: rav hen returned empty list in __main__.unsafe_get_screenings_from_cinema, retrying in 2 seconds...
+2024-09-09 03:04:36,751 - cinemas.rav_hen - INFO - STARTED RAV HEN
+2024-09-09 03:04:36,751 - cinemas.rav_hen - INFO - STARTED RAV HEN GIVATAIM
+2024-09-09 03:04:36,773 - cinemas.rav_hen - INFO - DONE RAV HEN GIVATAIM
+2024-09-09 03:04:36,773 - cinemas.rav_hen - INFO - STARTED RAV HEN DIZINGOF
+2024-09-09 03:04:36,791 - cinemas.rav_hen - INFO - DONE RAV HEN DIZINGOF
+2024-09-09 03:04:36,792 - cinemas.rav_hen - INFO - STARTED RAV HEN MODIIN
+2024-09-09 03:04:36,811 - cinemas.rav_hen - INFO - DONE RAV HEN MODIIN
+2024-09-09 03:04:36,811 - cinemas.rav_hen - INFO - STARTED RAV HEN KIRYAT_ONO
+2024-09-09 03:04:36,829 - cinemas.rav_hen - INFO - DONE RAV HEN KIRYAT_ONO
+2024-09-09 03:04:36,829 - cinemas.rav_hen - INFO - DONE RAV HEN
+2024-09-09 03:04:36,829 - root - ERROR - rav hen crashed: rav hen returned empty list
+2024-09-09 03:04:36,830 - cinemas.hot_cinema - INFO - STARTED HOT CINEMA
+2024-09-09 03:04:36,830 - cinemas.hot_cinema - INFO - STARTED HOT CINEMA MODIIN
+2024-09-09 03:04:37,029 - cinemas.hot_cinema - INFO - DONE HOT CINEMA MODIIN
+2024-09-09 03:04:37,029 - cinemas.hot_cinema - INFO - STARTED HOT CINEMA KIRYON
+2024-09-09 03:04:38,307 - cinemas.hot_cinema - INFO - DONE HOT CINEMA KIRYON
+2024-09-09 03:04:38,307 - cinemas.hot_cinema - INFO - STARTED HOT CINEMA KFAR_SABBA
+2024-09-09 03:04:39,728 - cinemas.hot_cinema - INFO - DONE HOT CINEMA KFAR_SABBA
+2024-09-09 03:04:39,728 - cinemas.hot_cinema - INFO - STARTED HOT CINEMA HAIFA
+2024-09-09 03:04:39,926 - cinemas.hot_cinema - INFO - DONE HOT CINEMA HAIFA
+2024-09-09 03:04:39,927 - cinemas.hot_cinema - INFO - STARTED HOT CINEMA PETACH_TIKVA
+2024-09-09 03:04:40,126 - cinemas.hot_cinema - INFO - DONE HOT CINEMA PETACH_TIKVA
+2024-09-09 03:04:40,126 - cinemas.hot_cinema - INFO - STARTED HOT CINEMA RECHOVOT
+2024-09-09 03:04:40,326 - cinemas.hot_cinema - INFO - DONE HOT CINEMA RECHOVOT
+2024-09-09 03:04:40,326 - cinemas.hot_cinema - INFO - STARTED HOT CINEMA ASHKELON
+2024-09-09 03:04:40,525 - cinemas.hot_cinema - INFO - DONE HOT CINEMA ASHKELON
+2024-09-09 03:04:40,525 - cinemas.hot_cinema - INFO - STARTED HOT CINEMA KARMIEL
+2024-09-09 03:04:40,725 - cinemas.hot_cinema - INFO - DONE HOT CINEMA KARMIEL
+2024-09-09 03:04:40,726 - cinemas.hot_cinema - INFO - STARTED HOT CINEMA NAHARIA
+2024-09-09 03:04:40,925 - cinemas.hot_cinema - INFO - DONE HOT CINEMA NAHARIA
+2024-09-09 03:04:40,925 - cinemas.hot_cinema - INFO - STARTED HOT CINEMA ASHDOD
+2024-09-09 03:04:41,125 - cinemas.hot_cinema - INFO - DONE HOT CINEMA ASHDOD
+2024-09-09 03:04:41,126 - cinemas.hot_cinema - INFO - DONE HOT CINEMA
+2024-09-09 03:04:41,126 - cinemas.cinema_city - INFO - STARTED CINEMA CITY
+2024-09-09 03:04:41,126 - cinemas.cinema_city - INFO - STARTED CINEMA CITY GLILOT
+2024-09-09 03:04:41,355 - cinemas.cinema_city - ERROR - NO DATE FOUND FOR GLILOT
+2024-09-09 03:04:41,355 - cinemas.cinema_city - INFO - STARTED CINEMA CITY RISHON
+2024-09-09 03:04:41,576 - cinemas.cinema_city - ERROR - NO DATE FOUND FOR RISHON
+2024-09-09 03:04:41,576 - cinemas.cinema_city - INFO - STARTED CINEMA CITY JERUSALEM
+2024-09-09 03:04:41,796 - cinemas.cinema_city - ERROR - NO DATE FOUND FOR JERUSALEM
+2024-09-09 03:04:41,796 - cinemas.cinema_city - INFO - STARTED CINEMA CITY KFAR_SABBA
+2024-09-09 03:04:42,018 - cinemas.cinema_city - ERROR - NO DATE FOUND FOR KFAR_SABBA
+2024-09-09 03:04:42,018 - cinemas.cinema_city - INFO - STARTED CINEMA CITY NATANIA
+2024-09-09 03:04:42,238 - cinemas.cinema_city - ERROR - NO DATE FOUND FOR NATANIA
+2024-09-09 03:04:42,238 - cinemas.cinema_city - INFO - STARTED CINEMA CITY BEER_SHEVA
+2024-09-09 03:04:42,456 - cinemas.cinema_city - ERROR - NO DATE FOUND FOR BEER_SHEVA
+2024-09-09 03:04:42,456 - cinemas.cinema_city - INFO - STARTED CINEMA CITY HADERA
+2024-09-09 03:04:42,675 - cinemas.cinema_city - ERROR - NO DATE FOUND FOR HADERA
+2024-09-09 03:04:42,675 - cinemas.cinema_city - INFO - STARTED CINEMA CITY ASHDOD
+2024-09-09 03:04:42,895 - cinemas.cinema_city - ERROR - NO DATE FOUND FOR ASHDOD
+2024-09-09 03:04:42,895 - cinemas.cinema_city - INFO - DONE CINEMA CITY
+2024-09-09 03:04:42,895 - retry.api - WARNING - AssertionError: cinema city returned empty list in __main__.unsafe_get_screenings_from_cinema, retrying in 1 seconds...
+2024-09-09 03:04:43,896 - cinemas.cinema_city - INFO - STARTED CINEMA CITY
+2024-09-09 03:04:43,896 - cinemas.cinema_city - INFO - STARTED CINEMA CITY GLILOT
+2024-09-09 03:04:44,115 - cinemas.cinema_city - ERROR - NO DATE FOUND FOR GLILOT
+2024-09-09 03:04:44,115 - cinemas.cinema_city - INFO - STARTED CINEMA CITY RISHON
+2024-09-09 03:04:44,335 - cinemas.cinema_city - ERROR - NO DATE FOUND FOR RISHON
+2024-09-09 03:04:44,335 - cinemas.cinema_city - INFO - STARTED CINEMA CITY JERUSALEM
+2024-09-09 03:04:44,554 - cinemas.cinema_city - ERROR - NO DATE FOUND FOR JERUSALEM
+2024-09-09 03:04:44,554 - cinemas.cinema_city - INFO - STARTED CINEMA CITY KFAR_SABBA
+2024-09-09 03:04:44,775 - cinemas.cinema_city - ERROR - NO DATE FOUND FOR KFAR_SABBA
+2024-09-09 03:04:44,775 - cinemas.cinema_city - INFO - STARTED CINEMA CITY NATANIA
+2024-09-09 03:04:44,996 - cinemas.cinema_city - ERROR - NO DATE FOUND FOR NATANIA
+2024-09-09 03:04:44,996 - cinemas.cinema_city - INFO - STARTED CINEMA CITY BEER_SHEVA
+2024-09-09 03:04:45,216 - cinemas.cinema_city - ERROR - NO DATE FOUND FOR BEER_SHEVA
+2024-09-09 03:04:45,217 - cinemas.cinema_city - INFO - STARTED CINEMA CITY HADERA
+2024-09-09 03:04:45,436 - cinemas.cinema_city - ERROR - NO DATE FOUND FOR HADERA
+2024-09-09 03:04:45,436 - cinemas.cinema_city - INFO - STARTED CINEMA CITY ASHDOD
+2024-09-09 03:04:45,655 - cinemas.cinema_city - ERROR - NO DATE FOUND FOR ASHDOD
+2024-09-09 03:04:45,655 - cinemas.cinema_city - INFO - DONE CINEMA CITY
+2024-09-09 03:04:45,655 - retry.api - WARNING - AssertionError: cinema city returned empty list in __main__.unsafe_get_screenings_from_cinema, retrying in 2 seconds...
+2024-09-09 03:04:47,656 - cinemas.cinema_city - INFO - STARTED CINEMA CITY
+2024-09-09 03:04:47,656 - cinemas.cinema_city - INFO - STARTED CINEMA CITY GLILOT
+2024-09-09 03:04:47,876 - cinemas.cinema_city - ERROR - NO DATE FOUND FOR GLILOT
+2024-09-09 03:04:47,876 - cinemas.cinema_city - INFO - STARTED CINEMA CITY RISHON
+2024-09-09 03:04:48,343 - cinemas.cinema_city - ERROR - NO DATE FOUND FOR RISHON
+2024-09-09 03:04:48,343 - cinemas.cinema_city - INFO - STARTED CINEMA CITY JERUSALEM
+2024-09-09 03:04:48,568 - cinemas.cinema_city - ERROR - NO DATE FOUND FOR JERUSALEM
+2024-09-09 03:04:48,568 - cinemas.cinema_city - INFO - STARTED CINEMA CITY KFAR_SABBA
+2024-09-09 03:04:48,788 - cinemas.cinema_city - ERROR - NO DATE FOUND FOR KFAR_SABBA
+2024-09-09 03:04:48,788 - cinemas.cinema_city - INFO - STARTED CINEMA CITY NATANIA
+2024-09-09 03:04:49,011 - cinemas.cinema_city - ERROR - NO DATE FOUND FOR NATANIA
+2024-09-09 03:04:49,011 - cinemas.cinema_city - INFO - STARTED CINEMA CITY BEER_SHEVA
+2024-09-09 03:04:49,232 - cinemas.cinema_city - ERROR - NO DATE FOUND FOR BEER_SHEVA
+2024-09-09 03:04:49,232 - cinemas.cinema_city - INFO - STARTED CINEMA CITY HADERA
+2024-09-09 03:04:49,452 - cinemas.cinema_city - ERROR - NO DATE FOUND FOR HADERA
+2024-09-09 03:04:49,452 - cinemas.cinema_city - INFO - STARTED CINEMA CITY ASHDOD
+2024-09-09 03:04:49,677 - cinemas.cinema_city - ERROR - NO DATE FOUND FOR ASHDOD
+2024-09-09 03:04:49,677 - cinemas.cinema_city - INFO - DONE CINEMA CITY
+2024-09-09 03:04:49,677 - root - ERROR - cinema city crashed: cinema city returned empty list
+2024-09-09 03:04:49,678 - cinemas.lev - INFO - STARTED LEV
+2024-09-09 03:04:51,859 - proxy - INFO - Proxy: {'YourFuckingIPAddress': '81.28.7.51', 'YourFuckingLocation': 'Haifa, HA, Israel', 'YourFuckingHostname': '81.28.7.51', 'YourFuckingISP': 'O.M.C. COMPUTERS & COMMUNICATIONS LTD', 'YourFuckingTorExit': False, 'YourFuckingCity': 'Haifa', 'YourFuckingCountry': 'Israel', 'YourFuckingCountryCode': 'IL'}
+2024-09-09 03:04:51,859 - cinemas.lev - INFO - STARTED LEV TEL_AVIV
+2024-09-09 03:04:53,375 - cinemas.lev - INFO - DONE LEV TEL_AVIV
+2024-09-09 03:04:53,376 - cinemas.lev - INFO - STARTED LEV RAMAT_HASHARON
+2024-09-09 03:04:53,856 - cinemas.lev - INFO - DONE LEV RAMAT_HASHARON
+2024-09-09 03:04:53,856 - cinemas.lev - INFO - STARTED LEV MANDARIN
+2024-09-09 03:04:54,292 - cinemas.lev - INFO - DONE LEV MANDARIN
+2024-09-09 03:04:54,292 - cinemas.lev - INFO - STARTED LEV EVEN_YEHUDA
+2024-09-09 03:04:54,702 - cinemas.lev - INFO - DONE LEV EVEN_YEHUDA
+2024-09-09 03:04:54,702 - cinemas.lev - INFO - STARTED LEV SMADAR
+2024-09-09 03:04:55,152 - cinemas.lev - INFO - DONE LEV SMADAR
+2024-09-09 03:04:55,152 - cinemas.lev - INFO - STARTED LEV RAANANA
+2024-09-09 03:04:55,831 - cinemas.lev - INFO - DONE LEV RAANANA
+2024-09-09 03:04:55,831 - cinemas.lev - INFO - STARTED LEV OMER
+2024-09-09 03:04:56,412 - cinemas.lev - INFO - DONE LEV OMER
+2024-09-09 03:04:56,412 - cinemas.lev - INFO - STARTED LEV SHOHAM
+2024-09-09 03:04:57,107 - cinemas.lev - INFO - DONE LEV SHOHAM
+2024-09-09 03:04:57,107 - cinemas.lev - INFO - STARTED LEV DANIEL
+2024-09-09 03:04:57,748 - cinemas.lev - INFO - DONE LEV DANIEL
+2024-09-09 03:04:57,811 - proxy - INFO - Proxy removed
+2024-09-09 03:04:57,811 - cinemas.lev - INFO - DONE LEV
+2024-09-09 03:04:57,812 - cinemas.movieland - INFO - STARTED Movie Land
+2024-09-09 03:04:57,812 - cinemas.movieland - INFO - STARTED Movie Land CARMIEL
+2024-09-09 03:04:57,812 - cinemas.movieland - INFO - DONE Movie Land CARMIEL
+2024-09-09 03:04:57,812 - cinemas.movieland - INFO - STARTED Movie Land HAIFA
+2024-09-09 03:04:57,812 - cinemas.movieland - INFO - DONE Movie Land HAIFA
+2024-09-09 03:04:57,812 - cinemas.movieland - INFO - STARTED Movie Land NATANYA
+2024-09-09 03:04:57,812 - cinemas.movieland - INFO - DONE Movie Land NATANYA
+2024-09-09 03:04:57,812 - cinemas.movieland - INFO - DONE Movie Land
+2024-09-09 03:04:57,812 - retry.api - WARNING - AssertionError: movieland returned empty list in __main__.unsafe_get_screenings_from_cinema, retrying in 1 seconds...
+2024-09-09 03:04:58,813 - cinemas.movieland - INFO - STARTED Movie Land
+2024-09-09 03:04:58,813 - cinemas.movieland - INFO - STARTED Movie Land CARMIEL
+2024-09-09 03:04:58,813 - cinemas.movieland - INFO - DONE Movie Land CARMIEL
+2024-09-09 03:04:58,813 - cinemas.movieland - INFO - STARTED Movie Land HAIFA
+2024-09-09 03:04:58,813 - cinemas.movieland - INFO - DONE Movie Land HAIFA
+2024-09-09 03:04:58,813 - cinemas.movieland - INFO - STARTED Movie Land NATANYA
+2024-09-09 03:04:58,813 - cinemas.movieland - INFO - DONE Movie Land NATANYA
+2024-09-09 03:04:58,813 - cinemas.movieland - INFO - DONE Movie Land
+2024-09-09 03:04:58,814 - retry.api - WARNING - AssertionError: movieland returned empty list in __main__.unsafe_get_screenings_from_cinema, retrying in 2 seconds...
+2024-09-09 03:05:00,814 - cinemas.movieland - INFO - STARTED Movie Land
+2024-09-09 03:05:00,814 - cinemas.movieland - INFO - STARTED Movie Land CARMIEL
+2024-09-09 03:05:00,814 - cinemas.movieland - INFO - DONE Movie Land CARMIEL
+2024-09-09 03:05:00,814 - cinemas.movieland - INFO - STARTED Movie Land HAIFA
+2024-09-09 03:05:00,814 - cinemas.movieland - INFO - DONE Movie Land HAIFA
+2024-09-09 03:05:00,814 - cinemas.movieland - INFO - STARTED Movie Land NATANYA
+2024-09-09 03:05:00,815 - cinemas.movieland - INFO - DONE Movie Land NATANYA
+2024-09-09 03:05:00,815 - cinemas.movieland - INFO - DONE Movie Land
+2024-09-09 03:05:00,815 - root - ERROR - movieland crashed: movieland returned empty list
+2024-09-09 03:05:00,815 - root - INFO - ********************
+2024-09-09 03:05:00,815 - root - INFO - started checking for:13-09-2024
+2024-09-09 03:05:00,815 - cinemas.yes_planet - INFO - STARTED YES PLANET
+2024-09-09 03:05:03,044 - proxy - INFO - Proxy: {'YourFuckingIPAddress': '81.28.7.51', 'YourFuckingLocation': 'Haifa, HA, Israel', 'YourFuckingHostname': '81.28.7.51', 'YourFuckingISP': 'O.M.C. COMPUTERS & COMMUNICATIONS LTD', 'YourFuckingTorExit': False, 'YourFuckingCity': 'Haifa', 'YourFuckingCountry': 'Israel', 'YourFuckingCountryCode': 'IL'}
+2024-09-09 03:05:03,044 - cinemas.yes_planet - INFO - STARTED YES PLANET RISHON
+2024-09-09 03:05:04,473 - cinemas.yes_planet - INFO - DONE YES PLANET RISHON
+2024-09-09 03:05:04,474 - cinemas.yes_planet - INFO - STARTED YES PLANET AYALON
+2024-09-09 03:05:05,062 - cinemas.yes_planet - INFO - DONE YES PLANET AYALON
+2024-09-09 03:05:05,062 - cinemas.yes_planet - INFO - STARTED YES PLANET ZICHRON
+2024-09-09 03:05:05,759 - cinemas.yes_planet - INFO - DONE YES PLANET ZICHRON
+2024-09-09 03:05:05,759 - cinemas.yes_planet - INFO - STARTED YES PLANET HAIFA
+2024-09-09 03:05:06,742 - cinemas.yes_planet - INFO - DONE YES PLANET HAIFA
+2024-09-09 03:05:06,742 - cinemas.yes_planet - INFO - STARTED YES PLANET JERUSALEM
+2024-09-09 03:05:07,315 - cinemas.yes_planet - INFO - DONE YES PLANET JERUSALEM
+2024-09-09 03:05:07,315 - cinemas.yes_planet - INFO - STARTED YES PLANET BEER_SHEVA
+2024-09-09 03:05:07,939 - cinemas.yes_planet - INFO - DONE YES PLANET BEER_SHEVA
+2024-09-09 03:05:08,004 - proxy - INFO - Proxy removed
+2024-09-09 03:05:08,004 - cinemas.yes_planet - INFO - DONE YES PLANET
+2024-09-09 03:05:08,005 - cinemas.rav_hen - INFO - STARTED RAV HEN
+2024-09-09 03:05:08,005 - cinemas.rav_hen - INFO - STARTED RAV HEN GIVATAIM
+2024-09-09 03:05:08,674 - cinemas.rav_hen - INFO - DONE RAV HEN GIVATAIM
+2024-09-09 03:05:08,675 - cinemas.rav_hen - INFO - STARTED RAV HEN DIZINGOF
+2024-09-09 03:05:09,357 - cinemas.rav_hen - INFO - DONE RAV HEN DIZINGOF
+2024-09-09 03:05:09,357 - cinemas.rav_hen - INFO - STARTED RAV HEN MODIIN
+2024-09-09 03:05:09,896 - cinemas.rav_hen - INFO - DONE RAV HEN MODIIN
+2024-09-09 03:05:09,896 - cinemas.rav_hen - INFO - STARTED RAV HEN KIRYAT_ONO
+2024-09-09 03:05:10,451 - cinemas.rav_hen - INFO - DONE RAV HEN KIRYAT_ONO
+2024-09-09 03:05:10,451 - cinemas.rav_hen - INFO - DONE RAV HEN
+2024-09-09 03:05:10,451 - retry.api - WARNING - AssertionError: rav hen returned empty list in __main__.unsafe_get_screenings_from_cinema, retrying in 1 seconds...
+2024-09-09 03:05:11,451 - cinemas.rav_hen - INFO - STARTED RAV HEN
+2024-09-09 03:05:11,452 - cinemas.rav_hen - INFO - STARTED RAV HEN GIVATAIM
+2024-09-09 03:05:11,470 - cinemas.rav_hen - INFO - DONE RAV HEN GIVATAIM
+2024-09-09 03:05:11,470 - cinemas.rav_hen - INFO - STARTED RAV HEN DIZINGOF
+2024-09-09 03:05:11,488 - cinemas.rav_hen - INFO - DONE RAV HEN DIZINGOF
+2024-09-09 03:05:11,488 - cinemas.rav_hen - INFO - STARTED RAV HEN MODIIN
+2024-09-09 03:05:11,509 - cinemas.rav_hen - INFO - DONE RAV HEN MODIIN
+2024-09-09 03:05:11,510 - cinemas.rav_hen - INFO - STARTED RAV HEN KIRYAT_ONO
+2024-09-09 03:05:11,529 - cinemas.rav_hen - INFO - DONE RAV HEN KIRYAT_ONO
+2024-09-09 03:05:11,529 - cinemas.rav_hen - INFO - DONE RAV HEN
+2024-09-09 03:05:11,529 - retry.api - WARNING - AssertionError: rav hen returned empty list in __main__.unsafe_get_screenings_from_cinema, retrying in 2 seconds...
+2024-09-09 03:05:13,529 - cinemas.rav_hen - INFO - STARTED RAV HEN
+2024-09-09 03:05:13,529 - cinemas.rav_hen - INFO - STARTED RAV HEN GIVATAIM
+2024-09-09 03:05:13,547 - cinemas.rav_hen - INFO - DONE RAV HEN GIVATAIM
+2024-09-09 03:05:13,547 - cinemas.rav_hen - INFO - STARTED RAV HEN DIZINGOF
+2024-09-09 03:05:13,566 - cinemas.rav_hen - INFO - DONE RAV HEN DIZINGOF
+2024-09-09 03:05:13,566 - cinemas.rav_hen - INFO - STARTED RAV HEN MODIIN
+2024-09-09 03:05:13,586 - cinemas.rav_hen - INFO - DONE RAV HEN MODIIN
+2024-09-09 03:05:13,586 - cinemas.rav_hen - INFO - STARTED RAV HEN KIRYAT_ONO
+2024-09-09 03:05:13,605 - cinemas.rav_hen - INFO - DONE RAV HEN KIRYAT_ONO
+2024-09-09 03:05:13,605 - cinemas.rav_hen - INFO - DONE RAV HEN
+2024-09-09 03:05:13,605 - root - ERROR - rav hen crashed: rav hen returned empty list
+2024-09-09 03:05:13,605 - cinemas.hot_cinema - INFO - STARTED HOT CINEMA
+2024-09-09 03:05:13,605 - cinemas.hot_cinema - INFO - STARTED HOT CINEMA MODIIN
+2024-09-09 03:05:13,804 - cinemas.hot_cinema - INFO - DONE HOT CINEMA MODIIN
+2024-09-09 03:05:13,804 - cinemas.hot_cinema - INFO - STARTED HOT CINEMA KIRYON
+2024-09-09 03:05:14,005 - cinemas.hot_cinema - INFO - DONE HOT CINEMA KIRYON
+2024-09-09 03:05:14,005 - cinemas.hot_cinema - INFO - STARTED HOT CINEMA KFAR_SABBA
+2024-09-09 03:05:14,206 - cinemas.hot_cinema - INFO - DONE HOT CINEMA KFAR_SABBA
+2024-09-09 03:05:14,206 - cinemas.hot_cinema - INFO - STARTED HOT CINEMA HAIFA
+2024-09-09 03:05:14,406 - cinemas.hot_cinema - INFO - DONE HOT CINEMA HAIFA
+2024-09-09 03:05:14,406 - cinemas.hot_cinema - INFO - STARTED HOT CINEMA PETACH_TIKVA
+2024-09-09 03:05:14,605 - cinemas.hot_cinema - INFO - DONE HOT CINEMA PETACH_TIKVA
+2024-09-09 03:05:14,605 - cinemas.hot_cinema - INFO - STARTED HOT CINEMA RECHOVOT
+2024-09-09 03:05:14,804 - cinemas.hot_cinema - INFO - DONE HOT CINEMA RECHOVOT
+2024-09-09 03:05:14,804 - cinemas.hot_cinema - INFO - STARTED HOT CINEMA ASHKELON
+2024-09-09 03:05:15,004 - cinemas.hot_cinema - INFO - DONE HOT CINEMA ASHKELON
+2024-09-09 03:05:15,004 - cinemas.hot_cinema - INFO - STARTED HOT CINEMA KARMIEL
+2024-09-09 03:05:15,203 - cinemas.hot_cinema - INFO - DONE HOT CINEMA KARMIEL
+2024-09-09 03:05:15,203 - cinemas.hot_cinema - INFO - STARTED HOT CINEMA NAHARIA
+2024-09-09 03:05:15,402 - cinemas.hot_cinema - INFO - DONE HOT CINEMA NAHARIA
+2024-09-09 03:05:15,403 - cinemas.hot_cinema - INFO - STARTED HOT CINEMA ASHDOD
+2024-09-09 03:05:15,602 - cinemas.hot_cinema - INFO - DONE HOT CINEMA ASHDOD
+2024-09-09 03:05:15,602 - cinemas.hot_cinema - INFO - DONE HOT CINEMA
+2024-09-09 03:05:15,602 - cinemas.cinema_city - INFO - STARTED CINEMA CITY
+2024-09-09 03:05:15,602 - cinemas.cinema_city - INFO - STARTED CINEMA CITY GLILOT
+2024-09-09 03:05:17,047 - cinemas.cinema_city - INFO - DONE CINEMA CITY GLILOT
+2024-09-09 03:05:17,047 - cinemas.cinema_city - INFO - STARTED CINEMA CITY RISHON
+2024-09-09 03:05:17,266 - cinemas.cinema_city - ERROR - NO DATE FOUND FOR RISHON
+2024-09-09 03:05:17,266 - cinemas.cinema_city - INFO - STARTED CINEMA CITY JERUSALEM
+2024-09-09 03:05:17,486 - cinemas.cinema_city - ERROR - NO DATE FOUND FOR JERUSALEM
+2024-09-09 03:05:17,486 - cinemas.cinema_city - INFO - STARTED CINEMA CITY KFAR_SABBA
+2024-09-09 03:05:17,706 - cinemas.cinema_city - ERROR - NO DATE FOUND FOR KFAR_SABBA
+2024-09-09 03:05:17,707 - cinemas.cinema_city - INFO - STARTED CINEMA CITY NATANIA
+2024-09-09 03:05:17,926 - cinemas.cinema_city - ERROR - NO DATE FOUND FOR NATANIA
+2024-09-09 03:05:17,926 - cinemas.cinema_city - INFO - STARTED CINEMA CITY BEER_SHEVA
+2024-09-09 03:05:18,145 - cinemas.cinema_city - ERROR - NO DATE FOUND FOR BEER_SHEVA
+2024-09-09 03:05:18,145 - cinemas.cinema_city - INFO - STARTED CINEMA CITY HADERA
+2024-09-09 03:05:18,364 - cinemas.cinema_city - ERROR - NO DATE FOUND FOR HADERA
+2024-09-09 03:05:18,364 - cinemas.cinema_city - INFO - STARTED CINEMA CITY ASHDOD
+2024-09-09 03:05:18,583 - cinemas.cinema_city - ERROR - NO DATE FOUND FOR ASHDOD
+2024-09-09 03:05:18,583 - cinemas.cinema_city - INFO - DONE CINEMA CITY
+2024-09-09 03:05:18,583 - cinemas.lev - INFO - STARTED LEV
+2024-09-09 03:05:20,842 - proxy - INFO - Proxy: {'YourFuckingIPAddress': '81.28.7.51', 'YourFuckingLocation': 'Haifa, HA, Israel', 'YourFuckingHostname': '81.28.7.51', 'YourFuckingISP': 'O.M.C. COMPUTERS & COMMUNICATIONS LTD', 'YourFuckingTorExit': False, 'YourFuckingCity': 'Haifa', 'YourFuckingCountry': 'Israel', 'YourFuckingCountryCode': 'IL'}
+2024-09-09 03:05:20,842 - cinemas.lev - INFO - STARTED LEV TEL_AVIV
+2024-09-09 03:05:22,167 - cinemas.lev - INFO - DONE LEV TEL_AVIV
+2024-09-09 03:05:22,167 - cinemas.lev - INFO - STARTED LEV RAMAT_HASHARON
+2024-09-09 03:05:22,506 - cinemas.lev - INFO - DONE LEV RAMAT_HASHARON
+2024-09-09 03:05:22,507 - cinemas.lev - INFO - STARTED LEV MANDARIN
+2024-09-09 03:05:23,052 - cinemas.lev - INFO - DONE LEV MANDARIN
+2024-09-09 03:05:23,052 - cinemas.lev - INFO - STARTED LEV EVEN_YEHUDA
+2024-09-09 03:05:23,639 - cinemas.lev - INFO - DONE LEV EVEN_YEHUDA
+2024-09-09 03:05:23,639 - cinemas.lev - INFO - STARTED LEV SMADAR
+2024-09-09 03:05:24,268 - cinemas.lev - INFO - DONE LEV SMADAR
+2024-09-09 03:05:24,268 - cinemas.lev - INFO - STARTED LEV RAANANA
+2024-09-09 03:05:24,770 - cinemas.lev - INFO - DONE LEV RAANANA
+2024-09-09 03:05:24,770 - cinemas.lev - INFO - STARTED LEV OMER
+2024-09-09 03:05:25,396 - cinemas.lev - INFO - DONE LEV OMER
+2024-09-09 03:05:25,396 - cinemas.lev - INFO - STARTED LEV SHOHAM
+2024-09-09 03:05:26,054 - cinemas.lev - INFO - DONE LEV SHOHAM
+2024-09-09 03:05:26,054 - cinemas.lev - INFO - STARTED LEV DANIEL
+2024-09-09 03:05:26,738 - cinemas.lev - INFO - DONE LEV DANIEL
+2024-09-09 03:05:26,802 - proxy - INFO - Proxy removed
+2024-09-09 03:05:26,802 - cinemas.lev - INFO - DONE LEV
+2024-09-09 03:05:26,802 - cinemas.movieland - INFO - STARTED Movie Land
+2024-09-09 03:05:26,802 - cinemas.movieland - INFO - STARTED Movie Land CARMIEL
+2024-09-09 03:05:26,802 - cinemas.movieland - INFO - DONE Movie Land CARMIEL
+2024-09-09 03:05:26,802 - cinemas.movieland - INFO - STARTED Movie Land HAIFA
+2024-09-09 03:05:26,802 - cinemas.movieland - INFO - DONE Movie Land HAIFA
+2024-09-09 03:05:26,803 - cinemas.movieland - INFO - STARTED Movie Land NATANYA
+2024-09-09 03:05:26,803 - cinemas.movieland - INFO - DONE Movie Land NATANYA
+2024-09-09 03:05:26,803 - cinemas.movieland - INFO - DONE Movie Land
+2024-09-09 03:05:26,803 - retry.api - WARNING - AssertionError: movieland returned empty list in __main__.unsafe_get_screenings_from_cinema, retrying in 1 seconds...
+2024-09-09 03:05:27,803 - cinemas.movieland - INFO - STARTED Movie Land
+2024-09-09 03:05:27,803 - cinemas.movieland - INFO - STARTED Movie Land CARMIEL
+2024-09-09 03:05:27,803 - cinemas.movieland - INFO - DONE Movie Land CARMIEL
+2024-09-09 03:05:27,803 - cinemas.movieland - INFO - STARTED Movie Land HAIFA
+2024-09-09 03:05:27,804 - cinemas.movieland - INFO - DONE Movie Land HAIFA
+2024-09-09 03:05:27,804 - cinemas.movieland - INFO - STARTED Movie Land NATANYA
+2024-09-09 03:05:27,804 - cinemas.movieland - INFO - DONE Movie Land NATANYA
+2024-09-09 03:05:27,804 - cinemas.movieland - INFO - DONE Movie Land
+2024-09-09 03:05:27,804 - retry.api - WARNING - AssertionError: movieland returned empty list in __main__.unsafe_get_screenings_from_cinema, retrying in 2 seconds...
+2024-09-09 03:05:29,804 - cinemas.movieland - INFO - STARTED Movie Land
+2024-09-09 03:05:29,804 - cinemas.movieland - INFO - STARTED Movie Land CARMIEL
+2024-09-09 03:05:29,804 - cinemas.movieland - INFO - DONE Movie Land CARMIEL
+2024-09-09 03:05:29,805 - cinemas.movieland - INFO - STARTED Movie Land HAIFA
+2024-09-09 03:05:29,805 - cinemas.movieland - INFO - DONE Movie Land HAIFA
+2024-09-09 03:05:29,805 - cinemas.movieland - INFO - STARTED Movie Land NATANYA
+2024-09-09 03:05:29,805 - cinemas.movieland - INFO - DONE Movie Land NATANYA
+2024-09-09 03:05:29,805 - cinemas.movieland - INFO - DONE Movie Land
+2024-09-09 03:05:29,805 - root - ERROR - movieland crashed: movieland returned empty list
+2024-09-09 03:05:31,870 - seret.movie_info_fetchers.composite - INFO - Got info for גולסטאר הסרט: מרוסקים using ElasticMovieInfoFetcher
+2024-09-09 03:05:31,878 - seret.movie_info_fetchers.composite - INFO - Got info for Golstar using ElasticMovieInfoFetcher
+2024-09-09 03:05:33,289 - seret.movie_info_fetchers.composite - INFO - Got info for ביטלג'וס ביטלג'וס using ElasticMovieInfoFetcher
+2024-09-09 03:05:34,030 - seret.movie_info_fetchers.composite - INFO - Got info for Beetlejuice Beetlejuice using ElasticMovieInfoFetcher
+2024-09-09 03:05:35,261 - seret.movie_info_fetchers.composite - INFO - Got info for קח אותי לירח using ElasticMovieInfoFetcher
+2024-09-09 03:05:36,579 - seret.movie_info_fetchers.composite - INFO - Got info for Fly Me to the Moon using ElasticMovieInfoFetcher
+2024-09-09 03:05:37,692 - seret.movie_info_fetchers.composite - INFO - Got info for גנוב על החיים using ElasticMovieInfoFetcher
+2024-09-09 03:05:38,745 - seret.movie_info_fetchers.composite - INFO - Got info for Despicable Me 4 using ElasticMovieInfoFetcher
+2024-09-09 03:05:40,589 - seret.movie_info_fetchers.composite - INFO - Got info for עשרה חודשים - נפלאות האילוזיה using ElasticMovieInfoFetcher
+2024-09-09 03:05:41,355 - seret.movie_info_fetchers.composite - INFO - Got info for ten month using ElasticMovieInfoFetcher
+2024-09-09 03:05:42,489 - seret.movie_info_fetchers.composite - INFO - Got info for דדפול ווולברין using ElasticMovieInfoFetcher
+2024-09-09 03:05:43,889 - seret.movie_info_fetchers.composite - INFO - Got info for Deadpool and Wolverine using ElasticMovieInfoFetcher
+2024-09-09 03:05:45,514 - seret.movie_info_fetchers.composite - INFO - Got info for ג'ולס using ElasticMovieInfoFetcher
+2024-09-09 03:05:46,388 - seret.movie_info_fetchers.composite - INFO - Got info for Jules using ElasticMovieInfoFetcher
+2024-09-09 03:05:47,430 - seret.movie_info_fetchers.composite - INFO - Got info for עיפרון הקסם using ElasticMovieInfoFetcher
+2024-09-09 03:05:48,329 - seret.movie_info_fetchers.composite - INFO - Got info for Harold And The Purple Crayon using ElasticMovieInfoFetcher
+2024-09-09 03:05:50,351 - seret.movie_info_fetchers.composite - INFO - Got info for הנזיר והרובה using ElasticMovieInfoFetcher
+2024-09-09 03:05:51,325 - seret.movie_info_fetchers.composite - INFO - Got info for The Monk and the Gun using ElasticMovieInfoFetcher
+2024-09-09 03:05:52,692 - seret.movie_info_fetchers.composite - INFO - Got info for החתול בעל 10 הנשמות using ElasticMovieInfoFetcher
+2024-09-09 03:05:53,664 - seret.movie_info_fetchers.composite - INFO - Got info for 10 Lives using ElasticMovieInfoFetcher
+2024-09-09 03:05:54,870 - seret.movie_info_fetchers.composite - INFO - Got info for הקול בראש 2 using ElasticMovieInfoFetcher
+2024-09-09 03:05:55,783 - seret.movie_info_fetchers.composite - INFO - Got info for Inside out 2 using ElasticMovieInfoFetcher
+2024-09-09 03:05:57,682 - seret.movie_info_fetchers.composite - INFO - Got info for להציל את היער using ElasticMovieInfoFetcher
+2024-09-09 03:05:58,889 - seret.movie_info_fetchers.composite - INFO - Got info for Ozi: the voice of the forest using ElasticMovieInfoFetcher
+2024-09-09 03:06:00,918 - seret.movie_info_fetchers.composite - INFO - Got info for מחכים לדאלי using ElasticMovieInfoFetcher
+2024-09-09 03:06:01,782 - seret.movie_info_fetchers.composite - INFO - Got info for Waiting for Dali using ElasticMovieInfoFetcher
+2024-09-09 03:06:03,719 - seret.movie_info_fetchers.composite - INFO - Got info for בורדרלנדס using ElasticMovieInfoFetcher
+2024-09-09 03:06:04,752 - seret.movie_info_fetchers.composite - INFO - Got info for Borderlands using ElasticMovieInfoFetcher
+2024-09-09 03:06:06,544 - seret.movie_info_fetchers.composite - INFO - Got info for הגיע הזמן using ElasticMovieInfoFetcher
+2024-09-09 03:06:06,557 - seret.movie_info_fetchers.composite - INFO - Got info for The Present using ElasticMovieInfoFetcher
+2024-09-09 03:06:06,564 - seret.movie_info_fetchers.composite - INFO - Got info for נשימה אחרונה using ElasticMovieInfoFetcher
+2024-09-09 03:06:06,569 - seret.movie_info_fetchers.composite - INFO - Got info for BREATHE using ElasticMovieInfoFetcher
+2024-09-09 03:06:06,570 - seret.info_fetcher - ERROR - Failed to get info for BREATHE and נשימה אחרונה
+2024-09-09 03:06:08,191 - seret.movie_info_fetchers.composite - INFO - Got info for אמילי והיגואר האחרון using ElasticMovieInfoFetcher
+2024-09-09 03:06:09,057 - seret.movie_info_fetchers.composite - INFO - Got info for Autumn and the Black Jaguar using ElasticMovieInfoFetcher
+2024-09-09 03:06:10,176 - seret.movie_info_fetchers.composite - INFO - Got info for איתנו זה נגמר using ElasticMovieInfoFetcher
+2024-09-09 03:06:11,065 - seret.movie_info_fetchers.composite - INFO - Got info for It Ends with Us using ElasticMovieInfoFetcher
+2024-09-09 03:06:12,577 - seret.movie_info_fetchers.composite - INFO - Got info for עולם מפריד בינינו using ElasticMovieInfoFetcher
+2024-09-09 03:06:15,119 - seret.movie_info_fetchers.composite - INFO - Got info for A world Apart using ElasticMovieInfoFetcher
+2024-09-09 03:06:16,523 - seret.movie_info_fetchers.composite - INFO - Got info for קאש אאוט using ElasticMovieInfoFetcher
+2024-09-09 03:06:17,376 - seret.movie_info_fetchers.composite - INFO - Got info for CASH OUT using ElasticMovieInfoFetcher
+2024-09-09 03:06:18,975 - seret.movie_info_fetchers.composite - INFO - Got info for מחר יום חדש using ElasticMovieInfoFetcher
+2024-09-09 03:06:19,856 - seret.movie_info_fetchers.composite - INFO - Got info for There Is Still Tomorrow using ElasticMovieInfoFetcher
+2024-09-09 03:06:20,955 - seret.movie_info_fetchers.composite - INFO - Got info for צאי מזה using ElasticMovieInfoFetcher
+2024-09-09 03:06:22,129 - seret.movie_info_fetchers.composite - INFO - Got info for Blink Twice using ElasticMovieInfoFetcher
+2024-09-09 03:06:23,529 - seret.movie_info_fetchers.composite - INFO - Got info for מים רדודים using ElasticMovieInfoFetcher
+2024-09-09 03:06:24,550 - seret.movie_info_fetchers.composite - INFO - Got info for POOLMAN using ElasticMovieInfoFetcher
+2024-09-09 03:06:25,977 - seret.movie_info_fetchers.composite - INFO - Got info for המושב האחורי using ElasticMovieInfoFetcher
+2024-09-09 03:06:26,895 - seret.movie_info_fetchers.composite - INFO - Got info for Daddio using ElasticMovieInfoFetcher
+2024-09-09 03:06:29,017 - seret.movie_info_fetchers.composite - INFO - Got info for אדוני השופט using ElasticMovieInfoFetcher
+2024-09-09 03:06:30,269 - seret.movie_info_fetchers.composite - INFO - Got info for Take a Chance On Me using ElasticMovieInfoFetcher
+2024-09-09 03:06:31,226 - seret.movie_info_fetchers.composite - INFO - Got info for תלמה using ElasticMovieInfoFetcher
+2024-09-09 03:06:32,131 - seret.movie_info_fetchers.composite - INFO - Got info for Thelma using ElasticMovieInfoFetcher
+2024-09-09 03:06:34,122 - seret.movie_info_fetchers.composite - INFO - Got info for הקבלן using ElasticMovieInfoFetcher
+2024-09-09 03:06:35,144 - seret.movie_info_fetchers.composite - INFO - Got info for The Bricklayer using ElasticMovieInfoFetcher
+2024-09-09 03:06:35,151 - seret.movie_info_fetchers.composite - INFO - Got info for העורב using ElasticMovieInfoFetcher
+2024-09-09 03:06:35,156 - seret.movie_info_fetchers.composite - INFO - Got info for The Crow using ElasticMovieInfoFetcher
+2024-09-09 03:06:35,156 - seret.info_fetcher - ERROR - Failed to get info for The Crow and העורב
+2024-09-09 03:06:36,604 - imdb_api - ERROR - id='tt9371598', movie='This Time Next Year'
 Traceback (most recent call last):
   File "/home/runner/work/Movie-Time-Server/Movie-Time-Server/seret/movie_raters/imdb_api.py", line 67, in get_imdb_rating
     return info["aggregateRating"]['ratingValue']
            ~~~~^^^^^^^^^^^^^^^^^^^
 KeyError: 'aggregateRating'
-2024-09-08 03:01:49,623 - seret.movie_raters.composite - WARNING - Failed to get rating for This Time Next Year
-2024-09-08 03:01:49,809 - seret.movie_raters.composite - WARNING - Failed to get rating for מזל שנפגשנו
-2024-09-08 03:01:49,809 - seret.movie_info_fetchers.composite - INFO - Got info for מזל שנפגשנו using ElasticMovieInfoFetcher
-2024-09-08 03:01:50,255 - imdb_api - ERROR - id='tt9371598', movie='This Time Next Year'
+2024-09-09 03:06:36,604 - seret.movie_raters.composite - WARNING - Failed to get rating for This Time Next Year
+2024-09-09 03:06:36,913 - seret.movie_raters.composite - WARNING - Failed to get rating for מזל שנפגשנו
+2024-09-09 03:06:36,913 - seret.movie_info_fetchers.composite - INFO - Got info for מזל שנפגשנו using ElasticMovieInfoFetcher
+2024-09-09 03:06:37,648 - imdb_api - ERROR - id='tt9371598', movie='This Time Next Year'
 Traceback (most recent call last):
   File "/home/runner/work/Movie-Time-Server/Movie-Time-Server/seret/movie_raters/imdb_api.py", line 67, in get_imdb_rating
     return info["aggregateRating"]['ratingValue']
            ~~~~^^^^^^^^^^^^^^^^^^^
 KeyError: 'aggregateRating'
-2024-09-08 03:01:50,256 - seret.movie_raters.composite - WARNING - Failed to get rating for This Time Next Year
-2024-09-08 03:01:50,268 - seret.movie_raters.composite - WARNING - Failed to get rating for מזל שנפגשנו
-2024-09-08 03:01:50,268 - seret.movie_info_fetchers.composite - INFO - Got info for This Time Next Year using ElasticMovieInfoFetcher
-2024-09-08 03:01:51,484 - seret.movie_info_fetchers.composite - INFO - Got info for רצח ממבט ראשון using ElasticMovieInfoFetcher
-2024-09-08 03:01:52,220 - seret.movie_info_fetchers.composite - INFO - Got info for Strange Darling using ElasticMovieInfoFetcher
-2024-09-08 03:01:53,466 - seret.movie_info_fetchers.composite - INFO - Got info for הנוסע השמיני: רומולוס using ElasticMovieInfoFetcher
-2024-09-08 03:01:54,104 - seret.movie_info_fetchers.composite - INFO - Got info for Alien: Romulus using ElasticMovieInfoFetcher
-2024-09-08 03:01:55,567 - seret.movie_info_fetchers.composite - INFO - Got info for בחורים רעים: הכל או כלום using ElasticMovieInfoFetcher
-2024-09-08 03:01:56,109 - seret.movie_info_fetchers.composite - INFO - Got info for Bad Boys: Ride or Die using ElasticMovieInfoFetcher
-2024-09-08 03:01:57,589 - seret.movie_info_fetchers.composite - INFO - Got info for מזל חתולה using ElasticMovieInfoFetcher
-2024-09-08 03:01:58,480 - seret.movie_info_fetchers.composite - INFO - Got info for Cat's Luck using ElasticMovieInfoFetcher
-2024-09-08 03:01:59,032 - seret.movie_info_fetchers.composite - INFO - Got info for Longlegs using ElasticMovieInfoFetcher
-2024-09-08 03:02:00,593 - seret.movie_info_fetchers.composite - INFO - Got info for סוד החיים הפשוטים using ElasticMovieInfoFetcher
-2024-09-08 03:02:01,112 - seret.movie_info_fetchers.composite - INFO - Got info for A Great Friend using ElasticMovieInfoFetcher
-2024-09-08 03:02:02,693 - seret.movie_info_fetchers.composite - INFO - Got info for נמר מי שמדבר using ElasticMovieInfoFetcher
-2024-09-08 03:02:02,700 - seret.movie_info_fetchers.composite - INFO - Got info for Extinction using ElasticMovieInfoFetcher
-2024-09-08 03:02:02,705 - seret.movie_info_fetchers.composite - INFO - Got info for הקיץ האחרון using ElasticMovieInfoFetcher
-2024-09-08 03:02:04,368 - seret.movie_info_fetchers.composite - INFO - Got info for Last Summer using ElasticMovieInfoFetcher
-2024-09-08 03:02:05,569 - seret.movie_info_fetchers.composite - INFO - Got info for עוד משהו בקטנה using ElasticMovieInfoFetcher
-2024-09-08 03:02:06,022 - seret.movie_info_fetchers.composite - INFO - Got info for A Little Something Extra using ElasticMovieInfoFetcher
-2024-09-08 03:02:07,446 - seret.movie_info_fetchers.composite - INFO - Got info for מלכוד בחדר הבקרה using ElasticMovieInfoFetcher
-2024-09-08 03:02:08,024 - seret.movie_info_fetchers.composite - INFO - Got info for Wire Room using ElasticMovieInfoFetcher
-2024-09-08 03:02:09,704 - seret.movie_info_fetchers.composite - INFO - Got info for מטוסי על: הסרט using ElasticMovieInfoFetcher
-2024-09-08 03:02:10,485 - seret.movie_info_fetchers.composite - INFO - Got info for Super Wings the movie: Maximum Speed using ElasticMovieInfoFetcher
-2024-09-08 03:02:12,243 - seret.movie_info_fetchers.composite - INFO - Got info for טאטאמי using ElasticMovieInfoFetcher
-2024-09-08 03:02:12,923 - seret.movie_info_fetchers.composite - INFO - Got info for Tatami using ElasticMovieInfoFetcher
-2024-09-08 03:02:14,215 - seret.movie_info_fetchers.composite - INFO - Got info for חברים דמיוניים using ElasticMovieInfoFetcher
-2024-09-08 03:02:14,801 - seret.movie_info_fetchers.composite - INFO - Got info for Imaginary Friends using ElasticMovieInfoFetcher
-2024-09-08 03:02:16,241 - seret.movie_info_fetchers.composite - INFO - Got info for גיבורה בהפתעה 2: טובים השניים מן האחד using ElasticMovieInfoFetcher
-2024-09-08 03:02:16,762 - seret.movie_info_fetchers.composite - INFO - Got info for Combat Wombat 2 - Back 2 Back using ElasticMovieInfoFetcher
-2024-09-08 03:02:17,505 - seret.movie_info_fetchers.composite - INFO - Got info for It Ends With Us using ElasticMovieInfoFetcher
-2024-09-08 03:02:18,031 - seret.movie_info_fetchers.composite - INFO - Got info for גיבורה בהפתעה 2 - טובים השניים מן האחד using ElasticMovieInfoFetcher
-2024-09-08 03:02:19,729 - seret.movie_info_fetchers.composite - INFO - Got info for Combat Wombat 2 using ElasticMovieInfoFetcher
-2024-09-08 03:02:20,325 - seret.movie_info_fetchers.composite - INFO - Got info for דדפול & וולברין using ElasticMovieInfoFetcher
-2024-09-08 03:02:20,983 - seret.movie_info_fetchers.composite - INFO - Got info for Deadpool & Wolverine using ElasticMovieInfoFetcher
-2024-09-08 03:02:22,451 - seret.movie_info_fetchers.composite - INFO - Got info for 10 lives using ElasticMovieInfoFetcher
-2024-09-08 03:02:23,031 - seret.movie_info_fetchers.composite - INFO - Got info for Inside Out 2 using ElasticMovieInfoFetcher
-2024-09-08 03:02:24,022 - seret.movie_info_fetchers.composite - INFO - Got info for Ozi - The Voice of The Forest using ElasticMovieInfoFetcher
-2024-09-08 03:02:24,854 - seret.movie_info_fetchers.composite - INFO - Got info for Mazal Hutula using ElasticMovieInfoFetcher
-2024-09-08 03:02:25,885 - seret.movie_info_fetchers.composite - INFO - Got info for A World Apart using ElasticMovieInfoFetcher
-2024-09-08 03:02:26,698 - seret.movie_info_fetchers.composite - INFO - Got info for עשרה חודשים using ElasticMovieInfoFetcher
-2024-09-08 03:02:27,192 - seret.movie_info_fetchers.composite - INFO - Got info for Ten Months using ElasticMovieInfoFetcher
-2024-09-08 03:02:28,433 - seret.movie_info_fetchers.composite - INFO - Got info for קונג פו פנדה 4 using ElasticMovieInfoFetcher
-2024-09-08 03:02:30,057 - seret.movie_info_fetchers.composite - INFO - Got info for Kung Fu Panda 4 using ElasticMovieInfoFetcher
-2024-09-08 03:02:30,064 - seret.movie_info_fetchers.composite - INFO - Got info for גארפילד - הסרט using ElasticMovieInfoFetcher
-2024-09-08 03:02:30,074 - seret.movie_info_fetchers.composite - INFO - Got info for The Garfield Movie using ElasticMovieInfoFetcher
-2024-09-08 03:02:30,075 - seret.info_fetcher - ERROR - Failed to get info for The Garfield Movie and גארפילד - הסרט
-2024-09-08 03:02:32,040 - seret.movie_info_fetchers.composite - INFO - Got info for מרצ'לו מיו using ElasticMovieInfoFetcher
-2024-09-08 03:02:32,577 - seret.movie_info_fetchers.composite - INFO - Got info for Marcello Mio using ElasticMovieInfoFetcher
-2024-09-08 03:02:33,986 - seret.movie_info_fetchers.composite - INFO - Got info for Harold and the Purple Crayon using ElasticMovieInfoFetcher
-2024-09-08 03:02:34,628 - seret.movie_info_fetchers.composite - INFO - Got info for Cash Out using ElasticMovieInfoFetcher
-2024-09-08 03:02:35,674 - seret.movie_info_fetchers.composite - INFO - Got info for התיבה של נח using ElasticMovieInfoFetcher
-2024-09-08 03:02:35,682 - seret.movie_info_fetchers.composite - INFO - Got info for Noah's Ark using ElasticMovieInfoFetcher
-2024-09-08 03:02:36,407 - seret.movie_info_fetchers.composite - INFO - Got info for Imaginary Friends (IF using ElasticMovieInfoFetcher
-2024-09-08 03:02:36,919 - seret.movie_info_fetchers.composite - INFO - Got info for Poolman using ElasticMovieInfoFetcher
-2024-09-08 03:02:37,513 - seret.movie_info_fetchers.composite - INFO - Got info for גארפילד using ElasticMovieInfoFetcher
-2024-09-08 03:02:37,525 - seret.movie_info_fetchers.composite - INFO - Got info for THE GARFIELD MOVIE using ElasticMovieInfoFetcher
-2024-09-08 03:02:38,182 - seret.movie_info_fetchers.composite - INFO - Got info for התיבה של נוח using ElasticMovieInfoFetcher
-2024-09-08 03:02:38,189 - seret.movie_info_fetchers.composite - INFO - Got info for Noah's Ark using ElasticMovieInfoFetcher
-2024-09-08 03:02:39,683 - imdb_api - ERROR - id='tt27953589', movie='Hemda'
+2024-09-09 03:06:37,649 - seret.movie_raters.composite - WARNING - Failed to get rating for This Time Next Year
+2024-09-09 03:06:37,677 - seret.movie_raters.composite - WARNING - Failed to get rating for מזל שנפגשנו
+2024-09-09 03:06:37,677 - seret.movie_info_fetchers.composite - INFO - Got info for This Time Next Year using ElasticMovieInfoFetcher
+2024-09-09 03:06:38,649 - seret.movie_info_fetchers.composite - INFO - Got info for רצח ממבט ראשון using ElasticMovieInfoFetcher
+2024-09-09 03:06:40,069 - seret.movie_info_fetchers.composite - INFO - Got info for Strange Darling using ElasticMovieInfoFetcher
+2024-09-09 03:06:41,165 - seret.movie_info_fetchers.composite - INFO - Got info for הנוסע השמיני: רומולוס using ElasticMovieInfoFetcher
+2024-09-09 03:06:42,178 - seret.movie_info_fetchers.composite - INFO - Got info for Alien: Romulus using ElasticMovieInfoFetcher
+2024-09-09 03:06:43,160 - seret.movie_info_fetchers.composite - INFO - Got info for בחורים רעים: הכל או כלום using ElasticMovieInfoFetcher
+2024-09-09 03:06:44,263 - seret.movie_info_fetchers.composite - INFO - Got info for Bad Boys: Ride or Die using ElasticMovieInfoFetcher
+2024-09-09 03:06:46,035 - seret.movie_info_fetchers.composite - INFO - Got info for מזל חתולה using ElasticMovieInfoFetcher
+2024-09-09 03:06:46,849 - seret.movie_info_fetchers.composite - INFO - Got info for Cat's Luck using ElasticMovieInfoFetcher
+2024-09-09 03:06:48,007 - seret.movie_info_fetchers.composite - INFO - Got info for Longlegs using ElasticMovieInfoFetcher
+2024-09-09 03:06:49,839 - seret.movie_info_fetchers.composite - INFO - Got info for סוד החיים הפשוטים using ElasticMovieInfoFetcher
+2024-09-09 03:06:50,661 - seret.movie_info_fetchers.composite - INFO - Got info for A Great Friend using ElasticMovieInfoFetcher
+2024-09-09 03:06:52,302 - seret.movie_info_fetchers.composite - INFO - Got info for נמר מי שמדבר using ElasticMovieInfoFetcher
+2024-09-09 03:06:52,308 - seret.movie_info_fetchers.composite - INFO - Got info for Extinction using ElasticMovieInfoFetcher
+2024-09-09 03:06:52,313 - seret.movie_info_fetchers.composite - INFO - Got info for הקיץ האחרון using ElasticMovieInfoFetcher
+2024-09-09 03:06:54,137 - seret.movie_info_fetchers.composite - INFO - Got info for Last Summer using ElasticMovieInfoFetcher
+2024-09-09 03:06:56,531 - seret.movie_info_fetchers.composite - INFO - Got info for עוד משהו בקטנה using ElasticMovieInfoFetcher
+2024-09-09 03:06:57,273 - seret.movie_info_fetchers.composite - INFO - Got info for A Little Something Extra using ElasticMovieInfoFetcher
+2024-09-09 03:06:59,375 - seret.movie_info_fetchers.composite - INFO - Got info for מלכוד בחדר הבקרה using ElasticMovieInfoFetcher
+2024-09-09 03:07:00,285 - seret.movie_info_fetchers.composite - INFO - Got info for Wire Room using ElasticMovieInfoFetcher
+2024-09-09 03:07:01,996 - seret.movie_info_fetchers.composite - INFO - Got info for מטוסי על: הסרט using ElasticMovieInfoFetcher
+2024-09-09 03:07:03,100 - seret.movie_info_fetchers.composite - INFO - Got info for Super Wings the movie: Maximum Speed using ElasticMovieInfoFetcher
+2024-09-09 03:07:04,514 - seret.movie_info_fetchers.composite - INFO - Got info for טאטאמי using ElasticMovieInfoFetcher
+2024-09-09 03:07:05,205 - seret.movie_info_fetchers.composite - INFO - Got info for Tatami using ElasticMovieInfoFetcher
+2024-09-09 03:07:07,009 - seret.movie_info_fetchers.composite - INFO - Got info for חברים דמיוניים using ElasticMovieInfoFetcher
+2024-09-09 03:07:07,951 - seret.movie_info_fetchers.composite - INFO - Got info for Imaginary Friends using ElasticMovieInfoFetcher
+2024-09-09 03:07:09,980 - seret.movie_info_fetchers.composite - INFO - Got info for גיבורה בהפתעה 2: טובים השניים מן האחד using ElasticMovieInfoFetcher
+2024-09-09 03:07:10,904 - seret.movie_info_fetchers.composite - INFO - Got info for Combat Wombat 2 - Back 2 Back using ElasticMovieInfoFetcher
+2024-09-09 03:07:11,787 - seret.movie_info_fetchers.composite - INFO - Got info for It Ends With Us using ElasticMovieInfoFetcher
+2024-09-09 03:07:12,564 - seret.movie_info_fetchers.composite - INFO - Got info for גיבורה בהפתעה 2 - טובים השניים מן האחד using ElasticMovieInfoFetcher
+2024-09-09 03:07:14,333 - seret.movie_info_fetchers.composite - INFO - Got info for Combat Wombat 2 using ElasticMovieInfoFetcher
+2024-09-09 03:07:15,257 - seret.movie_info_fetchers.composite - INFO - Got info for דדפול & וולברין using ElasticMovieInfoFetcher
+2024-09-09 03:07:16,341 - seret.movie_info_fetchers.composite - INFO - Got info for Deadpool & Wolverine using ElasticMovieInfoFetcher
+2024-09-09 03:07:17,418 - seret.movie_info_fetchers.composite - INFO - Got info for 10 lives using ElasticMovieInfoFetcher
+2024-09-09 03:07:18,408 - seret.movie_info_fetchers.composite - INFO - Got info for Inside Out 2 using ElasticMovieInfoFetcher
+2024-09-09 03:07:19,231 - seret.movie_info_fetchers.composite - INFO - Got info for Ozi - The Voice of The Forest using ElasticMovieInfoFetcher
+2024-09-09 03:07:20,152 - seret.movie_info_fetchers.composite - INFO - Got info for A World Apart using ElasticMovieInfoFetcher
+2024-09-09 03:07:21,057 - seret.movie_info_fetchers.composite - INFO - Got info for עשרה חודשים using ElasticMovieInfoFetcher
+2024-09-09 03:07:22,191 - seret.movie_info_fetchers.composite - INFO - Got info for Ten Months using ElasticMovieInfoFetcher
+2024-09-09 03:07:22,198 - seret.movie_info_fetchers.composite - INFO - Got info for גארפילד - הסרט using ElasticMovieInfoFetcher
+2024-09-09 03:07:22,206 - seret.movie_info_fetchers.composite - INFO - Got info for The Garfield Movie using ElasticMovieInfoFetcher
+2024-09-09 03:07:22,206 - seret.info_fetcher - ERROR - Failed to get info for The Garfield Movie and גארפילד - הסרט
+2024-09-09 03:07:23,131 - seret.movie_info_fetchers.composite - INFO - Got info for התיבה של נח using ElasticMovieInfoFetcher
+2024-09-09 03:07:23,139 - seret.movie_info_fetchers.composite - INFO - Got info for Noah's Ark using ElasticMovieInfoFetcher
+2024-09-09 03:07:24,408 - seret.movie_info_fetchers.composite - INFO - Got info for Mazal Hutula using ElasticMovieInfoFetcher
+2024-09-09 03:07:26,093 - seret.movie_info_fetchers.composite - INFO - Got info for מרצ'לו מיו using ElasticMovieInfoFetcher
+2024-09-09 03:07:26,917 - seret.movie_info_fetchers.composite - INFO - Got info for Marcello Mio using ElasticMovieInfoFetcher
+2024-09-09 03:07:28,000 - seret.movie_info_fetchers.composite - INFO - Got info for Harold and the Purple Crayon using ElasticMovieInfoFetcher
+2024-09-09 03:07:29,643 - seret.movie_info_fetchers.composite - INFO - Got info for קונג פו פנדה 4 using ElasticMovieInfoFetcher
+2024-09-09 03:07:31,071 - seret.movie_info_fetchers.composite - INFO - Got info for Kung Fu Panda 4 using ElasticMovieInfoFetcher
+2024-09-09 03:07:32,376 - seret.movie_info_fetchers.composite - INFO - Got info for Imaginary Friends (IF using ElasticMovieInfoFetcher
+2024-09-09 03:07:33,481 - seret.movie_info_fetchers.composite - INFO - Got info for Cash Out using ElasticMovieInfoFetcher
+2024-09-09 03:07:34,769 - seret.movie_info_fetchers.composite - INFO - Got info for Poolman using ElasticMovieInfoFetcher
+2024-09-09 03:07:35,593 - seret.movie_info_fetchers.composite - INFO - Got info for DESPICABLE ME 4 using ElasticMovieInfoFetcher
+2024-09-09 03:07:36,525 - seret.movie_info_fetchers.composite - INFO - Got info for גארפילד using ElasticMovieInfoFetcher
+2024-09-09 03:07:36,536 - seret.movie_info_fetchers.composite - INFO - Got info for THE GARFIELD MOVIE using ElasticMovieInfoFetcher
+2024-09-09 03:07:37,464 - seret.movie_info_fetchers.composite - INFO - Got info for התיבה של נוח using ElasticMovieInfoFetcher
+2024-09-09 03:07:37,471 - seret.movie_info_fetchers.composite - INFO - Got info for Noah's Ark using ElasticMovieInfoFetcher
+2024-09-09 03:07:38,814 - imdb_api - ERROR - id='tt27953589', movie='Hemda'
 Traceback (most recent call last):
   File "/home/runner/work/Movie-Time-Server/Movie-Time-Server/seret/movie_raters/imdb_api.py", line 67, in get_imdb_rating
     return info["aggregateRating"]['ratingValue']
            ~~~~^^^^^^^^^^^^^^^^^^^
 KeyError: 'aggregateRating'
-2024-09-08 03:02:39,684 - seret.movie_raters.composite - WARNING - Failed to get rating for Hemda
-2024-09-08 03:02:39,816 - seret.movie_raters.composite - WARNING - Failed to get rating for חמדה
-2024-09-08 03:02:39,816 - seret.movie_info_fetchers.composite - INFO - Got info for חמדה using ElasticMovieInfoFetcher
-2024-09-08 03:02:40,386 - seret.movie_info_fetchers.composite - INFO - Got info for Ozi: Voice of the Forest using ElasticMovieInfoFetcher
-2024-09-08 03:02:41,238 - seret.movie_info_fetchers.composite - INFO - Got info for There's Still Tomorrow using ElasticMovieInfoFetcher
-2024-09-08 03:02:41,243 - seret.movie_info_fetchers.composite - INFO - Got info for Breathe using ElasticMovieInfoFetcher
-2024-09-08 03:02:42,435 - seret.movie_info_fetchers.composite - INFO - Got info for Les Choses Simples using ElasticMovieInfoFetcher
-2024-09-08 03:02:43,487 - seret.movie_info_fetchers.composite - INFO - Got info for Un p'tit truc en plus using ElasticMovieInfoFetcher
-2024-09-08 03:02:43,981 - seret.movie_info_fetchers.composite - INFO - Got info for Ten Months using ElasticMovieInfoFetcher
-2024-09-08 03:02:45,397 - seret.movie_info_fetchers.composite - INFO - Got info for רוחות מלחמה using ElasticMovieInfoFetcher
-2024-09-08 03:02:46,163 - seret.movie_info_fetchers.composite - INFO - Got info for Refuge using ElasticMovieInfoFetcher
-2024-09-08 03:02:47,076 - seret.movie_info_fetchers.composite - INFO - Got info for STRANGE DARLING using ElasticMovieInfoFetcher
-2024-09-08 03:02:47,098 - seret.movie_info_fetchers.composite - INFO - Got info for Битлджус Битлджус using ElasticMovieInfoFetcher
-2024-09-08 03:02:47,105 - seret.movie_info_fetchers.composite - INFO - Got info for בראול סיטי/Brawl city using ElasticMovieInfoFetcher
-2024-09-08 03:02:48,554 - imdb_api - ERROR - id='tt0765045', movie='A City with No Pity'
+2024-09-09 03:07:38,814 - seret.movie_raters.composite - WARNING - Failed to get rating for Hemda
+2024-09-09 03:07:39,014 - seret.movie_raters.composite - WARNING - Failed to get rating for חמדה
+2024-09-09 03:07:39,014 - seret.movie_info_fetchers.composite - INFO - Got info for חמדה using ElasticMovieInfoFetcher
+2024-09-09 03:07:40,566 - seret.movie_info_fetchers.composite - INFO - Got info for Ozi: Voice of the Forest using ElasticMovieInfoFetcher
+2024-09-09 03:07:41,522 - seret.movie_info_fetchers.composite - INFO - Got info for There's Still Tomorrow using ElasticMovieInfoFetcher
+2024-09-09 03:07:41,527 - seret.movie_info_fetchers.composite - INFO - Got info for Breathe using ElasticMovieInfoFetcher
+2024-09-09 03:07:43,083 - seret.movie_info_fetchers.composite - INFO - Got info for Les Choses Simples using ElasticMovieInfoFetcher
+2024-09-09 03:07:43,802 - seret.movie_info_fetchers.composite - INFO - Got info for Ten Months using ElasticMovieInfoFetcher
+2024-09-09 03:07:45,611 - seret.movie_info_fetchers.composite - INFO - Got info for רוחות מלחמה using ElasticMovieInfoFetcher
+2024-09-09 03:07:46,329 - seret.movie_info_fetchers.composite - INFO - Got info for Refuge using ElasticMovieInfoFetcher
+2024-09-09 03:07:47,191 - seret.movie_info_fetchers.composite - INFO - Got info for STRANGE DARLING using ElasticMovieInfoFetcher
+2024-09-09 03:07:49,128 - seret.movie_info_fetchers.composite - INFO - Got info for אי הפאפינים using ElasticMovieInfoFetcher
+2024-09-09 03:07:49,849 - seret.movie_info_fetchers.composite - INFO - Got info for Puffin Rock and the New Friends using ElasticMovieInfoFetcher
+2024-09-09 03:07:50,695 - seret.movie_info_fetchers.composite - INFO - Got info for גיבורה בהפתעה 2 - טובים השניים מן האחד-מ using ElasticMovieInfoFetcher
+2024-09-09 03:07:51,513 - seret.movie_info_fetchers.composite - INFO - Got info for Combat Wombat 2 - Back 2 Back using ElasticMovieInfoFetcher
+2024-09-09 03:07:52,824 - seret.movie_info_fetchers.composite - INFO - Got info for Un p'tit truc en plus using ElasticMovieInfoFetcher
+2024-09-09 03:07:54,426 - seret.movie_info_fetchers.composite - INFO - Got info for נקמה יהודית 6 using ElasticMovieInfoFetcher
+2024-09-09 03:07:55,303 - seret.movie_info_fetchers.composite - INFO - Got info for The Monk And The Gun using ElasticMovieInfoFetcher
+2024-09-09 03:07:57,393 - imdb_api - ERROR - id='tt27518625', movie='Fallen Leaves'
 Traceback (most recent call last):
   File "/home/runner/work/Movie-Time-Server/Movie-Time-Server/seret/movie_raters/imdb_api.py", line 67, in get_imdb_rating
     return info["aggregateRating"]['ratingValue']
            ~~~~^^^^^^^^^^^^^^^^^^^
 KeyError: 'aggregateRating'
-2024-09-08 03:02:48,554 - seret.movie_raters.composite - WARNING - Failed to get rating for A City with No Pity
-2024-09-08 03:02:48,710 - seret.movie_raters.composite - WARNING - Failed to get rating for עיר ללא רחמים
-2024-09-08 03:02:48,710 - seret.movie_info_fetchers.composite - INFO - Got info for Brawl city using ElasticMovieInfoFetcher
-2024-09-08 03:02:49,430 - seret.movie_info_fetchers.composite - INFO - Got info for גיבורה בהפתעה 2 - טובים השניים מן האחד-מ using ElasticMovieInfoFetcher
-2024-09-08 03:02:49,852 - seret.movie_info_fetchers.composite - INFO - Got info for Combat Wombat 2 - Back 2 Back using ElasticMovieInfoFetcher
-2024-09-08 03:02:51,009 - seret.movie_info_fetchers.composite - INFO - Got info for נקמה יהודית 6 using ElasticMovieInfoFetcher
-2024-09-08 03:02:51,460 - seret.movie_info_fetchers.composite - INFO - Got info for The Monk And The Gun using ElasticMovieInfoFetcher
-2024-09-08 03:02:54,038 - imdb_api - ERROR - id='tt27518625', movie='Fallen Leaves'
+2024-09-09 03:07:57,393 - seret.movie_raters.composite - WARNING - Failed to get rating for Fallen Leaves
+2024-09-09 03:07:57,651 - seret.movie_raters.composite - WARNING - Failed to get rating for עלי שלכת
+2024-09-09 03:07:57,651 - seret.movie_info_fetchers.composite - INFO - Got info for עלי שלכת using ElasticMovieInfoFetcher
+2024-09-09 03:07:58,440 - imdb_api - ERROR - id='tt27518625', movie='Fallen Leaves'
 Traceback (most recent call last):
   File "/home/runner/work/Movie-Time-Server/Movie-Time-Server/seret/movie_raters/imdb_api.py", line 67, in get_imdb_rating
     return info["aggregateRating"]['ratingValue']
            ~~~~^^^^^^^^^^^^^^^^^^^
 KeyError: 'aggregateRating'
-2024-09-08 03:02:54,038 - seret.movie_raters.composite - WARNING - Failed to get rating for Fallen Leaves
-2024-09-08 03:02:54,202 - seret.movie_raters.composite - WARNING - Failed to get rating for עלי שלכת
-2024-09-08 03:02:54,202 - seret.movie_info_fetchers.composite - INFO - Got info for עלי שלכת using ElasticMovieInfoFetcher
-2024-09-08 03:02:54,949 - imdb_api - ERROR - id='tt27518625', movie='Fallen Leaves'
+2024-09-09 03:07:58,440 - seret.movie_raters.composite - WARNING - Failed to get rating for Fallen Leaves
+2024-09-09 03:07:58,469 - seret.movie_raters.composite - WARNING - Failed to get rating for עלי שלכת
+2024-09-09 03:07:58,469 - seret.movie_info_fetchers.composite - INFO - Got info for Fallen Leaves using ElasticMovieInfoFetcher
+2024-09-09 03:07:59,519 - seret.movie_info_fetchers.composite - INFO - Got info for Despicable Me 4 Dubbed using ElasticMovieInfoFetcher
+2024-09-09 03:07:59,537 - seret.movie_info_fetchers.composite - INFO - Got info for БИТЛДЖУС БИТЛДЖУС using ElasticMovieInfoFetcher
+2024-09-09 03:07:59,537 - seret.info_fetcher - ERROR - Failed to get info for БИТЛДЖУС БИТЛДЖУС and БИТЛДЖУС БИТЛДЖУС
+2024-09-09 03:08:01,631 - seret.movie_info_fetchers.composite - INFO - Got info for ימים מושלמים using ElasticMovieInfoFetcher
+2024-09-09 03:08:01,643 - seret.movie_info_fetchers.composite - INFO - Got info for Perfect Days using ElasticMovieInfoFetcher
+2024-09-09 03:08:02,417 - seret.movie_info_fetchers.composite - INFO - Got info for 10 Lives Dubbed using ElasticMovieInfoFetcher
+2024-09-09 03:08:03,268 - seret.movie_info_fetchers.composite - INFO - Got info for Waiting For Dali using ElasticMovieInfoFetcher
+2024-09-09 03:08:03,960 - seret.movie_info_fetchers.composite - INFO - Got info for גולסטאר הסרט - מרוסקים using ElasticMovieInfoFetcher
+2024-09-09 03:08:03,964 - seret.movie_info_fetchers.composite - INFO - Got info for Golstar using ElasticMovieInfoFetcher
+2024-09-09 03:08:04,814 - seret.movie_info_fetchers.composite - INFO - Got info for Ozi Voice Of The Forest using ElasticMovieInfoFetcher
+2024-09-09 03:08:06,314 - seret.movie_info_fetchers.composite - INFO - Got info for Beetlejuice Beetlejuice using ElasticMovieInfoFetcher
+2024-09-09 03:08:06,324 - seret.movie_info_fetchers.composite - INFO - Got info for The Garfield Movie using ElasticMovieInfoFetcher
+2024-09-09 03:08:07,491 - seret.movie_info_fetchers.composite - INFO - Got info for 10 ЖИЗНЕЙ using ElasticMovieInfoFetcher
+2024-09-09 03:08:09,623 - seret.movie_info_fetchers.composite - INFO - Got info for אג'ומה using ElasticMovieInfoFetcher
+2024-09-09 03:08:10,628 - seret.movie_info_fetchers.composite - INFO - Got info for Ajoomma using ElasticMovieInfoFetcher
+2024-09-09 03:08:11,331 - imdb_api - ERROR - id='tt27953589', movie='Hemda'
 Traceback (most recent call last):
   File "/home/runner/work/Movie-Time-Server/Movie-Time-Server/seret/movie_raters/imdb_api.py", line 67, in get_imdb_rating
     return info["aggregateRating"]['ratingValue']
            ~~~~^^^^^^^^^^^^^^^^^^^
 KeyError: 'aggregateRating'
-2024-09-08 03:02:54,949 - seret.movie_raters.composite - WARNING - Failed to get rating for Fallen Leaves
-2024-09-08 03:02:54,961 - seret.movie_raters.composite - WARNING - Failed to get rating for עלי שלכת
-2024-09-08 03:02:54,961 - seret.movie_info_fetchers.composite - INFO - Got info for Fallen Leaves using ElasticMovieInfoFetcher
-2024-09-08 03:02:55,652 - seret.movie_info_fetchers.composite - INFO - Got info for 10 Lives Dubbed using ElasticMovieInfoFetcher
-2024-09-08 03:02:56,494 - seret.movie_info_fetchers.composite - INFO - Got info for ימים מושלמים using ElasticMovieInfoFetcher
-2024-09-08 03:02:56,505 - seret.movie_info_fetchers.composite - INFO - Got info for Perfect Days using ElasticMovieInfoFetcher
-2024-09-08 03:02:57,048 - seret.movie_info_fetchers.composite - INFO - Got info for Despicable Me 4 Dubbed using ElasticMovieInfoFetcher
-2024-09-08 03:02:57,508 - seret.movie_info_fetchers.composite - INFO - Got info for Waiting For Dali using ElasticMovieInfoFetcher
-2024-09-08 03:02:58,038 - seret.movie_info_fetchers.composite - INFO - Got info for Ozi Voice Of The Forest using ElasticMovieInfoFetcher
-2024-09-08 03:02:58,735 - seret.movie_info_fetchers.composite - INFO - Got info for HAROLD AND THE PURPLE CRAYON using ElasticMovieInfoFetcher
-2024-09-08 03:02:58,750 - seret.movie_info_fetchers.composite - INFO - Got info for БИТЛДЖУС БИТЛДЖУС using ElasticMovieInfoFetcher
-2024-09-08 03:02:59,251 - seret.movie_info_fetchers.composite - INFO - Got info for Beetlejuice Beetlejuice using ElasticMovieInfoFetcher
-2024-09-08 03:02:59,261 - seret.movie_info_fetchers.composite - INFO - Got info for The Garfield Movie using ElasticMovieInfoFetcher
-2024-09-08 03:02:59,719 - seret.movie_info_fetchers.composite - INFO - Got info for DESPICABLE ME 4 using ElasticMovieInfoFetcher
-2024-09-08 03:03:01,198 - seret.movie_info_fetchers.composite - INFO - Got info for אי הפאפינים using ElasticMovieInfoFetcher
-2024-09-08 03:03:02,063 - seret.movie_info_fetchers.composite - INFO - Got info for Puffin Rock and the New Friends using ElasticMovieInfoFetcher
-2024-09-08 03:03:02,063 - seret.info_fetcher - ERROR - Failed to get info for БИТЛДЖУС БИТЛДЖУС and БИТЛДЖУС БИТЛДЖУС
-2024-09-08 03:03:02,602 - seret.movie_info_fetchers.composite - INFO - Got info for גולסטאר הסרט - מרוסקים using ElasticMovieInfoFetcher
-2024-09-08 03:03:02,607 - seret.movie_info_fetchers.composite - INFO - Got info for Golstar using ElasticMovieInfoFetcher
-2024-09-08 03:03:03,416 - seret.movie_info_fetchers.composite - INFO - Got info for 10 ЖИЗНЕЙ using ElasticMovieInfoFetcher
-2024-09-08 03:03:05,451 - seret.movie_info_fetchers.composite - INFO - Got info for אג'ומה using ElasticMovieInfoFetcher
-2024-09-08 03:03:05,976 - seret.movie_info_fetchers.composite - INFO - Got info for Ajoomma using ElasticMovieInfoFetcher
-2024-09-08 03:03:06,693 - imdb_api - ERROR - id='tt27953589', movie='Hemda'
+2024-09-09 03:08:11,331 - seret.movie_raters.composite - WARNING - Failed to get rating for Hemda
+2024-09-09 03:08:11,360 - seret.movie_raters.composite - WARNING - Failed to get rating for חמדה
+2024-09-09 03:08:11,360 - seret.movie_info_fetchers.composite - INFO - Got info for Hemda using ElasticMovieInfoFetcher
+2024-09-09 03:08:12,318 - seret.movie_info_fetchers.composite - INFO - Got info for TATAMI using ElasticMovieInfoFetcher
+2024-09-09 03:08:12,325 - seret.movie_info_fetchers.composite - INFO - Got info for הילד השישי using ElasticMovieInfoFetcher
+2024-09-09 03:08:12,330 - seret.movie_info_fetchers.composite - INFO - Got info for The Sixth Child using ElasticMovieInfoFetcher
+2024-09-09 03:08:12,330 - seret.info_fetcher - ERROR - Failed to get info for The Sixth Child and הילד השישי
+2024-09-09 03:08:14,006 - imdb_api - ERROR - id='tt27903484', movie='On the wandering paths'
 Traceback (most recent call last):
   File "/home/runner/work/Movie-Time-Server/Movie-Time-Server/seret/movie_raters/imdb_api.py", line 67, in get_imdb_rating
     return info["aggregateRating"]['ratingValue']
            ~~~~^^^^^^^^^^^^^^^^^^^
 KeyError: 'aggregateRating'
-2024-09-08 03:03:06,693 - seret.movie_raters.composite - WARNING - Failed to get rating for Hemda
-2024-09-08 03:03:06,707 - seret.movie_raters.composite - WARNING - Failed to get rating for חמדה
-2024-09-08 03:03:06,707 - seret.movie_info_fetchers.composite - INFO - Got info for Hemda using ElasticMovieInfoFetcher
-2024-09-08 03:03:07,214 - seret.movie_info_fetchers.composite - INFO - Got info for TATAMI using ElasticMovieInfoFetcher
-2024-09-08 03:03:07,220 - seret.movie_info_fetchers.composite - INFO - Got info for הילד השישי using ElasticMovieInfoFetcher
-2024-09-08 03:03:07,225 - seret.movie_info_fetchers.composite - INFO - Got info for The Sixth Child using ElasticMovieInfoFetcher
-2024-09-08 03:03:07,226 - seret.info_fetcher - ERROR - Failed to get info for The Sixth Child and הילד השישי
-2024-09-08 03:03:08,527 - imdb_api - ERROR - id='tt27903484', movie='On the wandering paths'
+2024-09-09 03:08:14,007 - seret.movie_raters.composite - WARNING - Failed to get rating for On the wandering paths
+2024-09-09 03:08:14,305 - seret.movie_raters.composite - WARNING - Failed to get rating for הדרכים הלא ידועות
+2024-09-09 03:08:14,305 - seret.movie_info_fetchers.composite - INFO - Got info for הדרכים הלא ידועות using ElasticMovieInfoFetcher
+2024-09-09 03:08:15,054 - imdb_api - ERROR - id='tt27903484', movie='On the wandering paths'
 Traceback (most recent call last):
   File "/home/runner/work/Movie-Time-Server/Movie-Time-Server/seret/movie_raters/imdb_api.py", line 67, in get_imdb_rating
     return info["aggregateRating"]['ratingValue']
            ~~~~^^^^^^^^^^^^^^^^^^^
 KeyError: 'aggregateRating'
-2024-09-08 03:03:08,527 - seret.movie_raters.composite - WARNING - Failed to get rating for On the wandering paths
-2024-09-08 03:03:08,746 - seret.movie_raters.composite - WARNING - Failed to get rating for הדרכים הלא ידועות
-2024-09-08 03:03:08,747 - seret.movie_info_fetchers.composite - INFO - Got info for הדרכים הלא ידועות using ElasticMovieInfoFetcher
-2024-09-08 03:03:09,226 - imdb_api - ERROR - id='tt27903484', movie='On the wandering paths'
+2024-09-09 03:08:15,054 - seret.movie_raters.composite - WARNING - Failed to get rating for On the wandering paths
+2024-09-09 03:08:15,083 - seret.movie_raters.composite - WARNING - Failed to get rating for הדרכים הלא ידועות
+2024-09-09 03:08:15,083 - seret.movie_info_fetchers.composite - INFO - Got info for On the wandering paths using ElasticMovieInfoFetcher
+2024-09-09 03:08:17,761 - seret.movie_info_fetchers.composite - INFO - Got info for ריאליטי using ElasticMovieInfoFetcher
+2024-09-09 03:08:18,701 - seret.movie_info_fetchers.composite - INFO - Got info for Reality using ElasticMovieInfoFetcher
+2024-09-09 03:08:20,321 - seret.movie_info_fetchers.composite - INFO - Got info for הרוע אינו קיים using ElasticMovieInfoFetcher
+2024-09-09 03:08:21,137 - seret.movie_info_fetchers.composite - INFO - Got info for Evil Does Not Exist using ElasticMovieInfoFetcher
+2024-09-09 03:08:22,783 - seret.movie_info_fetchers.composite - INFO - Got info for DADDIO using ElasticMovieInfoFetcher
+2024-09-09 03:08:23,749 - seret.movie_info_fetchers.composite - INFO - Got info for Un mondo a parte using ElasticMovieInfoFetcher
+2024-09-09 03:08:24,969 - seret.movie_info_fetchers.composite - INFO - Got info for HAROLD AND THE PURPLE CRAYON using ElasticMovieInfoFetcher
+2024-09-09 03:08:24,986 - seret.movie_info_fetchers.composite - INFO - Got info for Битлджус Битлджус using ElasticMovieInfoFetcher
+2024-09-09 03:08:25,866 - seret.movie_info_fetchers.composite - INFO - Got info for סינמה קידס נתניה - החתול בעל 10 הנשמות-מ using ElasticMovieInfoFetcher
+2024-09-09 03:08:26,936 - seret.movie_info_fetchers.composite - INFO - Got info for 10 lives using ElasticMovieInfoFetcher
+2024-09-09 03:08:28,991 - seret.movie_info_fetchers.composite - INFO - Got info for טאבו: עמוס גוטמן + שיח יוצר using ElasticMovieInfoFetcher
+2024-09-09 03:08:30,181 - seret.movie_info_fetchers.composite - INFO - Got info for TABOO – Amos Guttman using ElasticMovieInfoFetcher
+2024-09-09 03:08:30,895 - seret.movie_info_fetchers.composite - INFO - Got info for Super Wings the Movie: Maximum Speed using ElasticMovieInfoFetcher
+2024-09-09 03:08:32,525 - seret.movie_info_fetchers.composite - INFO - Got info for ДЭДПУЛ И РОСОМАХА using ElasticMovieInfoFetcher
+2024-09-09 03:08:32,533 - seret.movie_info_fetchers.composite - INFO - Got info for אל תוציא מילה using ElasticMovieInfoFetcher
+2024-09-09 03:08:33,681 - imdb_api - ERROR - id='tt27534307', movie='Speak No Evil'
 Traceback (most recent call last):
   File "/home/runner/work/Movie-Time-Server/Movie-Time-Server/seret/movie_raters/imdb_api.py", line 67, in get_imdb_rating
     return info["aggregateRating"]['ratingValue']
            ~~~~^^^^^^^^^^^^^^^^^^^
 KeyError: 'aggregateRating'
-2024-09-08 03:03:09,226 - seret.movie_raters.composite - WARNING - Failed to get rating for On the wandering paths
-2024-09-08 03:03:09,240 - seret.movie_raters.composite - WARNING - Failed to get rating for הדרכים הלא ידועות
-2024-09-08 03:03:09,240 - seret.movie_info_fetchers.composite - INFO - Got info for On the wandering paths using ElasticMovieInfoFetcher
-2024-09-08 03:03:10,786 - seret.movie_info_fetchers.composite - INFO - Got info for ריאליטי using ElasticMovieInfoFetcher
-2024-09-08 03:03:11,446 - seret.movie_info_fetchers.composite - INFO - Got info for Reality using ElasticMovieInfoFetcher
-2024-09-08 03:03:12,446 - seret.movie_info_fetchers.composite - INFO - Got info for הרוע אינו קיים using ElasticMovieInfoFetcher
-2024-09-08 03:03:13,031 - seret.movie_info_fetchers.composite - INFO - Got info for Evil Does Not Exist using ElasticMovieInfoFetcher
-2024-09-08 03:03:13,806 - seret.movie_info_fetchers.composite - INFO - Got info for DADDIO using ElasticMovieInfoFetcher
-2024-09-08 03:03:14,342 - seret.movie_info_fetchers.composite - INFO - Got info for Un mondo a parte using ElasticMovieInfoFetcher
-2024-09-08 03:03:15,728 - seret.movie_info_fetchers.composite - INFO - Got info for סינמה קידס נתניה - החתול בעל 10 הנשמות-מ using ElasticMovieInfoFetcher
-2024-09-08 03:03:16,255 - seret.movie_info_fetchers.composite - INFO - Got info for 10 lives using ElasticMovieInfoFetcher
-2024-09-08 03:03:17,652 - seret.movie_info_fetchers.composite - INFO - Got info for טאבו: עמוס גוטמן + שיח יוצר using ElasticMovieInfoFetcher
-2024-09-08 03:03:18,106 - seret.movie_info_fetchers.composite - INFO - Got info for TABOO – Amos Guttman using ElasticMovieInfoFetcher
-2024-09-08 03:03:18,554 - seret.movie_info_fetchers.composite - INFO - Got info for Super Wings the Movie: Maximum Speed using ElasticMovieInfoFetcher
-2024-09-08 03:03:20,225 - seret.movie_info_fetchers.composite - INFO - Got info for ДЭДПУЛ И РОСОМАХА using ElasticMovieInfoFetcher
-2024-09-08 03:03:21,528 - seret.movie_info_fetchers.composite - INFO - Got info for USHER: RENDEZVOUS IN PARIS using ElasticMovieInfoFetcher
-2024-09-08 03:03:22,795 - seret.movie_info_fetchers.composite - INFO - Got info for המהנדס using ElasticMovieInfoFetcher
-2024-09-08 03:03:22,800 - seret.movie_info_fetchers.composite - INFO - Got info for Engeneer using ElasticMovieInfoFetcher
-2024-09-08 03:03:22,806 - seret.movie_info_fetchers.composite - INFO - Got info for יונתן ברק מגיע ל-HOT CINEMA using ElasticMovieInfoFetcher
-2024-09-08 03:03:22,807 - seret.info_fetcher - ERROR - Failed to get info for יונתן ברק מגיע ל-HOT CINEMA and יונתן ברק מגיע ל-HOT CINEMA
-2024-09-08 03:03:24,086 - seret.movie_info_fetchers.composite - INFO - Got info for אנסלם using ElasticMovieInfoFetcher
-2024-09-08 03:03:24,091 - seret.movie_info_fetchers.composite - INFO - Got info for Anselm using ElasticMovieInfoFetcher
-2024-09-08 03:03:25,398 - seret.movie_info_fetchers.composite - INFO - Got info for הרבי קפוארה + שיח יוצרים using ElasticMovieInfoFetcher
-2024-09-08 03:03:27,638 - seret.movie_info_fetchers.composite - INFO - Got info for Capoeira Special Event using ElasticMovieInfoFetcher
-2024-09-08 03:03:27,638 - seret.info_fetcher - ERROR - Failed to get info for 6 movies: [{'date': '08-09-2024', 'cinema': 'יס פלאנט', 'location': 'ראשון לציון', 'district': 'גוש דן', 'title': 'נשימה אחרונה', 'eng_title': 'BREATHE', 'type': '2D', 'time': '16:00', 'link': 'https://tickets3.planetcinema.co.il/site/1072?code=1072-52230&languageId=he-IL&saleChannelCode=web', 'coords': (31.9798, 34.7475), 'dubbed': False}, {'date': '08-09-2024', 'cinema': 'יס פלאנט', 'location': 'ראשון לציון', 'district': 'גוש דן', 'title': 'העורב', 'eng_title': 'The Crow', 'type': '2D', 'time': '19:00', 'link': 'https://tickets3.planetcinema.co.il/site/1072?code=1072-52227&languageId=he-IL&saleChannelCode=web', 'coords': (31.9798, 34.7475), 'dubbed': False}, {'date': '08-09-2024', 'cinema': 'הוט סינמה', 'location': 'קריון', 'district': 'הצפון', 'title': 'גארפילד - הסרט', 'eng_title': 'The Garfield Movie', 'type': '2D', 'time': '15:20', 'link': 'https://hotcinema.co.il/order?theaterId=2&eventId=46477&site=undefined', 'coords': (32.8427, 35.0897), 'dubbed': True}, {'date': '09-09-2024', 'cinema': 'לב', 'location': 'תל אביב', 'district': 'גוש דן', 'title': 'БИТЛДЖУС БИТЛДЖУС', 'eng_title': 'БИТЛДЖУС БИТЛДЖУС', 'type': '2D', 'time': '19:00', 'link': 'https://ticket.lev.co.il/order/554468', 'coords': (32.0748, 34.7755), 'dubbed': False}, {'date': '10-09-2024', 'cinema': 'הוט סינמה', 'location': 'קריון', 'district': 'הצפון', 'title': 'הילד השישי', 'eng_title': 'The Sixth Child', 'type': '2D', 'time': '11:00', 'link': 'https://hotcinema.co.il/order?theaterId=2&eventId=46436&site=undefined', 'coords': (32.8427, 35.0897), 'dubbed': False}, {'date': '12-09-2024', 'cinema': 'הוט סינמה', 'location': 'כפר סבא', 'district': 'השרון', 'title': 'יונתן ברק מגיע ל-HOT CINEMA', 'eng_title': 'יונתן ברק מגיע ל-HOT CINEMA', 'type': '2D', 'time': '20:30', 'link': 'https://hotcinema.co.il/order?theaterId=16&eventId=34607&site=undefined', 'coords': (32.1654, 34.9277), 'dubbed': False}]
-2024-09-08 03:03:27,759 - root - INFO - 5740
+2024-09-09 03:08:33,681 - seret.movie_raters.composite - WARNING - Failed to get rating for Speak No Evil
+2024-09-09 03:08:33,941 - seret.movie_raters.composite - WARNING - Failed to get rating for אל תוציא מילה
+2024-09-09 03:08:33,941 - seret.movie_info_fetchers.composite - INFO - Got info for Speak no evil using ElasticMovieInfoFetcher
+2024-09-09 03:08:35,606 - seret.movie_info_fetchers.composite - INFO - Got info for USHER: RENDEZVOUS IN PARIS using ElasticMovieInfoFetcher
+2024-09-09 03:08:39,271 - seret.movie_info_fetchers.composite - INFO - Got info for המהנדס using ElasticMovieInfoFetcher
+2024-09-09 03:08:40,272 - seret.movie_info_fetchers.composite - INFO - Got info for The Engeneer using ElasticMovieInfoFetcher
+2024-09-09 03:08:40,278 - seret.movie_info_fetchers.composite - INFO - Got info for יונתן ברק מגיע ל-HOT CINEMA using ElasticMovieInfoFetcher
+2024-09-09 03:08:40,279 - seret.info_fetcher - ERROR - Failed to get info for יונתן ברק מגיע ל-HOT CINEMA and יונתן ברק מגיע ל-HOT CINEMA
+2024-09-09 03:08:41,936 - seret.movie_info_fetchers.composite - INFO - Got info for אנסלם using ElasticMovieInfoFetcher
+2024-09-09 03:08:41,941 - seret.movie_info_fetchers.composite - INFO - Got info for Anselm using ElasticMovieInfoFetcher
+2024-09-09 03:08:43,545 - seret.movie_info_fetchers.composite - INFO - Got info for הרבי קפוארה + שיח יוצרים using ElasticMovieInfoFetcher
+2024-09-09 03:08:46,027 - seret.movie_info_fetchers.composite - INFO - Got info for Capoeira Special Event using ElasticMovieInfoFetcher
+2024-09-09 03:08:47,569 - seret.movie_info_fetchers.composite - INFO - Got info for מחזמר-מרי לו using ElasticMovieInfoFetcher
+2024-09-09 03:08:48,347 - seret.movie_info_fetchers.composite - INFO - Got info for הרבי קפוארה + שיח יוצרים, כתוביות ב using ElasticMovieInfoFetcher
+2024-09-09 03:08:49,146 - seret.movie_info_fetchers.composite - INFO - Got info for Capoeira Special Event using ElasticMovieInfoFetcher
+2024-09-09 03:08:51,184 - seret.movie_info_fetchers.composite - INFO - Got info for ואז רקדנו - מופע מחול + סרט using ElasticMovieInfoFetcher
+2024-09-09 03:08:52,097 - seret.movie_info_fetchers.composite - INFO - Got info for And Then We Danced using ElasticMovieInfoFetcher
+2024-09-09 03:08:52,098 - seret.info_fetcher - ERROR - Failed to get info for 6 movies: [{'date': '09-09-2024', 'cinema': 'יס פלאנט', 'location': 'ראשון לציון', 'district': 'גוש דן', 'title': 'נשימה אחרונה', 'eng_title': 'BREATHE', 'type': '2D', 'time': '16:00', 'link': 'https://tickets3.planetcinema.co.il/site/1072?code=1072-52319&languageId=he-IL&saleChannelCode=web', 'coords': (31.9798, 34.7475), 'dubbed': False}, {'date': '09-09-2024', 'cinema': 'יס פלאנט', 'location': 'ראשון לציון', 'district': 'גוש דן', 'title': 'העורב', 'eng_title': 'The Crow', 'type': '2D', 'time': '19:00', 'link': 'https://tickets3.planetcinema.co.il/site/1072?code=1072-52316&languageId=he-IL&saleChannelCode=web', 'coords': (31.9798, 34.7475), 'dubbed': False}, {'date': '09-09-2024', 'cinema': 'הוט סינמה', 'location': 'קריון', 'district': 'הצפון', 'title': 'גארפילד - הסרט', 'eng_title': 'The Garfield Movie', 'type': '2D', 'time': '15:20', 'link': 'https://hotcinema.co.il/order?theaterId=2&eventId=46160&site=undefined', 'coords': (32.8427, 35.0897), 'dubbed': True}, {'date': '09-09-2024', 'cinema': 'לב', 'location': 'תל אביב', 'district': 'גוש דן', 'title': 'БИТЛДЖУС БИТЛДЖУС', 'eng_title': 'БИТЛДЖУС БИТЛДЖУС', 'type': '2D', 'time': '19:00', 'link': 'https://ticket.lev.co.il/order/554468', 'coords': (32.0748, 34.7755), 'dubbed': False}, {'date': '10-09-2024', 'cinema': 'הוט סינמה', 'location': 'קריון', 'district': 'הצפון', 'title': 'הילד השישי', 'eng_title': 'The Sixth Child', 'type': '2D', 'time': '11:00', 'link': 'https://hotcinema.co.il/order?theaterId=2&eventId=46436&site=undefined', 'coords': (32.8427, 35.0897), 'dubbed': False}, {'date': '12-09-2024', 'cinema': 'הוט סינמה', 'location': 'כפר סבא', 'district': 'השרון', 'title': 'יונתן ברק מגיע ל-HOT CINEMA', 'eng_title': 'יונתן ברק מגיע ל-HOT CINEMA', 'type': '2D', 'time': '20:30', 'link': 'https://hotcinema.co.il/order?theaterId=16&eventId=34607&site=undefined', 'coords': (32.1654, 34.9277), 'dubbed': False}]
+2024-09-09 03:08:52,191 - root - INFO - 4633
