@@ -4,8 +4,9 @@ from enum import Enum
 import requests
 from bs4 import BeautifulSoup
 
-from models import Screening
 from models import Districts, LanguageType, MovieType
+from models import Screening
+from proxy import ProxifiedSession
 
 
 class Locations(Enum):
@@ -140,7 +141,8 @@ def get_screenings(year: str, month: str, day: str, s: requests.Session) -> list
     screenings: list[Screening] = []
     date = "{}-{}-{}".format(day.zfill(2), month.zfill(2), year)
 
-    for location in Locations:
-        screenings.extend(get_by_location(location, date, s))
+    with ProxifiedSession(s) as ps:
+        for location in Locations:
+            screenings.extend(get_by_location(location, date, ps))
     logger.info("DONE CINEMA CITY")
     return screenings
