@@ -119,18 +119,20 @@ def get_by_location(location: Locations, date: str, s: requests.Session) -> list
     for venue in VENUES:
         url = f"https://www.cinema-city.co.il/tickets/Events?TheatreId={location.value['TheatreId']}&VenueTypeId={venue}&Date={new_date}"
         res = s.get(url)
-        if not res.ok:
-            continue
-        for movie in res.json():
-            movie_name = movie.get("Name")
-            for show in movie.get("Dates"):
-                time = show.get("Hour")
-                link = f"https://tickets.cinema-city.co.il/order/{show.get('EventId')}"
-                english_name = get_english_name(movie_name, s)
-                screenings.append(
-                    Screening(date, "סינמה סיטי", location.value["name"], location.value['dis'], movie_name,
-                              english_name, VENUES[venue], time, link, location.value['coords'], LanguageType.UNKNOWN)
-                )
+        try:
+            for movie in res.json():
+                movie_name = movie.get("Name")
+                for show in movie.get("Dates"):
+                    time = show.get("Hour")
+                    link = f"https://tickets.cinema-city.co.il/order/{show.get('EventId')}"
+                    english_name = get_english_name(movie_name, s)
+                    screenings.append(
+                        Screening(date, "סינמה סיטי", location.value["name"], location.value['dis'], movie_name,
+                                  english_name, VENUES[venue], time, link, location.value['coords'],
+                                  LanguageType.UNKNOWN)
+                    )
+        except Exception as e:
+            logger.warning("error while getting movie info:", exc_info=e)
 
     logger.info(f"DONE CINEMA CITY {location.name}")
     return screenings
