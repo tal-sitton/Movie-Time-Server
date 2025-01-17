@@ -26,6 +26,12 @@ def search(search_term: str, search_field: ElasticSearchField, min_needed_score:
 
     if len(same_source_hits) > 2:
         difference_in_score = same_source_hits[0].get('_score') - same_source_hits[1].get('_score')
+        if difference_in_score==0 and not same_source_hits[0].get('priority') == same_source_hits[1].get('priority'):
+            difference_in_score = 99
+            if same_source_hits[1].get('priority') > same_source_hits[0].get('priority'):
+                tmp = same_source_hits[0]
+                same_source_hits[0] = same_source_hits[1]
+                same_source_hits[1] = tmp                      
     else:
         difference_in_score = 99
 
