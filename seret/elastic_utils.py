@@ -1,3 +1,5 @@
+from datetime import timedelta, datetime
+
 from elasticsearch import Elasticsearch
 
 from seret import ELASTIC_HOST, ELASTIC_MOVIES_INDEX, ElasticSearchField
@@ -22,16 +24,22 @@ def search(search_term: str, search_field: ElasticSearchField, min_needed_score:
 
     hits = raw_hits.get('hits')
 
+    hits = [hit for hit in hits if not hit.get('_source').get('premiere') or
+            datetime.fromisoformat(hit.get('_source').get('premiere')) - datetime.now() < timedelta(days=7)]
+
+    same_score_hits = [hit for hit in hits if hit.get('_score') == hits[0].get('_score')]
     same_source_hits = [hit for hit in hits if hits[0].get("_id").isdigit() == hit.get("_id").isdigit()]
 
-    if len(same_source_hits) > 2:
+    if len(same_score_hits) >= 4:
+        difference_in_score = 0
+    elif len(same_source_hits) >= 2:
         difference_in_score = same_source_hits[0].get('_score') - same_source_hits[1].get('_score')
-        if difference_in_score==0 and not same_source_hits[0].get('priority') == same_source_hits[1].get('priority'):
+        priority0 = same_source_hits[0].get('_source').get('priority')
+        priority1 = same_source_hits[1].get('_source').get('priority')
+        if difference_in_score == 0 and priority0 != priority1:
             difference_in_score = 99
-            if same_source_hits[1].get('priority') > same_source_hits[0].get('priority'):
-                tmp = same_source_hits[0]
-                same_source_hits[0] = same_source_hits[1]
-                same_source_hits[1] = tmp                      
+            if priority1 > priority0:
+                hits[0] = same_source_hits[1]
     else:
         difference_in_score = 99
 
