@@ -58,7 +58,7 @@ cached_english_names = {}
 def get_english_name(movie_id: str, s: requests.Session) -> str | None:
     if movie_id in cached_english_names:
         return cached_english_names[movie_id]
-    url = f"https://www.movieland-cinema.co.il/movie/{movie_id}"
+    url = f"https://www.movieland.co.il/movie/{movie_id}"
     try:
         bs = BeautifulSoup(s.get(url).text, "html.parser")
         title = bs.find("div", {"class": "bg-more-b"}).find_all("span")[1].text
@@ -74,7 +74,7 @@ def get_by_location(location: Locations, date: str, format_date: str, s: request
     screenings: list[Screening] = []
 
     if location.name not in cache:
-        url = f"https://www.movieland-cinema.co.il/api/Events?&TheatreId={location.value['TheatreId']}" \
+        url = f"https://www.movieland.co.il/api/Events?&TheatreId={location.value['TheatreId']}" \
               f"&isForSelectedTheaterOnly=true&isHideVODRent=true"
         res = s.get(url)
         if not res.ok:
