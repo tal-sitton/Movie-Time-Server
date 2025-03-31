@@ -102,7 +102,7 @@ def get_by_location(location: Locations, date: str, format_date: str, s: request
         movie_info = movies_data.get(event.get("filmId"))
         movie_name = movie_info.get('name')
         m_time = ":".join(event.get("eventDateTime").split("T")[1].split(":")[:2])
-        link = event.get("bookingLink")
+        link = event.get("bookingLink").replace("/api","").replace("he-IL","he")
         move_type = find_type(event['attributeIds'])
         dubbed = find_dubbed(event.get("attributeIds"))
         english_name = get_english_name(movie_info.get("link"), s)
