@@ -1,5 +1,6 @@
+import json
 import logging
-from datetime import datetime
+import re
 from enum import Enum
 
 import requests
@@ -51,95 +52,80 @@ class Locations(Enum):
 
 
 def find_type(movie_type: list):
-    if "4DX" in movie_type:
+    if "4dx" in movie_type:
         return MovieType.m_4DX
-    if "VIP" in movie_type:
+    if "vip" in movie_type:
         return MovieType.m_VIP
-    elif "IMAX" in movie_type:
+    elif "imax" in movie_type:
         return MovieType.m_IMAX
     elif "3D" in movie_type:
         return MovieType.m_3D
-    elif "SCREENX" in movie_type:
+    elif "screenx" in movie_type:
         return MovieType.m_SCREENX
     else:
         return MovieType.m_2D
 
 
 def find_dubbed(movie_info: list) -> LanguageType:
-    if "DUB" in movie_info:
+    if "dubbed" in movie_info:
         return LanguageType.DUBBED
-    elif "SUBTITLE" in movie_info:
+    elif "subbed" in movie_info:
         return LanguageType.SUBBED
     return LanguageType.UNKNOWN
 
 
-all_movies: dict[int, tuple[str, str]] = {}
-all_screenings: dict[str, dict[str, list[Screening]]] = {}
+cached_english_names = {}
 
 logger = logging.getLogger(__name__)
 
 
-def login(s: requests.Session) -> str:
-    res = s.post("https://pub-api.biggerpicture.ai/mapiAPI/login",
-                 json={"accessCode": "YP", "password": "MAPI132", "username": "MAPI1"})
-    return res.json().get("token")
+def get_english_name(movie_url: str, s: requests.Session) -> str | None:
+    if movie_url in cached_english_names:
+        return cached_english_names[movie_url]
+    res = None
+    try:
+        res = s.get(movie_url)
+        raw = re.search("var filmDetails = (.*);", res.text).group(1)
+        data: dict = json.loads(raw)
+        title = data.get("originalName")
+        cached_english_names[movie_url] = title
+        return title
+    except Exception as e:
+        logger.exception(f"Failed to get english name for {movie_url}", exc_info=e)
+        if res:
+            logger.info(res.text)
+        return None
 
 
-def get_all_movies(s: requests.Session, token: str) -> dict[int, tuple[str, str]]:
-    headers = {"Authorization": f"Bearer {token}"}
-    res = s.get("https://pub-api.biggerpicture.ai/mapiAPI/group/eventMasters?full=true", headers=headers)
-    raw_movies = res.json().get("eventMasters")
-    movies = {}
-    for movie in raw_movies:
-        edi = movie.get("edi")
-        heb_title = next((name['value'] for name in movie.get('webNameInLanguage') if name['key'] == 'he-IL'), None)
-        original_title = movie.get("originalName") if movie.get("originalName") != heb_title else next(
-            (name['value'] for name in movie.get('webNameInLanguage') if name['key'] != 'he-IL'), None)
-        movies[edi] = (heb_title, original_title)
-    return movies
+def prepare(location: Locations, date: str, s: requests.Session) -> tuple:
+    url = f"https://www.planetcinema.co.il/il/data-api-service/v1/quickbook/10100/film-events/in-cinema/{location.value['code']}/at-date/{date}"
+    res = s.get(url)
+    try:
+        data = dict(res.json().get("body"))
+        movies_data = {movie.get("id"): movie for movie in data.get("films")}
+        return movies_data, data.get("events")
+    except Exception as e:
+        logger.info(url)
+        logger.info(res.text)
+        raise e
 
 
-def get_all_screenings(s: requests.Session, token: str) -> dict[str, dict[str, list[Screening]]]:
-    screenings: dict[str, dict[str, list[Screening]]] = {}
-
-    headers = {"Authorization": f"Bearer {token}"}
-    url = f"https://pub-api.biggerpicture.ai/mapiAPI/group/events?key=MAPI&territory=il&group=true{''.join(['&siteId=' + cinema.value.get('code') for cinema in Locations])}"
-    res = s.get(url, headers=headers)
-
-    for raw_screening in res.json().get("events"):
-        parsed_date = datetime.fromisoformat(raw_screening.get("dtf"))
-        screening_date = parsed_date.strftime("%d-%m-%Y")
-        raw_location = str(raw_screening.get("sId"))
-        if screening_date not in screenings:
-            screenings[screening_date] = {}
-        if raw_location not in screenings[screening_date]:
-            screenings[screening_date][raw_location] = []
-
-        screening_time = parsed_date.strftime("%H:%M")
-        screening_location = [location.value for location in Locations if location.value.get('code') == raw_location][0]
-        title, eng_title = all_movies.get(raw_screening.get("edi"))
-        link = f"https://tickets3.planetcinema.co.il/site/{raw_location}?code={raw_screening.get('eventCode')}&saleChannelCode=web"
-
-        screening = Screening(screening_date, "יס פלאנט", screening_location['name'], screening_location['dis'], title,
-                              eng_title, find_type(raw_screening.get("attrs")), screening_time, link,
-                              screening_location['coords'], find_dubbed(raw_screening.get("attrs")))
-        screenings[screening_date][raw_location].append(screening)
-    return screenings
-
-
-def init_data(s: requests.Session):
-    global all_movies, all_screenings
-    if not all_movies or not all_screenings:
-        logger.info("STARTED YES PLANET INIT")
-        token = login(s)
-        all_movies = get_all_movies(s, token)
-        all_screenings = get_all_screenings(s, token)
-
-
-def get_by_location(location: Locations, format_date: str, s: requests.Session) -> list[Screening]:
+def get_by_location(location: Locations, date: str, format_date: str, s: requests.Session) -> list[Screening]:
     logger.info(f"STARTED YES PLANET {location.name}")
-    init_data(s)
-    screenings: list[Screening] = all_screenings.get(format_date, {}).get(location.value['code'], [])
+    screenings: list[Screening] = []
+
+    movies_data, events = prepare(location, date, s)
+    for event in events:
+        movie_info = movies_data.get(event.get("filmId"))
+        movie_name = movie_info.get("name")
+        m_time = ":".join(event.get("eventDateTime").split("T")[1].split(":")[:2])
+        movie_type = find_type(event.get("attributeIds"))
+        link = event.get("bookingLink")
+        dubbed = find_dubbed(event.get("attributeIds"))
+        english_name = get_english_name(movie_info.get("link"), s)
+        screenings.append(
+            Screening(format_date, "יס פלאנט", location.value['name'], location.value['dis'], movie_name,
+                      english_name, movie_type, m_time, link, location.value['coords'], dubbed))
     logger.info(f"DONE YES PLANET {location.name}")
     return screenings
 
@@ -147,11 +133,12 @@ def get_by_location(location: Locations, format_date: str, s: requests.Session) 
 def get_screenings(year: str, month: str, day: str, s: requests.Session) -> list[Screening]:
     logger.info("STARTED YES PLANET")
     screenings: list[Screening] = []
+    date = "{}-{}-{}".format(year, month.zfill(2), day.zfill(2))
     format_date = "{}-{}-{}".format(day.zfill(2), month.zfill(2), year)
 
     for location in Locations:
         try:
-            screenings.extend(get_by_location(location, format_date, s))
+            screenings.extend(get_by_location(location, date, format_date, s))
         except Exception as e:
             logger.exception(f"Failed to get screenings for {location.name}", exc_info=e)
 
@@ -160,6 +147,8 @@ def get_screenings(year: str, month: str, day: str, s: requests.Session) -> list
 
 
 if __name__ == '__main__':
+    from datetime import datetime
+
     s = requests.Session()
     print(get_screenings(str(datetime.now().year), str(datetime.now().month).zfill(2),
-                         str(datetime.now().day + 1).zfill(2), s))
+                         str(datetime.now().day).zfill(2), s))
