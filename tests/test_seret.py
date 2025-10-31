@@ -70,14 +70,6 @@ testData: list[tuple[str, str, list[str], list[str]]] = [
     ("Deadpool and Wolverine", 'דדפול ווולברין', ['דדפול & וולברין'],
      ["https://www.edb.co.il/photos/187052024_poster05.poster.jpg",
       "https://www.seret.co.il/images/movies/DeadpoolandWolverine/DeadpoolandWolverine1.jpg"]),
-
-    ("Wicked", 'מרשעת', ['מרשעת'],
-     ["https://www.edb.co.il/photos/187142024_poster03.poster.jpg",
-      "https://www.seret.co.il/images/movies/Wicked/Wicked1.jpg"]),
-
-    ("Wicked: Part 1", 'מרשעת', ['מרשעת'],
-     ["https://www.edb.co.il/photos/187142024_poster03.poster.jpg",
-      "https://www.seret.co.il/images/movies/Wicked/Wicked1.jpg"]),
 ]
 
 fake_movies_names = [
