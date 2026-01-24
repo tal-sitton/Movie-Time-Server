@@ -8,9 +8,9 @@ from models import Screening
 GetScreeningCallable = Callable[[str, str, str, Session], List[Screening]]
 
 cinemas_get_screenings: Dict[str, GetScreeningCallable] = {
+    "hot cinema": hot_cinema.get_screenings,
     "yes planet": yes_planet.get_screenings,
     "rav hen": rav_hen.get_screenings,
-    "hot cinema": hot_cinema.get_screenings,
     "cinema city": cinema_city.get_screenings,
     "lev": lev.get_screenings,
     "movieland": movieland.get_screenings
