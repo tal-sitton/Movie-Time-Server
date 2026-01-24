@@ -39,6 +39,14 @@ jobs:
         options: >-
           --name proxy
           --privileged
+
+      flare-solverr:
+        image: ghcr.io/flaresolverr/flaresolverr:latest
+        ports:
+          - 8191:8191
+        options: >-
+          --name flaresolverr
+          --privileged
     
 
     steps:
@@ -96,6 +104,14 @@ jobs:
           PASTE_KEYS: ${{ secrets.PASTE_KEYS }}
         options: >-
           --name proxy
+          --privileged
+
+      flare-solverr:
+        image: ghcr.io/flaresolverr/flaresolverr:latest
+        ports:
+          - 8191:8191
+        options: >-
+          --name flaresolverr
           --privileged
 
     steps:

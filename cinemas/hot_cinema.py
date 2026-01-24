@@ -4,7 +4,9 @@ from enum import Enum
 import requests
 from bs4 import BeautifulSoup
 
+from flare_proxy import FlaredProxy
 from models import MovieType, Districts, LanguageType, Screening
+from proxy import ProxifiedSession
 
 
 class Locations(Enum):
@@ -126,8 +128,15 @@ def get_screenings(year: str, month: str, day: str, s: requests.Session) -> list
     logger.info("STARTED HOT CINEMA")
     screenings: list[Screening] = []
     date = "{}-{}-{}".format(day.zfill(2), month.zfill(2), year)
-
-    for location in Locations:
-        screenings.extend(get_by_location(location, date, s))
+    with FlaredProxy(s) as ps:
+        for location in Locations:
+            screenings.extend(get_by_location(location, date, ps))
     logger.info("DONE HOT CINEMA")
     return screenings
+
+if __name__ == '__main__':
+    from datetime import datetime
+
+    s = requests.Session()
+    date = datetime.now()
+    get_screenings(str(date.year), str(date.month), str(date.day), s)

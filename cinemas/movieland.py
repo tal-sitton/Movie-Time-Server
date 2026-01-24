@@ -5,6 +5,7 @@ from typing import Dict
 import requests
 from bs4 import BeautifulSoup
 
+from flare_proxy import FlaredProxy
 from models import Districts, MovieType, LanguageType
 from models import Screening
 
@@ -114,8 +115,9 @@ def get_screenings(year: str, month: str, day: str, s: requests.Session) -> list
     date = "{}.{}".format(day.zfill(2), month.zfill(2))
     format_date = "{}-{}-{}".format(day.zfill(2), month.zfill(2), year)
 
-    for location in Locations:
-        screenings.extend(get_by_location(location, date, format_date, s))
+    with FlaredProxy(s) as ps:
+        for location in Locations:
+            screenings.extend(get_by_location(location, date, format_date, ps))
     logger.info("DONE Movie Land")
     return screenings
 
